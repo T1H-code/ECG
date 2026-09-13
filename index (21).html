@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Schnupperkurs Eisschnelllauf · ECG Grefrath 1992 e.V.</title>
+<meta name="description" content="Schnupperkurs Eisschnelllauf des Eisschnelllauf-Club Grefrath 1992 e.V. – jetzt vormerken, Anmeldung ab 04.10.2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ECG GREFRATH — SCHNUPPERKURS EISSCHNELLLAUF
+   ============================================================ */
+:root{
+  --green:#0d3b2e;
+  --green-dark:#071f18;
+  --green-light:#175642;
+  --red:#d01f3c;
+  --red-dark:#9e1129;
+  --ice:#bdeaf5;
+  --ice-soft:#e7f8fc;
+  --black:#0a0d0c;
+  --white:#fbfdfc;
+  --grey:#5c6b68;
+  --grey-light:#e3e9e7;
+  --radius:20px;
+  --radius-sm:12px;
+  --shadow:0 20px 50px -20px rgba(7,31,24,0.35);
+  --ease:cubic-bezier(.22,.8,.28,1);
+  --maxw:1180px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--black);
+  background:var(--white);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+button{font-family:inherit;}
+
+h1,h2,h3,.display{
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:.02em;
+  line-height:.95;
+  margin:0;
+  font-weight:400;
+}
+p{line-height:1.6;margin:0;}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.section{padding:80px 0;position:relative;}
+@media(max-width:720px){.section{padding:56px 0;}}
+
+.eyebrow{
+  font-size:.8rem;
+  color:var(--green);
+  font-weight:700;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+.h2{font-size:clamp(2.4rem,6vw,4rem);color:var(--green-dark);}
+.h2 .accent{color:var(--red);}
+.lede{max-width:560px;font-size:1.08rem;color:var(--grey);margin-top:16px;}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 34px;
+  border-radius:100px;
+  font-weight:700;
+  font-size:1.02rem;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s;
+  min-height:56px;
+}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 14px 30px -12px rgba(208,31,60,.55);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 36px -12px rgba(208,31,60,.65);}
+.btn-primary:disabled{background:#c7cdcb;color:#8b9694;box-shadow:none;cursor:not-allowed;transform:none;}
+.btn-ghost{background:transparent;border:2px solid var(--white);color:var(--white);}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-3px);}
+.btn-dark{background:var(--green-dark);color:#fff;}
+.btn-dark:hover{transform:translateY(-3px);background:var(--green);}
+
+/* ---------- reveal-on-scroll ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  *{animation-duration:.001ms !important; scroll-behavior:auto !important;}
+}
+
+/* ---------- speed line divider ---------- */
+.speedline{position:relative;height:64px;overflow:hidden;}
+.speedline svg{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(10,13,12,0.72);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;}
+.nav-logo .mark{height:36px;width:auto;background:#fff;border-radius:8px;padding:3px 8px;}
+.nav-logo .word{font-family:'Bebas Neue';font-size:1.4rem;letter-spacing:.04em;}
+.nav-links{display:flex;gap:30px;list-style:none;margin:0;padding:0;}
+.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.92rem;font-weight:600;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
+.nav .btn-primary{padding:12px 22px;font-size:.9rem;min-height:auto;}
+.nav-burger{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:6px;}
+@media(max-width:860px){
+  .nav-links{display:none;}
+  .nav-burger{display:block;}
+  .nav .btn-primary.desktop-only{display:none;}
+}
+
+/* ============================================================
+   LOGO MARK (SVG placeholder — replace with real ECG logo file)
+   ============================================================ */
+.ecg-mark{filter:drop-shadow(0 6px 16px rgba(0,0,0,.35));}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(120% 90% at 50% -10%, #123f30 0%, var(--green-dark) 55%, var(--black) 100%);
+  color:#fff;
+  overflow:hidden;
+  padding-top:72px;
+}
+.hero-track{
+  position:absolute;inset:0;z-index:0;opacity:.5;
+}
+.hero-track svg{width:100%;height:100%;}
+.hero-frost{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg, rgba(189,234,245,0) 0%, rgba(189,234,245,.05) 60%, rgba(10,13,12,.55) 100%);
+}
+#snow-hero{position:absolute;inset:0;z-index:2;pointer-events:none;}
+
+.hero-content{position:relative;z-index:3;text-align:center;width:100%;padding:60px 0 90px;}
+.hero-logo-plate{
+  display:inline-block;background:#fff;border-radius:22px;padding:16px 24px;
+  margin:0 auto 30px;box-shadow:0 20px 45px -18px rgba(0,0,0,.55);
+  animation:logoIn 1s var(--ease) both;
+}
+.hero-logo{width:200px;height:auto;display:block;}
+@media(max-width:560px){.hero-logo{width:150px;}.hero-logo-plate{padding:12px 18px;border-radius:16px;}}
+@keyframes logoIn{from{opacity:0;transform:scale(.7) rotate(-8deg);}to{opacity:1;transform:scale(1) rotate(0);}}
+
+.hero-title{
+  font-size:clamp(2.8rem,9vw,6.4rem);
+  color:#fff;
+  animation:heroUp 1s .2s var(--ease) both;
+}
+.hero-title span{display:block;color:var(--ice);}
+@keyframes heroUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+
+.hero-sub{
+  font-size:clamp(1.1rem,2.4vw,1.5rem);
+  color:var(--ice);
+  margin-top:18px;
+  font-weight:700;
+  animation:heroUp 1s .35s var(--ease) both;
+}
+.hero-desc{
+  max-width:540px;margin:20px auto 0;color:rgba(255,255,255,.82);
+  font-size:1.05rem;
+  animation:heroUp 1s .45s var(--ease) both;
+}
+.hero-cta{margin-top:38px;animation:heroUp 1s .55s var(--ease) both;}
+.hero-note{
+  margin-top:22px;display:inline-flex;align-items:center;gap:10px;
+  font-size:.86rem;color:rgba(255,255,255,.75);
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  padding:10px 18px;border-radius:100px;
+  animation:heroUp 1s .65s var(--ease) both;
+}
+.hero-note .dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(208,31,60,.25);}
+
+.scroll-cue{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  z-index:3;color:rgba(255,255,255,.6);font-size:.75rem;letter-spacing:.15em;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.scroll-cue .line{width:1px;height:34px;background:linear-gradient(#fff,transparent);animation:cueMove 1.8s ease-in-out infinite;}
+@keyframes cueMove{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}50.01%{transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
+
+/* ============================================================
+   COUNTDOWN
+   ============================================================ */
+.countdown-section{
+  background:var(--green-dark);
+  color:#fff;
+  text-align:center;
+  position:relative;
+}
+.countdown-section .eyebrow{color:var(--ice);}
+.countdown-section .h2{color:#fff;}
+.countdown-section .lede{color:rgba(255,255,255,.75);margin-left:auto;margin-right:auto;}
+.countdown-head{text-align:center;}
+
+.countdown-grid{
+  display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+  margin-top:50px;
+}
+.cd-box{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius-sm);
+  width:120px;padding:24px 8px;
+  backdrop-filter:blur(6px);
+}
+.cd-num{
+  font-family:'Bebas Neue';
+  font-size:3.2rem;
+  color:var(--ice);
+  font-variant-numeric:tabular-nums;
+}
+.cd-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-top:4px;}
+@media(max-width:560px){.cd-box{width:76px;padding:16px 4px;}.cd-num{font-size:2rem;}}
+
+.status-pill{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:46px;padding:14px 26px;border-radius:100px;
+  font-weight:800;font-size:.95rem;letter-spacing:.03em;
+}
+.status-closed{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85);}
+.status-open{background:var(--red);color:#fff;box-shadow:0 14px 30px -10px rgba(208,31,60,.6);}
+.status-full{background:var(--black);border:1px solid rgba(255,255,255,.2);color:#fff;}
+
+.open-cta{margin-top:28px;}
+
+/* ============================================================
+   INFO CARDS
+   ============================================================ */
+.info-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px;
+}
+@media(max-width:980px){.info-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.info-grid{grid-template-columns:1fr;}}
+
+.card{
+  background:#fff;
+  border:1px solid var(--grey-light);
+  border-radius:var(--radius);
+  padding:30px 26px;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--green),var(--red));
+}
+.card-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:var(--ice-soft);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;color:var(--green);
+}
+.card h3{font-family:'Inter';font-weight:800;font-size:1.15rem;margin-bottom:10px;color:var(--green-dark);}
+.card p{color:var(--grey);font-size:.95rem;}
+.card strong{color:var(--black);}
+
+.slot-number{
+  font-family:'Bebas Neue';font-size:3.4rem;color:var(--red);line-height:1;
+}
+.slot-sub{font-size:.85rem;color:var(--grey);margin-top:4px;}
+.slot-bar{height:10px;border-radius:100px;background:var(--grey-light);margin-top:16px;overflow:hidden;}
+.slot-bar-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--red));border-radius:100px;transition:width .8s var(--ease);}
+
+/* ---------- timeline ---------- */
+.timeline{margin-top:60px;}
+.timeline-title{font-weight:800;color:var(--green-dark);margin-bottom:24px;font-size:1.2rem;}
+.timeline-track{
+  display:flex;gap:0;overflow-x:auto;padding-bottom:12px;
+  scrollbar-width:thin;
+}
+.tl-item{
+  min-width:180px;flex:1;
+  padding:20px 18px 20px 0;
+  position:relative;
+  border-left:3px solid var(--grey-light);
+  padding-left:20px;
+  transform:translateX(-20px);
+  opacity:0;
+  transition:transform .6s var(--ease),opacity .6s var(--ease);
+}
+.tl-item.in{transform:translateX(0);opacity:1;}
+.tl-item.final{border-left-color:var(--red);}
+.tl-item::before{
+  content:'';position:absolute;left:-9px;top:22px;width:15px;height:15px;border-radius:50%;
+  background:var(--green);border:3px solid #fff;box-shadow:0 0 0 2px var(--green);
+}
+.tl-item.final::before{background:var(--red);box-shadow:0 0 0 2px var(--red);}
+.tl-date{font-family:'Bebas Neue';font-size:1.6rem;color:var(--green-dark);}
+.tl-item.final .tl-date{color:var(--red);}
+.tl-label{font-size:.85rem;color:var(--grey);margin-top:2px;}
+
+/* ============================================================
+   PRICING
+   ============================================================ */
+.price-section{background:var(--ice-soft);}
+.price-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;margin-top:56px;}
+@media(max-width:820px){.price-grid{grid-template-columns:1fr;}}
+.price-hero{
+  background:var(--green-dark);color:#fff;border-radius:var(--radius);
+  padding:44px 40px;position:relative;overflow:hidden;
+}
+.price-hero .big{font-family:'Bebas Neue';font-size:clamp(4rem,10vw,6.5rem);color:var(--ice);line-height:.85;}
+.price-hero p{color:rgba(255,255,255,.8);margin-top:10px;font-size:1.05rem;}
+.price-side{display:flex;flex-direction:column;gap:18px;}
+.price-line{
+  background:#fff;border-radius:var(--radius-sm);padding:22px 24px;
+  display:flex;justify-content:space-between;align-items:center;
+  border:1px solid var(--grey-light);
+}
+.price-line .label{font-weight:700;color:var(--green-dark);}
+.price-line .value{font-family:'Bebas Neue';font-size:1.6rem;color:var(--red);}
+.price-note{font-size:.85rem;color:var(--grey);margin-top:6px;}
+
+/* ============================================================
+   MITBRINGEN
+   ============================================================ */
+.bring-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;}
+@media(max-width:920px){.bring-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.bring-grid{grid-template-columns:1fr;}}
+.bring-card{
+  background:#fff;border:1px solid var(--grey-light);border-radius:var(--radius);
+  padding:26px;text-align:left;transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.bring-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+.bring-check{
+  width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px;
+}
+.bring-card h4{font-size:1.05rem;font-weight:800;color:var(--green-dark);margin-bottom:8px;}
+.bring-card p{font-size:.92rem;color:var(--grey);}
+
+.no-pro{
+  margin-top:50px;background:var(--green-dark);border-radius:var(--radius);
+  padding:40px;text-align:center;color:#fff;
+}
+.no-pro h4{font-family:'Bebas Neue';font-size:1.8rem;margin-bottom:12px;color:var(--ice);}
+.no-pro p{color:rgba(255,255,255,.8);max-width:520px;margin:0 auto;}
+.word-row{display:flex;justify-content:center;gap:16px;margin-top:26px;flex-wrap:wrap;}
+.word-chip{
+  font-family:'Bebas Neue';font-size:1.6rem;padding:12px 30px;border-radius:100px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+  opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease);
+}
+.word-chip.in{opacity:1;transform:translateY(0);}
+
+/* ============================================================
+   COMPARISON (Foto)
+   ============================================================ */
+.compare-photo{margin-top:56px;text-align:center;}
+.compare-photo-title{font-family:'Bebas Neue';font-size:clamp(1.8rem,4vw,2.4rem);color:var(--green-dark);margin-bottom:12px;}
+.compare-photo-lede{color:var(--grey);max-width:640px;margin:0 auto 28px;font-size:1rem;}
+.compare-photo-img{
+  width:100%;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--grey-light);
+}
+
+/* ============================================================
+   NIKOLAUS
+   ============================================================ */
+.nik-section{
+  position:relative;background:var(--green-dark);color:#fff;overflow:hidden;text-align:center;
+}
+#snow-nik{position:absolute;inset:0;z-index:0;pointer-events:none;}
+.nik-inner{position:relative;z-index:1;}
+.nik-badge{
+  display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;
+  padding:10px 22px;border-radius:100px;font-weight:800;font-size:.85rem;margin-bottom:22px;
+}
+.nik-layout{
+  display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;
+  text-align:left;margin-top:46px;
+}
+@media(max-width:820px){.nik-layout{grid-template-columns:1fr;text-align:center;}}
+.nik-date{font-family:'Bebas Neue';font-size:clamp(2.6rem,7vw,4.2rem);color:var(--ice);}
+.nik-day{font-size:1.05rem;color:rgba(255,255,255,.75);margin-top:-4px;}
+.nik-text{max-width:460px;margin:20px 0 0;color:rgba(255,255,255,.85);}
+@media(max-width:820px){.nik-text{margin-left:auto;margin-right:auto;}}
+.nik-text + .nik-text{margin-top:12px;}
+.nik-time-note{
+  margin-top:24px;display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+  padding:12px 24px;border-radius:100px;font-size:.9rem;color:rgba(255,255,255,.85);
+}
+.nik-photo img{
+  width:100%;border-radius:var(--radius);box-shadow:0 30px 70px -20px rgba(0,0,0,.6);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+/* ============================================================
+   VORTREFFEN / FAQ
+   ============================================================ */
+.pretreat-card{
+  margin-top:50px;background:#fff;border:2px dashed var(--grey-light);border-radius:var(--radius);
+  padding:40px;text-align:center;
+}
+.pretreat-card h4{font-family:'Bebas Neue';font-size:1.8rem;color:var(--green-dark);margin-bottom:10px;}
+.pretreat-card p{color:var(--grey);max-width:480px;margin:6px auto 0;}
+
+.faq-list{margin-top:50px;display:flex;flex-direction:column;gap:14px;}
+.faq-item{border:1px solid var(--grey-light);border-radius:var(--radius-sm);overflow:hidden;background:#fff;}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;padding:20px 24px;
+  display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+  font-weight:700;font-size:1rem;color:var(--green-dark);
+}
+.faq-q .plus{transition:transform .3s var(--ease);color:var(--red);font-size:1.3rem;}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s var(--ease);}
+.faq-a p{padding:0 24px 22px;color:var(--grey);font-size:.95rem;}
+.faq-a .pending{color:var(--red);font-weight:600;}
+
+/* ============================================================
+   ANMELDUNG FORM
+   ============================================================ */
+.form-section{background:var(--ice-soft);}
+.form-locked{
+  margin-top:50px;text-align:center;background:#fff;border-radius:var(--radius);
+  padding:60px 30px;box-shadow:var(--shadow);
+}
+.form-locked .lock-icon{width:56px;height:56px;margin:0 auto 18px;color:var(--grey);}
+.form-locked h4{font-family:'Bebas Neue';font-size:1.8rem;color:var(--green-dark);}
+.form-locked p{color:var(--grey);margin-top:8px;}
+
+.reg-card{
+  margin-top:50px;background:#fff;border-radius:var(--radius);padding:44px;box-shadow:var(--shadow);
+}
+@media(max-width:600px){.reg-card{padding:26px;}}
+.reg-group-title{font-family:'Bebas Neue';font-size:1.4rem;color:var(--green);margin:28px 0 16px;}
+.reg-group-title:first-child{margin-top:0;}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:560px){.field-grid{grid-template-columns:1fr;}}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-size:.85rem;font-weight:700;color:var(--green-dark);}
+.field label .req{color:var(--red);}
+.field input{
+  padding:14px 16px;border:1.5px solid var(--grey-light);border-radius:10px;font-size:1rem;
+  font-family:inherit;transition:border-color .2s;
+}
+.field input:focus{outline:none;border-color:var(--green);}
+.field .err{font-size:.78rem;color:var(--red);min-height:16px;}
+.field input.invalid{border-color:var(--red);}
+
+.consent-list{margin-top:30px;display:flex;flex-direction:column;gap:14px;}
+.consent{display:flex;align-items:flex-start;gap:12px;cursor:pointer;}
+.consent input{width:20px;height:20px;margin-top:2px;accent-color:var(--green);flex:0 0 auto;}
+.consent span{font-size:.9rem;color:var(--grey);}
+.consent span .req{color:var(--red);}
+
+.photo-note{
+  margin-top:26px;background:var(--ice-soft);border-radius:10px;padding:16px 18px;font-size:.85rem;color:var(--grey);
+}
+
+.reg-submit{margin-top:32px;width:100%;}
+.form-msg{margin-top:16px;text-align:center;font-weight:700;font-size:.92rem;}
+.form-msg.error{color:var(--red);}
+
+.confirmation{display:none;margin-top:50px;text-align:center;}
+.confirmation.show{display:block;}
+.confirm-line{height:6px;background:linear-gradient(90deg,var(--green),var(--ice),var(--red));border-radius:100px;
+  width:0;margin:0 auto 30px;animation:lineRun 1.2s var(--ease) forwards;}
+@keyframes lineRun{to{width:100%;}}
+.confirmation .check-hero{
+  width:76px;height:76px;border-radius:50%;background:var(--green);color:#fff;margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;font-size:2rem;
+}
+.confirmation h4{font-family:'Bebas Neue';font-size:2.2rem;color:var(--green-dark);}
+.confirmation p{color:var(--grey);margin-top:10px;max-width:480px;margin-left:auto;margin-right:auto;}
+.confirm-details{
+  margin-top:30px;display:inline-block;text-align:left;background:var(--ice-soft);border-radius:var(--radius-sm);
+  padding:26px 30px;
+}
+.confirm-details div{font-size:.92rem;color:var(--black);margin-bottom:6px;}
+.confirm-details strong{color:var(--green-dark);}
+
+.sold-out-banner{
+  margin-top:24px;background:var(--black);color:#fff;padding:18px 24px;border-radius:var(--radius-sm);
+  text-align:center;font-weight:700;
+}
+.waitlist-btn{margin-top:16px;}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12);}
+.foot-brand{display:flex;align-items:center;gap:12px;color:#fff;}
+.foot-brand .word{font-family:'Bebas Neue';font-size:1.5rem;}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;list-style:none;padding:0;margin:0;}
+.foot-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.9rem;}
+.foot-links a:hover{color:#fff;}
+.foot-bottom{padding-top:24px;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.legal-page{display:none;padding:120px 0 80px;max-width:760px;margin:0 auto;}
+.legal-page.show{display:block;}
+.legal-page h2{font-size:2.2rem;color:var(--green-dark);margin-bottom:20px;}
+.legal-page p{color:var(--grey);margin-bottom:14px;}
+.legal-back{display:inline-block;margin-bottom:30px;color:var(--green);font-weight:700;text-decoration:none;}
+
+/* ---------- admin (demo) ---------- */
+.admin-link{background:none;border:none;color:rgba(255,255,255,.4);font-size:.75rem;cursor:pointer;text-decoration:underline;}
+.admin-panel{display:none;padding:120px 0 80px;}
+.admin-panel.show{display:block;}
+.admin-panel table{width:100%;border-collapse:collapse;margin-top:20px;font-size:.88rem;}
+.admin-panel th,.admin-panel td{padding:10px 12px;border-bottom:1px solid var(--grey-light);text-align:left;}
+.admin-stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;}
+.admin-stat{background:var(--ice-soft);padding:16px 22px;border-radius:12px;}
+.admin-stat b{display:block;font-family:'Bebas Neue';font-size:1.8rem;color:var(--green-dark);}
+.admin-actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;}
+.admin-actions button{padding:10px 18px;border-radius:8px;border:1px solid var(--grey-light);background:#fff;cursor:pointer;font-weight:600;}
+
+/* main content hide when legal/admin page shown */
+#site-main.hidden{display:none;}
+
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="nav-logo">
+      <img class="mark ecg-mark" src="ecg-logo.png" alt="ECG Grefrath Logo">
+      <span class="word">ECG GREFRATH</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#kursinfos">Kurs</a></li>
+      <li><a href="#mitbringen">Ausrüstung</a></li>
+      <li><a href="#nikolauslauf">Nikolaus-Lauf</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#anmeldung" class="btn btn-primary desktop-only">Jetzt vormerken</a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Menü öffnen">☰</button>
+  </div>
+</nav>
+
+<div id="site-main">
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-track" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="trackGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#bdeaf5" stop-opacity="0.5"/>
+          <stop offset="1" stop-color="#bdeaf5" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="600" cy="900" rx="1000" ry="360" fill="none" stroke="url(#trackGrad)" stroke-width="2"/>
+      <ellipse cx="600" cy="900" rx="760" ry="270" fill="none" stroke="url(#trackGrad)" stroke-width="2"/>
+      <ellipse cx="600" cy="900" rx="520" ry="180" fill="none" stroke="url(#trackGrad)" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="hero-frost" aria-hidden="true"></div>
+  <canvas id="snow-hero"></canvas>
+
+  <div class="wrap hero-content">
+    <div class="hero-logo-plate">
+      <img class="hero-logo" src="ecg-logo.png" alt="ECG Grefrath Logo">
+    </div>
+
+    <h1 class="hero-title">Schnupperkurs<span>Eisschnelllauf</span></h1>
+    <p class="hero-sub">Entdecke den schnellsten Sport auf dem Eis!</p>
+    <p class="hero-desc">Du möchtest Eisschnelllauf ausprobieren? Dann komm zu unserem Schnupperkurs des Eisschnelllauf&#8209;Club Grefrath 1992 e.V.</p>
+
+    <div class="hero-cta">
+      <a href="#anmeldung" class="btn btn-primary">Jetzt vormerken</a>
+    </div>
+
+    <div class="hero-note"><span class="dot"></span> Anmeldung ab 04.10.2026 geöffnet</div>
+  </div>
+
+  <div class="scroll-cue"><span class="line"></span>SCROLLEN</div>
+</header>
+
+<!-- speed divider -->
+<div class="speedline" aria-hidden="true">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0 40 L1200 24" stroke="#0d3b2e" stroke-width="2" opacity=".3"/><path d="M0 52 L1200 36" stroke="#d01f3c" stroke-width="2" opacity=".25"/></svg>
+</div>
+
+<!-- ============ COUNTDOWN ============ -->
+<section class="countdown-section section" id="anmeldung-status">
+  <div class="wrap countdown-head">
+    <span class="eyebrow">ANMELDUNG</span>
+    <h2 class="h2" id="cdHeadline">Die Anmeldung startet bald!</h2>
+    <p class="lede" id="cdSub" style="margin-left:auto;margin-right:auto;">Ab dem 04.10.2026 kannst du dich für den Schnupperkurs anmelden.</p>
+
+    <div class="countdown-grid" id="countdownGrid">
+      <div class="cd-box"><div class="cd-num" id="cdDays">00</div><div class="cd-label">Tage</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdHours">00</div><div class="cd-label">Stunden</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdMinutes">00</div><div class="cd-label">Minuten</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdSeconds">00</div><div class="cd-label">Sekunden</div></div>
+    </div>
+
+    <div id="statusPillWrap">
+      <div class="status-pill status-closed" id="statusPill">ANMELDUNG NOCH NICHT GEÖFFNET</div>
+    </div>
+    <div class="open-cta" id="openCta" style="display:none;">
+      <a href="#anmeldung" class="btn btn-primary">Jetzt anmelden</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KURSINFOS ============ -->
+<section class="section" id="kursinfos">
+  <div class="wrap">
+    <span class="eyebrow">DER SCHNUPPERKURS</span>
+    <h2 class="h2 reveal">Alle Infos zum <span class="accent">Schnupperkurs</span></h2>
+    <p class="lede reveal">Alles, was Eltern und Kinder vorab wissen müssen — auf einen Blick.</p>
+
+    <div class="info-grid">
+      <div class="card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Wann?</h3>
+        <p>Start: <strong>ab 11.11.2026</strong><br>Jeden <strong>Mittwoch</strong></p>
+        <p style="margin-top:10px;">16:30 Uhr – Aufwärmen<br>17:00 Uhr – Eiszeit<br>bis ca. 18:00 Uhr</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Wo?</h3>
+        <p><strong>Eisstadion Grefrath</strong></p>
+        <p style="margin-top:10px;">Der genaue Treffpunkt vor Ort wird rechtzeitig bekannt gegeben.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 20c.3-2.6 2-4.6 4.5-5" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Für wen?</h3>
+        <p>Für Kinder, die Eisschnelllauf kennenlernen, ausprobieren und ihre Fähigkeiten auf dem Eis entdecken möchten.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9h18" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Plätze</h3>
+        <div class="slot-number" id="slotNumber">30</div>
+        <div class="slot-sub" id="slotSub">Plätze insgesamt</div>
+        <div class="slot-bar"><div class="slot-bar-fill" id="slotBarFill" style="width:0%;"></div></div>
+      </div>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="timeline-title">Termine im Überblick</div>
+      <div class="timeline-track">
+        <div class="tl-item"><div class="tl-date">11.11.</div><div class="tl-label">1. Termin</div></div>
+        <div class="tl-item"><div class="tl-date">18.11.</div><div class="tl-label">2. Termin</div></div>
+        <div class="tl-item"><div class="tl-date">25.11.</div><div class="tl-label">3. Termin</div></div>
+        <div class="tl-item"><div class="tl-date">02.12.</div><div class="tl-label">4. Termin</div></div>
+        <div class="tl-item final"><div class="tl-date">05.12.</div><div class="tl-label">Nikolaus-Lauf (Sa.)</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- speed divider -->
+<div class="speedline" aria-hidden="true">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0 24 L1200 40" stroke="#0d3b2e" stroke-width="2" opacity=".3"/></svg>
+</div>
+
+<!-- ============ PREISE ============ -->
+<section class="section price-section" id="preise">
+  <div class="wrap">
+    <span class="eyebrow">KOSTEN</span>
+    <h2 class="h2 reveal">Teilnahme &amp; <span class="accent">Kosten</span></h2>
+    <div class="price-grid">
+      <div class="price-hero reveal">
+        <div class="big">35&nbsp;€</div>
+        <p>Grundgebühr für den Schnupperkurs</p>
+      </div>
+      <div class="price-side reveal">
+        <div class="price-line">
+          <span class="label">Eigene Schlittschuhe</span>
+          <span class="value">kostenlos</span>
+        </div>
+        <div class="price-line">
+          <span class="label">Schlittschuhverleih</span>
+          <span class="value">10&nbsp;€</span>
+        </div>
+        <p class="price-note">Änderungen an der Verleihregelung werden hier aktualisiert, sobald sie feststehen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MITBRINGEN ============ -->
+<section class="section" id="mitbringen" style="background:var(--white);">
+  <div class="wrap">
+    <span class="eyebrow">AUSRÜSTUNG</span>
+    <h2 class="h2 reveal">Bereit für das Eis? <span class="accent">Das solltest du mitbringen!</span></h2>
+    <p class="lede reveal">Damit du dich auf dem Eis wohlfühlst und dich gut bewegen kannst, ist die richtige Kleidung besonders wichtig.</p>
+
+    <div class="bring-grid">
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Trinkflasche</h4>
+        <p>Sport macht durstig – bitte bring eine eigene Trinkflasche mit.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Sportschuhe</h4>
+        <p>Für das Aufwärmen vor dem Betreten des Eises brauchst du bequeme Sportschuhe.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Handschuhe</h4>
+        <p>Auf dem Eis sind Handschuhe wichtig, damit deine Hände geschützt sind.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Helm</h4>
+        <p>Bitte bring einen passenden Helm mit, der sicher sitzt.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Funktionelle Kleidung</h4>
+        <p>Zieh dich passend zum Wetter und zur Bewegung auf dem Eis an.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Bewegungsfreiheit</h4>
+        <p>Deine Kleidung sollte bequem sein und dir ermöglichen, dich frei zu bewegen.</p>
+      </div>
+    </div>
+
+    <div class="no-pro reveal">
+      <h4>Du brauchst keine Profi-Ausrüstung!</h4>
+      <p>Für unseren Schnupperkurs brauchst du keine teure Eisschnelllauf-Ausrüstung. Wichtig ist, dass du dich warm und bequem anziehst und dich gut bewegen kannst.</p>
+      <div class="word-row" id="wordRow">
+        <div class="word-chip">BEQUEM</div>
+        <div class="word-chip">WARM</div>
+        <div class="word-chip">BEWEGLICH</div>
+      </div>
+    </div>
+
+    <div class="compare-photo reveal">
+      <h3 class="compare-photo-title">Die richtige Kleidung macht den Unterschied!</h3>
+      <p class="compare-photo-lede">Ein dicker Schneeanzug ist für den Eisschnelllauf meistens ungeeignet, weil er die Bewegungsfreiheit einschränken kann. Am besten eignet sich bewegliche, warme Sportkleidung.</p>
+      <img class="compare-photo-img" src="kleidung-vergleich.jpg" alt="Vergleich: ungeeignete und passende Kleidung beim Eisschnelllauf">
+    </div>
+  </div>
+</section>
+
+<!-- ============ NIKOLAUS ============ -->
+<section class="section nik-section" id="nikolauslauf">
+  <canvas id="snow-nik"></canvas>
+  <div class="wrap nik-inner">
+    <div class="nik-badge">🎅 DAS GROSSE FINALE</div>
+    <h2 class="h2 reveal" style="color:#fff;">Der <span class="accent" style="color:var(--red);">Nikolaus-Lauf</span></h2>
+
+    <div class="nik-layout reveal">
+      <div class="nik-copy">
+        <div class="nik-date">05.12.2026</div>
+        <div class="nik-day">Samstag</div>
+        <p class="nik-text">Nach den vier Schnupperkurs-Terminen wartet ein besonderes Highlight: der Nikolaus-Lauf.</p>
+        <p class="nik-text">Hier können die Kinder zeigen, was sie im Schnupperkurs gelernt haben, ihre Fähigkeiten unter Beweis stellen und gemeinsam einen besonderen Abschluss auf dem Eis erleben.</p>
+        <div class="nik-time-note">Die genaue Uhrzeit wird rechtzeitig bekannt gegeben.</div>
+      </div>
+      <div class="nik-photo">
+        <img src="nikolaus-lauf.jpg" alt="Nikolaus-Lauf auf dem Eis beim ECG Grefrath">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VORTREFFEN ============ -->
+<section class="section" id="vortreffen">
+  <div class="wrap">
+    <span class="eyebrow">VOR DEM START</span>
+    <h2 class="h2 reveal">Vortreffen</h2>
+    <div class="pretreat-card reveal">
+      <h4>📍 Ort &amp; Termin folgen</h4>
+      <p>Ein Vortreffen ist geplant. Ort und genaue Informationen werden noch bekannt gegeben.</p>
+      <p>Alle weiteren Informationen werden rechtzeitig veröffentlicht.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq" style="background:var(--ice-soft);">
+  <div class="wrap">
+    <span class="eyebrow">HÄUFIGE FRAGEN</span>
+    <h2 class="h2 reveal">Fragen &amp; <span class="accent">Antworten</span></h2>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Wann beginnt der Schnupperkurs? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Der Schnupperkurs beginnt am 11.11.2026 und findet danach jeden Mittwoch statt (16:30 Uhr Aufwärmen, 17:00 Uhr Eiszeit, bis ca. 18:00 Uhr).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Wo findet der Schnupperkurs statt? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Im Eisstadion Grefrath.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was kostet die Teilnahme? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Die Grundgebühr für den Schnupperkurs beträgt 35 €.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Kann ich eigene Schlittschuhe mitbringen? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Ja, eigene Schlittschuhe können kostenlos mitgebracht werden.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was kostet der Schlittschuhverleih? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Der Schlittschuhverleih kostet 10 €.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Wie viele Plätze gibt es? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Es stehen maximal 30 Plätze zur Verfügung.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Wann ist der Nikolaus-Lauf? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Am Samstag, den 05.12.2026.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Wann wird die genaue Uhrzeit des Nikolaus-Laufs bekannt gegeben? <span class="plus">+</span></button>
+        <div class="faq-a"><p class="pending">Informationen hierzu werden rechtzeitig bekannt gegeben.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Wo findet das Vortreffen statt? <span class="plus">+</span></button>
+        <div class="faq-a"><p class="pending">Informationen hierzu werden rechtzeitig bekannt gegeben.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was muss ich zum Kurs mitbringen? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Eine Trinkflasche, Sportschuhe zum Aufwärmen, Handschuhe, einen Helm sowie bequeme, funktionelle Kleidung. Details findest du weiter oben im Bereich „Ausrüstung“.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANMELDUNG ============ -->
+<section class="section form-section" id="anmeldung">
+  <div class="wrap">
+    <span class="eyebrow">ANMELDUNG</span>
+    <h2 class="h2 reveal">Jetzt zum <span class="accent">Schnupperkurs</span> anmelden</h2>
+    <p class="lede reveal">Bitte fülle alle Pflichtfelder aus. Deine Angaben werden ausschließlich für die Organisation des Schnupperkurses verwendet.</p>
+
+    <!-- gesperrt -->
+    <div class="form-locked reveal" id="formLocked">
+      <svg class="lock-icon" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.6"/></svg>
+      <h4>Anmeldung noch nicht geöffnet</h4>
+      <p>Die Anmeldung startet automatisch am 04.10.2026. Schau in der Zwischenzeit gerne noch einmal auf den Countdown weiter oben.</p>
+    </div>
+
+    <!-- ausgebucht -->
+    <div class="sold-out-banner" id="soldOutBanner" style="display:none;">
+      Der Schnupperkurs ist aktuell ausgebucht.
+      <div class="waitlist-btn"><button class="btn btn-dark" id="waitlistBtn">Auf die Warteliste eintragen</button></div>
+    </div>
+
+    <!-- formular -->
+    <form class="reg-card reveal" id="regForm" style="display:none;" novalidate>
+      <div class="photo-note">Während des Schnupperkurses und beim Nikolaus-Lauf können Foto- und Videoaufnahmen entstehen. Die entsprechenden Einwilligungen werden im Anmeldeprozess abgefragt.</div>
+
+      <div class="reg-group-title">Kind</div>
+      <div class="field-grid">
+        <div class="field">
+          <label>Vorname des Kindes <span class="req">*</span></label>
+          <input type="text" name="childFirst" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Nachname des Kindes <span class="req">*</span></label>
+          <input type="text" name="childLast" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Schuhgröße <span class="req">*</span></label>
+          <input type="number" name="shoeSize" min="20" max="45" required>
+          <div class="err"></div>
+        </div>
+      </div>
+
+      <div class="reg-group-title">Eltern / Erziehungsberechtigte</div>
+      <div class="field-grid">
+        <div class="field">
+          <label>Vorname <span class="req">*</span></label>
+          <input type="text" name="parentFirst" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Nachname <span class="req">*</span></label>
+          <input type="text" name="parentLast" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>E-Mail-Adresse <span class="req">*</span></label>
+          <input type="email" name="parentEmail" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Telefonnummer <span class="req">*</span></label>
+          <input type="tel" name="parentPhone" required>
+          <div class="err"></div>
+        </div>
+      </div>
+
+      <div class="reg-group-title">Teilnahmebedingungen</div>
+      <div class="consent-list">
+        <label class="consent"><input type="checkbox" name="c1" required><span>Ich habe die Teilnahmebedingungen gelesen und akzeptiere diese. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c2" required><span>Ich bestätige, dass ich als Erziehungsberechtigte/r für die teilnehmende Person verantwortlich bin. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c3" required><span>Ich bestätige, dass die Aufsichtspflicht während des Kurses entsprechend den bekanntgegebenen Regelungen geregelt ist. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c4" required><span>Ich stimme den Regelungen zur Haftung zu. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c5"><span>Ich stimme zu, dass während der Veranstaltung Fotos und/oder Videos gemacht und im Rahmen der Vereinskommunikation verwendet werden dürfen.</span></label>
+      </div>
+
+      <button type="submit" class="btn btn-primary reg-submit" id="submitBtn" disabled>Verbindlich anmelden</button>
+      <div class="form-msg error" id="formMsg"></div>
+    </form>
+
+    <!-- bestätigung -->
+    <div class="confirmation" id="confirmation">
+      <div class="confirm-line"></div>
+      <div class="check-hero">✓</div>
+      <h4>Geschafft! Deine Anmeldung ist angekommen.</h4>
+      <p>Vielen Dank für die Anmeldung zum Schnupperkurs des Eisschnelllauf&#8209;Club Grefrath 1992 e.V.</p>
+      <p>Weitere Informationen werden rechtzeitig vor Kursbeginn bekannt gegeben.</p>
+      <div class="confirm-details">
+        <div><strong>11.11.2026</strong> – erster Termin (mittwochs)</div>
+        <div>16:30 Uhr Aufwärmen · 17:00 Uhr Eiszeit</div>
+        <div>Eisstadion Grefrath</div>
+        <div style="margin-top:10px;"><strong>Nikolaus-Lauf:</strong> 05.12.2026</div>
+        <div>Uhrzeit wird noch bekannt gegeben.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /site-main -->
+
+<!-- ============ LEGAL PAGES ============ -->
+<div class="legal-page" id="page-impressum">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
+    <h2>Impressum</h2>
+    <p>Eisschnelllauf-Club Grefrath 1992 e.V.</p>
+    <p>Die vollständigen Pflichtangaben nach §5 TMG (Vereinssitz, Vertretungsberechtigte, Registereintrag, Kontaktdaten) werden hier ergänzt.</p>
+  </div>
+</div>
+<div class="legal-page" id="page-datenschutz">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
+    <h2>Datenschutz</h2>
+    <p>Der Eisschnelllauf-Club Grefrath 1992 e.V. nimmt den Schutz personenbezogener Daten ernst. Im Rahmen der Anmeldung zum Schnupperkurs werden Daten zum Kind sowie zu den Erziehungsberechtigten ausschließlich zur Organisation der Veranstaltung erhoben und verarbeitet.</p>
+    <p>Die vollständige Datenschutzerklärung gemäß DSGVO wird hier ergänzt.</p>
+  </div>
+</div>
+<div class="legal-page" id="page-teilnahme">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
+    <h2>Teilnahmebedingungen</h2>
+    <p>Die ausführlichen Teilnahme-, Haftungs- und Fotoeinwilligungsbedingungen für den Schnupperkurs Eisschnelllauf werden hier durch den Verein ergänzt.</p>
+  </div>
+</div>
+<div class="legal-page" id="page-kontakt">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
+    <h2>Kontakt</h2>
+    <p>Eisschnelllauf-Club Grefrath 1992 e.V.</p>
+    <p>Kontaktdaten (E-Mail, Telefon, Ansprechpartner) werden hier ergänzt.</p>
+  </div>
+</div>
+
+<!-- ============ ADMIN (DEMO) ============ -->
+<div class="admin-panel" id="adminPanel">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
+    <h2 style="font-family:'Bebas Neue';font-size:2.2rem;color:var(--green-dark);">Admin-Bereich (Demo)</h2>
+    <p style="color:var(--grey);">Alle Anmeldungen werden zentral gespeichert und sind hier für alle Admins sichtbar.</p>
+    <div class="admin-stats">
+      <div class="admin-stat"><b id="adminTotal">0</b>Anmeldungen</div>
+      <div class="admin-stat"><b id="adminFree">30</b>Freie Plätze</div>
+      <div class="admin-stat"><b id="adminStatus">Geschlossen</b>Anmeldestatus</div>
+    </div>
+    <div class="admin-actions">
+      <button id="adminRefresh">Aktualisieren</button>
+      <button id="adminExport">Als CSV exportieren</button>
+      <button id="adminToggle">Anmeldung manuell öffnen/schließen</button>
+      <button id="adminReset">Alle Anmeldungen löschen</button>
+    </div>
+    <table>
+      <thead><tr><th>Kind</th><th>Schuhgröße</th><th>Erziehungsberechtigte/r</th><th>E-Mail</th><th>Telefon</th></tr></thead>
+      <tbody id="adminTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer id="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="#top" class="foot-brand">
+        <img src="ecg-logo.png" alt="ECG Grefrath Logo" style="height:30px;width:auto;background:#fff;border-radius:6px;padding:3px 7px;">
+        <span class="word">Eisschnelllauf-Club Grefrath 1992 e.V.</span>
+      </a>
+      <ul class="foot-links">
+        <li><a href="#" data-legal="page-impressum">Impressum</a></li>
+        <li><a href="#" data-legal="page-datenschutz">Datenschutz</a></li>
+        <li><a href="#" data-legal="page-teilnahme">Teilnahmebedingungen</a></li>
+        <li><a href="#" data-legal="page-kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Eisschnelllauf-Club Grefrath 1992 e.V.</span>
+      <button class="admin-link" id="adminOpenBtn">Admin</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SUPABASE (zentrale Speicherung) ============ -->
+<script>
+  // TODO: Ersetze diese beiden Werte durch deine eigenen aus Supabase (Project Settings -> API)
+  const SUPABASE_URL = "https://sfvjxjcrnpummjjkwotp.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNmdmp4amNybnB1bW1qamt3b3RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkyOTc0MzEsImV4cCI6MjEwNDg3MzQzMX0.yS2yZku07cJ6cs1AtmyKa0WhORjdbu7rSPpGpmVLmdI";
+</script>
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- reveal on scroll ---------------- */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const tlItems = document.querySelectorAll('.tl-item');
+  const tlIo = new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'), i*90); tlIo.unobserve(e.target);} });
+  },{threshold:.2});
+  tlItems.forEach(el=>tlIo.observe(el));
+
+  const wordChips = document.querySelectorAll('.word-chip');
+  const wordIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        wordChips.forEach((c,i)=> setTimeout(()=>c.classList.add('in'), i*220));
+        wordIo.disconnect();
+      }
+    });
+  },{threshold:.4});
+  if(document.getElementById('wordRow')) wordIo.observe(document.getElementById('wordRow'));
+
+  /* ---------------- snow canvas ---------------- */
+  function initSnow(canvasId, density){
+    const canvas = document.getElementById(canvasId);
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let w,h,flakes;
+    function resize(){
+      w = canvas.width = canvas.offsetWidth;
+      h = canvas.height = canvas.offsetHeight;
+    }
+    function makeFlakes(){
+      flakes = Array.from({length:density}, ()=>({
+        x:Math.random()*w, y:Math.random()*h,
+        r:Math.random()*2+0.6, spd:Math.random()*0.6+0.2, drift:Math.random()*0.6-0.3
+      }));
+    }
+    resize(); makeFlakes();
+    window.addEventListener('resize', ()=>{resize(); makeFlakes();});
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce) return;
+    function tick(){
+      ctx.clearRect(0,0,w,h);
+      ctx.fillStyle='rgba(255,255,255,0.85)';
+      flakes.forEach(f=>{
+        f.y += f.spd; f.x += f.drift;
+        if(f.y>h){f.y=-4; f.x=Math.random()*w;}
+        ctx.beginPath(); ctx.arc(f.x,f.y,f.r,0,Math.PI*2); ctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+    tick();
+  }
+  initSnow('snow-hero', 60);
+  initSnow('snow-nik', 50);
+
+  /* ---------------- countdown ---------------- */
+  const REG_OPEN = new Date('2026-10-04T00:00:00');
+  const MAX_SLOTS = 30;
+
+  const cdDays=document.getElementById('cdDays'), cdHours=document.getElementById('cdHours'),
+        cdMinutes=document.getElementById('cdMinutes'), cdSeconds=document.getElementById('cdSeconds');
+  const countdownGrid = document.getElementById('countdownGrid');
+  const statusPill = document.getElementById('statusPill');
+  const openCta = document.getElementById('openCta');
+  const cdHeadline = document.getElementById('cdHeadline');
+  const cdSub = document.getElementById('cdSub');
+
+  let storeCache = { registrations: [], manualOverrideOpen: null };
+
+  function sbHeaders(extra){
+    return Object.assign({
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: 'Bearer ' + SUPABASE_ANON_KEY
+    }, extra || {});
+  }
+
+  async function loadStore(){
+    try{
+      const regRes = await fetch(SUPABASE_URL + '/rest/v1/registrations?select=*&order=ts.asc', {
+        headers: sbHeaders()
+      });
+      storeCache.registrations = regRes.ok ? await regRes.json() : [];
+
+      const settingsRes = await fetch(SUPABASE_URL + '/rest/v1/settings?id=eq.1&select=manual_override', {
+        headers: sbHeaders()
+      });
+      const settingsData = settingsRes.ok ? await settingsRes.json() : [];
+      storeCache.manualOverrideOpen = (settingsData[0] && typeof settingsData[0].manual_override !== 'undefined')
+        ? settingsData[0].manual_override : null;
+    }catch(e){
+      console.error('Laden von Supabase fehlgeschlagen', e);
+    }
+    return storeCache;
+  }
+  async function addRegistration(reg){
+    try{
+      const res = await fetch(SUPABASE_URL + '/rest/v1/registrations', {
+        method: 'POST',
+        headers: sbHeaders({ 'Content-Type': 'application/json', 'Prefer': 'return=minimal' }),
+        body: JSON.stringify(reg)
+      });
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      return true;
+    }catch(e){
+      console.error('Speichern fehlgeschlagen', e);
+      alert('Achtung: Die Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.');
+      return false;
+    }
+  }
+  async function setManualOverride(value){
+    try{
+      await fetch(SUPABASE_URL + '/rest/v1/settings?id=eq.1', {
+        method: 'PATCH',
+        headers: sbHeaders({ 'Content-Type': 'application/json', 'Prefer': 'return=minimal' }),
+        body: JSON.stringify({ manual_override: value })
+      });
+    }catch(e){
+      console.error('Speichern fehlgeschlagen', e);
+    }
+  }
+  async function resetAllRegistrations(){
+    try{
+      await fetch(SUPABASE_URL + '/rest/v1/registrations?id=gt.0', {
+        method: 'DELETE',
+        headers: sbHeaders()
+      });
+      await setManualOverride(null);
+    }catch(e){
+      console.error('Zurücksetzen fehlgeschlagen', e);
+    }
+  }
+
+  function isRegistrationOpen(){
+    if(storeCache.manualOverrideOpen === true) return true;
+    if(storeCache.manualOverrideOpen === false) return false;
+    return new Date() >= REG_OPEN;
+  }
+  function freeSlots(){
+    return Math.max(0, MAX_SLOTS - storeCache.registrations.length);
+  }
+
+  function renderCountdown(){
+    const now = new Date();
+    const diff = REG_OPEN - now;
+    const open = isRegistrationOpen();
+
+    if(!open && diff > 0){
+      countdownGrid.style.display='flex';
+      const d = Math.floor(diff/86400000);
+      const h = Math.floor((diff%86400000)/3600000);
+      const m = Math.floor((diff%3600000)/60000);
+      const sec = Math.floor((diff%60000)/1000);
+      cdDays.textContent=String(d).padStart(2,'0');
+      cdHours.textContent=String(h).padStart(2,'0');
+      cdMinutes.textContent=String(m).padStart(2,'0');
+      cdSeconds.textContent=String(sec).padStart(2,'0');
+      statusPill.textContent='ANMELDUNG NOCH NICHT GEÖFFNET';
+      statusPill.className='status-pill status-closed';
+      openCta.style.display='none';
+      cdHeadline.textContent='Die Anmeldung startet bald!';
+      cdSub.textContent='Ab dem 04.10.2026 kannst du dich für den Schnupperkurs anmelden.';
+    } else {
+      countdownGrid.style.display='none';
+      const slotsLeft = freeSlots();
+      if(slotsLeft <= 0){
+        statusPill.textContent='SCHNUPPERKURS AUSGEBUCHT';
+        statusPill.className='status-pill status-full';
+        openCta.style.display='none';
+      } else {
+        statusPill.textContent='ANMELDUNG IST GEÖFFNET!';
+        statusPill.className='status-pill status-open';
+        openCta.style.display='block';
+      }
+      cdHeadline.textContent='Die Anmeldung ist geöffnet!';
+      cdSub.textContent='Sichere jetzt einen der letzten Plätze für den Schnupperkurs.';
+    }
+    updateSlots();
+    updateFormState();
+  }
+
+  /* ---------------- slots ---------------- */
+  const slotNumber = document.getElementById('slotNumber');
+  const slotSub = document.getElementById('slotSub');
+  const slotBarFill = document.getElementById('slotBarFill');
+  let slotAnimated = false;
+
+  function updateSlots(){
+    const open = isRegistrationOpen();
+    const left = freeSlots();
+    if(!open){
+      slotNumber.textContent = MAX_SLOTS;
+      slotSub.textContent = 'Plätze insgesamt';
+    } else {
+      slotNumber.textContent = left;
+      slotSub.textContent = `von ${MAX_SLOTS} Plätzen frei`;
+    }
+    const pct = open ? ((MAX_SLOTS-left)/MAX_SLOTS*100) : 0;
+    slotBarFill.style.width = pct+'%';
+  }
+
+  setInterval(renderCountdown, 1000);
+
+  const slotIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting && !slotAnimated){
+        slotAnimated = true;
+        slotBarFill.style.transition='width 1s cubic-bezier(.22,.8,.28,1)';
+      }
+    });
+  },{threshold:.5});
+  slotIo.observe(slotNumber);
+
+  /* ---------------- registration form ---------------- */
+  const formLocked = document.getElementById('formLocked');
+  const soldOutBanner = document.getElementById('soldOutBanner');
+  const regForm = document.getElementById('regForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formMsg = document.getElementById('formMsg');
+  const confirmation = document.getElementById('confirmation');
+
+  function updateFormState(){
+    const open = isRegistrationOpen();
+    const left = freeSlots();
+    if(confirmation.classList.contains('show')) return; // don't override after success
+
+    if(!open){
+      formLocked.style.display='block';
+      soldOutBanner.style.display='none';
+      regForm.style.display='none';
+    } else if(left <= 0){
+      formLocked.style.display='none';
+      soldOutBanner.style.display='block';
+      regForm.style.display='none';
+    } else {
+      formLocked.style.display='none';
+      soldOutBanner.style.display='none';
+      regForm.style.display='block';
+    }
+  }
+
+  function allRequiredChecked(){
+    return ['c1','c2','c3','c4'].every(n => regForm[n] && regForm[n].checked);
+  }
+  regForm.addEventListener('change', ()=>{ submitBtn.disabled = !allRequiredChecked(); });
+
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+  function validPhone(v){ return /^[+0-9 \/\-()]{6,20}$/.test(v); }
+
+  function setErr(input, msg){
+    const err = input.closest('.field').querySelector('.err');
+    err.textContent = msg || '';
+    input.classList.toggle('invalid', !!msg);
+  }
+
+  regForm.addEventListener('submit', async function(ev){
+    ev.preventDefault();
+    formMsg.textContent='';
+    await loadStore(); // aktuellsten Stand holen, bevor wir prüfen/speichern
+    if(!isRegistrationOpen()){
+      formMsg.textContent='Die Anmeldung ist noch nicht geöffnet.';
+      return;
+    }
+    if(freeSlots() <= 0){
+      formMsg.textContent='Der Schnupperkurs ist leider bereits ausgebucht.';
+      updateFormState();
+      return;
+    }
+
+    let valid = true;
+    const f = regForm;
+    [['childFirst','Bitte Vorname des Kindes angeben.'],
+     ['childLast','Bitte Nachname des Kindes angeben.'],
+     ['parentFirst','Bitte Vorname angeben.'],
+     ['parentLast','Bitte Nachname angeben.']].forEach(([name,msg])=>{
+      const el = f[name];
+      if(!el.value.trim()){ setErr(el,msg); valid=false; } else setErr(el,'');
+    });
+
+    const shoe = f['shoeSize'];
+    const shoeVal = parseInt(shoe.value,10);
+    if(!shoe.value || isNaN(shoeVal) || shoeVal < 20 || shoeVal > 45){
+      setErr(shoe,'Bitte eine gültige Schuhgröße (20–45) angeben.'); valid=false;
+    } else setErr(shoe,'');
+
+    const email = f['parentEmail'];
+    if(!validEmail(email.value)){ setErr(email,'Bitte eine gültige E-Mail-Adresse angeben.'); valid=false; }
+    else setErr(email,'');
+
+    const phone = f['parentPhone'];
+    if(!validPhone(phone.value)){ setErr(phone,'Bitte eine gültige Telefonnummer angeben.'); valid=false; }
+    else setErr(phone,'');
+
+    if(!allRequiredChecked()){
+      formMsg.textContent='Bitte bestätige alle erforderlichen Teilnahmebedingungen.';
+      valid=false;
+    }
+
+    if(!valid) return;
+
+    if(storeCache.registrations.length >= MAX_SLOTS){
+      formMsg.textContent='Der Schnupperkurs ist leider bereits ausgebucht.';
+      updateFormState();
+      return;
+    }
+    submitBtn.disabled = true;
+    const newReg = {
+      childfirst:f.childFirst.value.trim(), childlast:f.childLast.value.trim(),
+      shoesize:shoeVal, parentfirst:f.parentFirst.value.trim(), parentlast:f.parentLast.value.trim(),
+      parentemail:email.value.trim(), parentphone:phone.value.trim(),
+      photoconsent: !!f.c5.checked, ts: new Date().toISOString()
+    };
+    const ok = await addRegistration(newReg);
+    if(!ok){ submitBtn.disabled = false; return; }
+    storeCache.registrations.push(newReg);
+
+    regForm.reset();
+    regForm.style.display='none';
+    confirmation.classList.add('show');
+    renderCountdown();
+    renderAdmin();
+  });
+
+  document.getElementById('waitlistBtn').addEventListener('click', function(){
+    alert('Die Warteliste ist in Vorbereitung. Bitte kontaktiere den Verein, um dich vormerken zu lassen.');
+  });
+
+  /* ---------------- FAQ accordion ---------------- */
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight=null; });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight+'px'; }
+    });
+  });
+
+  /* ---------------- mobile nav ---------------- */
+  document.getElementById('burgerBtn').addEventListener('click', function(){
+    const links = document.querySelector('.nav-links');
+    const shown = links.style.display === 'flex';
+    links.style.display = shown ? 'none' : 'flex';
+    links.style.cssText += shown ? '' : 'position:fixed;top:72px;left:0;right:0;background:#0a0d0c;flex-direction:column;padding:20px 24px;gap:18px;';
+  });
+
+  /* ---------------- legal pages ---------------- */
+  const siteMain = document.getElementById('site-main');
+  const siteFooter = document.getElementById('site-footer');
+  function showLegal(id){
+    siteMain.classList.add('hidden');
+    document.querySelectorAll('.legal-page, .admin-panel').forEach(p=>p.classList.remove('show'));
+    document.getElementById(id).classList.add('show');
+    window.scrollTo(0,0);
+  }
+  function hideLegal(){
+    document.querySelectorAll('.legal-page, .admin-panel').forEach(p=>p.classList.remove('show'));
+    siteMain.classList.remove('hidden');
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('[data-legal]').forEach(a=>{
+    a.addEventListener('click', (e)=>{ e.preventDefault(); showLegal(a.dataset.legal); });
+  });
+  document.querySelectorAll('[data-close-legal]').forEach(a=>{
+    a.addEventListener('click', (e)=>{ e.preventDefault(); hideLegal(); });
+  });
+
+  /* ---------------- admin (demo) ---------------- */
+  const adminOpenBtn = document.getElementById('adminOpenBtn');
+  adminOpenBtn.addEventListener('click', async function(){
+    const pw = prompt('Admin-Passwort: ');
+    if(pw === '1344'){
+      adminOpenBtn.disabled = true;
+      await renderAdmin();
+      adminOpenBtn.disabled = false;
+      siteMain.classList.add('hidden');
+      document.querySelectorAll('.legal-page, .admin-panel').forEach(p=>p.classList.remove('show'));
+      document.getElementById('adminPanel').classList.add('show');
+      window.scrollTo(0,0);
+    } else if(pw !== null){
+      alert('Falsches Passwort.');
+    }
+  });
+
+  async function renderAdmin(){
+    await loadStore();
+    document.getElementById('adminTotal').textContent = storeCache.registrations.length;
+    document.getElementById('adminFree').textContent = freeSlots();
+    document.getElementById('adminStatus').textContent = isRegistrationOpen() ? 'Geöffnet' : 'Geschlossen';
+    const tbody = document.getElementById('adminTableBody');
+    tbody.innerHTML = storeCache.registrations.map(r=>
+      `<tr><td>${escapeHtml(r.childfirst)} ${escapeHtml(r.childlast)}</td><td>${r.shoesize}</td><td>${escapeHtml(r.parentfirst)} ${escapeHtml(r.parentlast)}</td><td>${escapeHtml(r.parentemail)}</td><td>${escapeHtml(r.parentphone)}</td></tr>`
+    ).join('') || '<tr><td colspan="5" style="color:#999;">Noch keine Anmeldungen.</td></tr>';
+  }
+  function escapeHtml(str){
+    return String(str).replace(/[&<>"']/g, s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+  }
+
+  document.getElementById('adminRefresh').addEventListener('click', function(){
+    renderAdmin();
+  });
+
+  document.getElementById('adminExport').addEventListener('click', async function(){
+    await loadStore();
+    const rows = [['Kind Vorname','Kind Nachname','Schuhgröße','Eltern Vorname','Eltern Nachname','E-Mail','Telefon','Fotoeinwilligung','Zeitstempel']];
+    storeCache.registrations.forEach(r=> rows.push([r.childfirst,r.childlast,r.shoesize,r.parentfirst,r.parentlast,r.parentemail,r.parentphone,r.photoconsent?'Ja':'Nein',r.ts]));
+    const csv = rows.map(r=> r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(';')).join('\n');
+    const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href=url; a.download='anmeldungen_schnupperkurs.csv'; a.click();
+    URL.revokeObjectURL(url);
+  });
+  document.getElementById('adminToggle').addEventListener('click', async function(){
+    await loadStore();
+    let next;
+    if(storeCache.manualOverrideOpen === true) next = false;
+    else if(storeCache.manualOverrideOpen === false) next = null;
+    else next = true;
+    await setManualOverride(next);
+    storeCache.manualOverrideOpen = next;
+    renderCountdown(); await renderAdmin();
+    alert('Anmeldestatus (manuell): ' + (next===true?'Geöffnet (erzwungen)': next===false?'Geschlossen (erzwungen)':'Automatisch (Datum entscheidet)'));
+  });
+  document.getElementById('adminReset').addEventListener('click', async function(){
+    if(confirm('Wirklich ALLE Anmeldungen unwiderruflich löschen?')){
+      await resetAllRegistrations();
+      storeCache = {registrations:[], manualOverrideOpen:null};
+      renderCountdown(); await renderAdmin();
+    }
+  });
+
+  /* ---------------- initialer Start ---------------- */
+  // Wird hier ganz am Ende ausgelöst, damit garantiert alle oben
+  // verwendeten Variablen bereits deklariert und zugewiesen sind.
+  renderCountdown();
+  loadStore().then(renderCountdown);
+  setInterval(async ()=>{ await loadStore(); renderCountdown(); }, 8000);
+})();
+</script>
+</body>
+</html>
