@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>Schnupperkurs Eisschnelllauf · ECG Grefrath 1992 e.V.</title>
-<meta name="description" content="Schnupperkurs Eisschnelllauf des Eisschnelllauf-Club Grefrath 1992 e.V. – jetzt vormerken, Anmeldung ab 04.10.2026.">
+<meta name="description" content="Schnupperkurs Eisschnelllauf des Eisschnelllauf-Club Grefrath 1992 e.V. – jetzt vormerken, Anmeldung ab 24.09.2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -316,6 +316,16 @@ p{line-height:1.6;margin:0;}
 .tl-date{font-family:'Bebas Neue';font-size:1.6rem;color:var(--green-dark);}
 .tl-item.final .tl-date{color:var(--red);}
 .tl-label{font-size:.85rem;color:var(--grey);margin-top:2px;}
+.tl-item.pre{border-left-color:var(--ice);}
+.tl-item.pre::before{background:var(--ice);box-shadow:0 0 0 2px var(--ice);}
+.tl-item.pre .tl-date{color:var(--green-light);}
+.tl-tag{
+  display:inline-block;margin-top:8px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:800;padding:4px 9px;border-radius:999px;
+}
+.tl-tag.must{background:var(--green);color:#fff;}
+.tl-tag.opt{background:var(--grey-light);color:var(--grey);}
+.timeline-legend{margin-top:16px;font-size:.85rem;color:var(--grey);}
 
 /* ============================================================
    PRICING
@@ -420,7 +430,66 @@ p{line-height:1.6;margin:0;}
   padding:40px;text-align:center;
 }
 .pretreat-card h4{font-family:'Bebas Neue';font-size:1.8rem;color:var(--green-dark);margin-bottom:10px;}
-.pretreat-card p{color:var(--grey);max-width:480px;margin:6px auto 0;}
+.pretreat-card p{color:var(--grey);max-width:560px;margin:6px auto 0;}
+.pretreat-card{border-style:solid;border-color:var(--ice);box-shadow:var(--shadow);}
+
+.pretreat-facts{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:26px auto 0;max-width:720px;
+}
+.pretreat-fact{
+  flex:1 1 180px;background:var(--ice-soft);border-radius:var(--radius-sm);padding:16px 18px;
+  display:flex;flex-direction:column;gap:4px;
+}
+.pf-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-weight:700;}
+.pf-value{font-weight:700;color:var(--green-dark);font-size:1.02rem;}
+
+.sock-note{
+  margin:28px auto 0;max-width:720px;text-align:left;
+  background:var(--green);color:#fff;border-radius:var(--radius);padding:26px 28px;
+}
+.sock-note h5{font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.03em;margin:0 0 8px;color:#fff;}
+.sock-note p{color:rgba(255,255,255,.8);margin:0;max-width:none;}
+.sock-list{margin:14px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:10px;}
+.sock-list li{color:rgba(255,255,255,.88);font-size:.95rem;line-height:1.55;}
+.sock-list strong{color:var(--ice);}
+@media(max-width:600px){.sock-note{padding:22px 20px;}.pretreat-card{padding:28px 20px;}}
+
+/* ---------- RECHTSSEITEN ---------- */
+.legal-page h3{
+  font-family:'Inter',sans-serif;font-weight:800;font-size:1.02rem;color:var(--green-dark);
+  margin:30px 0 8px;letter-spacing:0;
+}
+.legal-page h3:first-of-type{margin-top:22px;}
+.legal-page p,.legal-page li{color:var(--grey);font-size:.95rem;line-height:1.7;}
+.legal-page ul{padding-left:20px;margin:8px 0;}
+.legal-page li{margin-bottom:6px;}
+.legal-page a{color:var(--green-dark);}
+.legal-page strong{color:var(--green-dark);}
+.legal-intro{background:var(--ice-soft);border-radius:var(--radius-sm);padding:16px 18px;margin-top:18px;}
+.legal-updated{margin-top:26px;font-size:.85rem;font-style:italic;}
+
+/* ---------- OFFENE FRAGEN / KONTAKTFELD ---------- */
+.questions-section{background:var(--ice-soft);}
+.questions-box{
+  margin-top:40px;background:#fff;border:2px solid var(--ice);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:52px 44px;text-align:center;
+}
+.questions-box .q-icon{font-size:2.6rem;line-height:1;margin-bottom:14px;}
+.questions-box h3{font-size:2.1rem;color:var(--green-dark);margin:0 0 12px;}
+.questions-box p{color:var(--grey);max-width:560px;margin:0 auto;font-size:1.02rem;}
+.mail-box{
+  margin:28px auto 0;max-width:640px;background:var(--green);border-radius:var(--radius);
+  padding:28px 24px;
+}
+.mail-label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ice);font-weight:700;}
+.mail-link{
+  display:block;margin-top:10px;font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;
+  font-size:clamp(1.5rem,4.6vw,2.4rem);color:#fff;text-decoration:none;word-break:break-all;
+  transition:color .25s var(--ease);
+}
+.mail-link:hover{color:var(--ice);}
+.mail-hint{margin-top:14px;color:rgba(255,255,255,.72);font-size:.9rem;}
+@media(max-width:600px){.questions-box{padding:34px 20px;}}
 
 .faq-list{margin-top:50px;display:flex;flex-direction:column;gap:14px;}
 .faq-item{border:1px solid var(--grey-light);border-radius:var(--radius-sm);overflow:hidden;background:#fff;}
@@ -552,7 +621,9 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
       <li><a href="#kursinfos">Kurs</a></li>
       <li><a href="#mitbringen">Ausrüstung</a></li>
       <li><a href="#nikolauslauf">Nikolaus-Lauf</a></li>
+      <li><a href="#vortreffen">Vortreffen</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#offene-fragen">Kontakt</a></li>
     </ul>
     <a href="#anmeldung" class="btn btn-primary desktop-only">Jetzt vormerken</a>
     <button class="nav-burger" id="burgerBtn" aria-label="Menü öffnen">☰</button>
@@ -592,7 +663,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
       <a href="#anmeldung" class="btn btn-primary">Jetzt vormerken</a>
     </div>
 
-    <div class="hero-note"><span class="dot"></span> Anmeldung ab 04.10.2026 geöffnet</div>
+    <div class="hero-note"><span class="dot"></span> Anmeldung ab 24.09.2026 geöffnet</div>
   </div>
 
   <div class="scroll-cue"><span class="line"></span>SCROLLEN</div>
@@ -608,7 +679,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
   <div class="wrap countdown-head">
     <span class="eyebrow">ANMELDUNG</span>
     <h2 class="h2" id="cdHeadline">Die Anmeldung startet bald!</h2>
-    <p class="lede" id="cdSub" style="margin-left:auto;margin-right:auto;">Ab dem 04.10.2026 kannst du dich für den Schnupperkurs anmelden.</p>
+    <p class="lede" id="cdSub" style="margin-left:auto;margin-right:auto;">Ab dem 24.09.2026 kannst du dich für den Schnupperkurs anmelden.</p>
 
     <div class="countdown-grid" id="countdownGrid">
       <div class="cd-box"><div class="cd-num" id="cdDays">00</div><div class="cd-label">Tage</div></div>
@@ -674,12 +745,14 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
     <div class="timeline reveal">
       <div class="timeline-title">Termine im Überblick</div>
       <div class="timeline-track">
-        <div class="tl-item"><div class="tl-date">11.11.</div><div class="tl-label">1. Termin</div></div>
-        <div class="tl-item"><div class="tl-date">18.11.</div><div class="tl-label">2. Termin</div></div>
-        <div class="tl-item"><div class="tl-date">25.11.</div><div class="tl-label">3. Termin</div></div>
-        <div class="tl-item"><div class="tl-date">02.12.</div><div class="tl-label">4. Termin</div></div>
-        <div class="tl-item final"><div class="tl-date">05.12.</div><div class="tl-label">Nikolaus-Lauf (Sa.)</div></div>
+        <div class="tl-item pre"><div class="tl-date">02.11.</div><div class="tl-label">Vortreffen (Mo.) · 17:00 Uhr · Eisstadion Grefrath</div><span class="tl-tag must">Pflichttermin</span></div>
+        <div class="tl-item"><div class="tl-date">11.11.</div><div class="tl-label">1. Termin</div><span class="tl-tag must">Pflichttermin</span></div>
+        <div class="tl-item"><div class="tl-date">18.11.</div><div class="tl-label">2. Termin</div><span class="tl-tag must">Pflichttermin</span></div>
+        <div class="tl-item"><div class="tl-date">25.11.</div><div class="tl-label">3. Termin</div><span class="tl-tag must">Pflichttermin</span></div>
+        <div class="tl-item"><div class="tl-date">02.12.</div><div class="tl-label">4. Termin</div><span class="tl-tag must">Pflichttermin</span></div>
+        <div class="tl-item final"><div class="tl-date">05.12.</div><div class="tl-label">Nikolaus-Lauf (Sa.)</div><span class="tl-tag opt">freiwillig</span></div>
       </div>
+      <p class="timeline-legend">Das Vortreffen am 02.11.2026 und die vier Kurstermine sind Pflichttermine. Der Nikolaus-Lauf am 05.12.2026 ist ein freiwilliges Zusatzangebot – eine Teilnahme ist schön, aber nicht verpflichtend.</p>
     </div>
   </div>
 </section>
@@ -725,12 +798,17 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
       <div class="bring-card reveal">
         <div class="bring-check">✓</div>
         <h4>Trinkflasche</h4>
-        <p>Sport macht durstig – bitte bring eine eigene Trinkflasche mit.</p>
+        <p>Sport macht durstig – bitte bring eine eigene Trinkflasche mit. <strong>Keine Glasflaschen!</strong> Am besten Wasser oder Saftschorle, bitte keine Softdrinks.</p>
       </div>
       <div class="bring-card reveal">
         <div class="bring-check">✓</div>
         <h4>Sportschuhe</h4>
         <p>Für das Aufwärmen vor dem Betreten des Eises brauchst du bequeme Sportschuhe.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Socken</h4>
+        <p>Die Socken sollten über die Knöchel reichen und nicht zu dick sein – so sitzt der Schlittschuh gut und scheuert nicht.</p>
       </div>
       <div class="bring-card reveal">
         <div class="bring-check">✓</div>
@@ -776,14 +854,14 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
 <section class="section nik-section" id="nikolauslauf">
   <canvas id="snow-nik"></canvas>
   <div class="wrap nik-inner">
-    <div class="nik-badge">🎅 DAS GROSSE FINALE</div>
+    <div class="nik-badge">🎅 DAS GROSSE FINALE · FREIWILLIG</div>
     <h2 class="h2 reveal" style="color:#fff;">Der <span class="accent" style="color:var(--red);">Nikolaus-Lauf</span></h2>
 
     <div class="nik-layout reveal">
       <div class="nik-copy">
         <div class="nik-date">05.12.2026</div>
         <div class="nik-day">Samstag</div>
-        <p class="nik-text">Nach den vier Schnupperkurs-Terminen wartet ein besonderes Highlight: der Nikolaus-Lauf.</p>
+        <p class="nik-text">Nach den vier Schnupperkurs-Terminen wartet ein besonderes Highlight: der Nikolaus-Lauf. Die Teilnahme ist <strong>freiwillig</strong> und kein Pflichtbestandteil des Schnupperkurses.</p>
         <p class="nik-text">Hier können die Kinder zeigen, was sie im Schnupperkurs gelernt haben, ihre Fähigkeiten unter Beweis stellen und gemeinsam einen besonderen Abschluss auf dem Eis erleben.</p>
         <div class="nik-time-note">Die genaue Uhrzeit wird rechtzeitig bekannt gegeben.</div>
       </div>
@@ -800,9 +878,23 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
     <span class="eyebrow">VOR DEM START</span>
     <h2 class="h2 reveal">Vortreffen</h2>
     <div class="pretreat-card reveal">
-      <h4>📍 Ort &amp; Termin folgen</h4>
-      <p>Ein Vortreffen ist geplant. Ort und genaue Informationen werden noch bekannt gegeben.</p>
-      <p>Alle weiteren Informationen werden rechtzeitig veröffentlicht.</p>
+      <h4>📍 Montag, 02.11.2026 · 17:00 Uhr · Eisstadion Grefrath</h4>
+      <p><strong>Das Vortreffen ist ein Pflichttermin</strong> – bitte kommt gemeinsam mit einem Erziehungsberechtigten. Vor dem Start des Schnupperkurses treffen wir uns im Eisstadion Grefrath. Dort besprechen wir den Ablauf, die Ausrüstung und beantworten alle offenen Fragen.</p>
+
+      <div class="pretreat-facts">
+        <div class="pretreat-fact"><span class="pf-label">Datum</span><span class="pf-value">Montag, 02.11.2026</span></div>
+        <div class="pretreat-fact"><span class="pf-label">Uhrzeit</span><span class="pf-value">17:00 Uhr</span></div>
+        <div class="pretreat-fact"><span class="pf-label">Ort</span><span class="pf-value">Eisstadion Grefrath</span></div>
+      </div>
+
+      <div class="sock-note">
+        <h5>🧦 Die richtigen Socken</h5>
+        <p>Beim Vortreffen sprechen wir auch über die passenden Socken – hier schon vorab das Wichtigste:</p>
+        <ul class="sock-list">
+          <li><strong>Über die Knöchel:</strong> Die Socken sollten über die Knöchel reichen, damit der Schlittschuh nicht am Bein scheuert.</li>
+          <li><strong>Nicht zu dick:</strong> Dünne Socken sind besser als dicke – zu dicke Socken machen den Schlittschuh eng, nehmen das Gefühl für den Schuh und die Füße werden eher kalt statt warm.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -847,12 +939,46 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
         <div class="faq-a"><p class="pending">Informationen hierzu werden rechtzeitig bekannt gegeben.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Wo findet das Vortreffen statt? <span class="plus">+</span></button>
-        <div class="faq-a"><p class="pending">Informationen hierzu werden rechtzeitig bekannt gegeben.</p></div>
+        <button class="faq-q">Wann und wo findet das Vortreffen statt? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Am Montag, den 02.11.2026 um 17:00 Uhr im Eisstadion Grefrath.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Ist die Teilnahme am Vortreffen und am Nikolaus-Lauf Pflicht? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Das Vortreffen am 02.11.2026 ist ein Pflichttermin, ebenso die vier Kurstermine. Der Nikolaus-Lauf am 05.12.2026 ist ein freiwilliges Zusatzangebot.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was soll mein Kind trinken? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Bitte eine eigene Trinkflasche mitbringen – <strong>keine Glasflaschen</strong>. Am besten Wasser oder Saftschorle, keine Softdrinks.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Welche Socken soll mein Kind anziehen? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Socken, die über die Knöchel reichen und nicht zu dick sind. So scheuert der Schlittschuh nicht am Bein und sitzt trotzdem passgenau.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">An wen kann ich mich bei weiteren Fragen wenden? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Schreib uns einfach eine E-Mail an schnupperkurs2026@yahoo.com – wir antworten so schnell wie möglich.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Was muss ich zum Kurs mitbringen? <span class="plus">+</span></button>
-        <div class="faq-a"><p>Eine Trinkflasche, Sportschuhe zum Aufwärmen, Handschuhe, einen Helm sowie bequeme, funktionelle Kleidung. Details findest du weiter oben im Bereich „Ausrüstung“.</p></div>
+        <div class="faq-a"><p>Eine Trinkflasche, Sportschuhe zum Aufwärmen, Socken über den Knöcheln (nicht zu dick), Handschuhe, einen Helm sowie bequeme, funktionelle Kleidung. Details findest du weiter oben im Bereich „Ausrüstung“.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFENE FRAGEN ============ -->
+<section class="section questions-section" id="offene-fragen">
+  <div class="wrap">
+    <span class="eyebrow">NOCH FRAGEN?</span>
+    <h2 class="h2 reveal">Offene <span class="accent">Fragen?</span></h2>
+    <div class="questions-box reveal">
+      <div class="q-icon">✉️</div>
+      <h3>Schreib uns einfach!</h3>
+      <p>Ist deine Frage hier nicht beantwortet? Du erreichst uns jederzeit per E-Mail – wir melden uns so schnell wie möglich zurück.</p>
+      <div class="mail-box">
+        <span class="mail-label">E-Mail für alle Fragen</span>
+        <a class="mail-link" href="mailto:schnupperkurs2026@yahoo.com?subject=Frage%20zum%20Schnupperkurs%20Eisschnelllauf">schnupperkurs2026@yahoo.com</a>
+        <p class="mail-hint">Einfach auf die Adresse tippen, um direkt eine E-Mail zu schreiben.</p>
       </div>
     </div>
   </div>
@@ -869,7 +995,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
     <div class="form-locked reveal" id="formLocked">
       <svg class="lock-icon" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.6"/></svg>
       <h4>Anmeldung noch nicht geöffnet</h4>
-      <p>Die Anmeldung startet automatisch am 04.10.2026. Schau in der Zwischenzeit gerne noch einmal auf den Countdown weiter oben.</p>
+      <p>Die Anmeldung startet automatisch am 24.09.2026. Schau in der Zwischenzeit gerne noch einmal auf den Countdown weiter oben.</p>
     </div>
 
     <!-- ausgebucht -->
@@ -927,10 +1053,11 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
 
       <div class="reg-group-title">Teilnahmebedingungen</div>
       <div class="consent-list">
-        <label class="consent"><input type="checkbox" name="c1" required><span>Ich habe die Teilnahmebedingungen gelesen und akzeptiere diese. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c1" required><span>Ich habe die <a href="#" data-legal="page-teilnahme" style="color:var(--green-dark);font-weight:700;">Teilnahmebedingungen</a> und die <a href="#" data-legal="page-datenschutz" style="color:var(--green-dark);font-weight:700;">Datenschutzerklärung</a> gelesen und akzeptiere diese. <span class="req">*</span></span></label>
         <label class="consent"><input type="checkbox" name="c2" required><span>Ich bestätige, dass ich als Erziehungsberechtigte/r für die teilnehmende Person verantwortlich bin. <span class="req">*</span></span></label>
-        <label class="consent"><input type="checkbox" name="c3" required><span>Ich bestätige, dass die Aufsichtspflicht während des Kurses entsprechend den bekanntgegebenen Regelungen geregelt ist. <span class="req">*</span></span></label>
-        <label class="consent"><input type="checkbox" name="c4" required><span>Ich stimme den Regelungen zur Haftung zu. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c3" required><span>Ich habe zur Kenntnis genommen, dass die Aufsichtspflicht des Vereins nur während der angeleiteten Kurseinheiten auf dem Eis besteht und davor, danach sowie in den Umkleiden bei mir als Erziehungsberechtigte/r liegt. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c4" required><span>Ich erkenne die Haftungsregelungen an: Die Teilnahme erfolgt auf eigene Gefahr, für Schäden meines Kindes hafte ich als Erziehungsberechtigte/r, und für mitgebrachte Gegenstände wird keine Haftung übernommen. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c6" required><span>Ich bestätige, dass mein Kind gesundheitlich zur Teilnahme geeignet ist und dass ein Helm zu jeder Zeit auf dem Eis getragen wird. <span class="req">*</span></span></label>
         <label class="consent"><input type="checkbox" name="c5"><span>Ich stimme zu, dass während der Veranstaltung Fotos und/oder Videos gemacht und im Rahmen der Vereinskommunikation verwendet werden dürfen.</span></label>
       </div>
 
@@ -944,12 +1071,14 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
       <div class="check-hero">✓</div>
       <h4>Geschafft! Deine Anmeldung ist angekommen.</h4>
       <p>Vielen Dank für die Anmeldung zum Schnupperkurs des Eisschnelllauf&#8209;Club Grefrath 1992 e.V.</p>
-      <p>Weitere Informationen werden rechtzeitig vor Kursbeginn bekannt gegeben.</p>
+      <p>Weitere Informationen werden rechtzeitig vor Kursbeginn bekannt gegeben. Bei Fragen: <a href="mailto:schnupperkurs2026@yahoo.com">schnupperkurs2026@yahoo.com</a></p>
       <div class="confirm-details">
+        <div><strong>Vortreffen (Pflicht):</strong> Mo., 02.11.2026, 17:00 Uhr</div>
         <div><strong>11.11.2026</strong> – erster Termin (mittwochs)</div>
         <div>16:30 Uhr Aufwärmen · 17:00 Uhr Eiszeit</div>
         <div>Eisstadion Grefrath</div>
-        <div style="margin-top:10px;"><strong>Nikolaus-Lauf:</strong> 05.12.2026</div>
+        <div style="margin-top:10px;"><strong>Vortreffen:</strong> Montag, 02.11.2026, 17:00 Uhr, Eisstadion Grefrath</div>
+        <div style="margin-top:10px;"><strong>Nikolaus-Lauf (freiwillig):</strong> 05.12.2026</div>
         <div>Uhrzeit wird noch bekannt gegeben.</div>
       </div>
     </div>
@@ -963,31 +1092,160 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
   <div class="wrap">
     <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
     <h2>Impressum</h2>
-    <p>Eisschnelllauf-Club Grefrath 1992 e.V.</p>
-    <p>Die vollständigen Pflichtangaben nach §5 TMG (Vereinssitz, Vertretungsberechtigte, Registereintrag, Kontaktdaten) werden hier ergänzt.</p>
+
+    <h3>Angaben gemäß § 5 DDG (ehem. § 5 TMG)</h3>
+    <p>
+      Eisschnelllauf-Club Grefrath 1992 e.V.<br>
+      Grefrath, Deutschland
+    </p>
+
+    <h3>Vertreten durch</h3>
+    <p>Den Vorstand im Sinne des § 26 BGB.</p>
+
+    <h3>Kontakt</h3>
+    <p>E-Mail: <a href="mailto:schnupperkurs2026@yahoo.com">schnupperkurs2026@yahoo.com</a></p>
+
+    <h3>Registereintrag</h3>
+    <p>Eingetragen im Vereinsregister als eingetragener Verein (e.V.).</p>
+
+    <h3>Haftung für Inhalte</h3>
+    <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+    <h3>Haftung für Links</h3>
+    <p>Unser Angebot enthält gegebenenfalls Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft; rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
+    <h3>Urheberrecht</h3>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Vereins. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+
+    <h3>Streitschlichtung</h3>
+    <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
   </div>
 </div>
+
 <div class="legal-page" id="page-datenschutz">
   <div class="wrap">
     <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
-    <h2>Datenschutz</h2>
-    <p>Der Eisschnelllauf-Club Grefrath 1992 e.V. nimmt den Schutz personenbezogener Daten ernst. Im Rahmen der Anmeldung zum Schnupperkurs werden Daten zum Kind sowie zu den Erziehungsberechtigten ausschließlich zur Organisation der Veranstaltung erhoben und verarbeitet.</p>
-    <p>Die vollständige Datenschutzerklärung gemäß DSGVO wird hier ergänzt.</p>
+    <h2>Datenschutzerklärung</h2>
+
+    <h3>1. Verantwortlicher</h3>
+    <p>
+      Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:<br>
+      Eisschnelllauf-Club Grefrath 1992 e.V., Grefrath<br>
+      E-Mail: <a href="mailto:schnupperkurs2026@yahoo.com">schnupperkurs2026@yahoo.com</a>
+    </p>
+    <p>Ein Datenschutzbeauftragter ist gesetzlich nicht bestellt, da die Voraussetzungen des Art. 37 DSGVO bzw. § 38 BDSG nicht vorliegen. Bei allen Fragen zum Datenschutz wenden Sie sich bitte an die oben genannten Kontaktdaten.</p>
+
+    <h3>2. Welche Daten wir bei der Anmeldung erheben</h3>
+    <p>Im Rahmen der Online-Anmeldung zum Schnupperkurs verarbeiten wir folgende Daten:</p>
+    <ul>
+      <li>Name und Vorname des Kindes, Geburtsdatum bzw. Alter, Schuhgröße</li>
+      <li>Name der/des Erziehungsberechtigten</li>
+      <li>E-Mail-Adresse und Telefonnummer der/des Erziehungsberechtigten</li>
+      <li>Angaben, die Sie uns freiwillig mitteilen (z.&nbsp;B. gesundheitliche Hinweise, Anmerkungen)</li>
+      <li>Zeitpunkt der Anmeldung</li>
+    </ul>
+
+    <h3>3. Zweck und Rechtsgrundlage der Verarbeitung</h3>
+    <p>Die Daten werden ausschließlich zur Organisation und Durchführung des Schnupperkurses verarbeitet: Platzvergabe, Gruppeneinteilung, Bereitstellung von Leihschlittschuhen, Kommunikation zu Terminen und Änderungen sowie zur Erreichbarkeit im Notfall.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen und Erfüllung des Teilnahmevertrages) sowie – soweit Sie uns freiwillige Angaben machen oder in Foto- und Videoaufnahmen einwilligen – Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Gesundheitsbezogene Angaben werden nur auf Grundlage Ihrer ausdrücklichen Einwilligung gemäß Art. 9 Abs. 2 lit. a DSGVO verarbeitet.</p>
+
+    <h3>4. Empfänger der Daten</h3>
+    <p>Die Daten werden ausschließlich den mit der Organisation und Durchführung des Schnupperkurses betrauten Personen des Vereins (Vorstand, Übungsleiterinnen und Übungsleiter, Helferinnen und Helfer) zugänglich gemacht. Eine Weitergabe an Dritte zu Werbezwecken findet nicht statt. Eine Übermittlung an Behörden erfolgt nur, soweit wir gesetzlich dazu verpflichtet sind. Eine Übermittlung in Drittländer außerhalb der EU/des EWR ist nicht beabsichtigt.</p>
+
+    <h3>5. Speicherung im Browser</h3>
+    <p>Diese Website setzt keine Tracking- oder Werbe-Cookies ein. Für den Betrieb der Anmeldefunktion werden technisch notwendige Daten im lokalen Speicher (localStorage) Ihres Browsers abgelegt. Diese Speicherung ist für die von Ihnen ausdrücklich gewünschte Funktion erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Sie können diese Daten jederzeit über die Einstellungen Ihres Browsers löschen.</p>
+
+    <h3>6. Schriftarten und externe Inhalte</h3>
+    <p>Diese Website bindet Schriftarten über Google Fonts ein. Dabei wird eine Verbindung zu Servern von Google (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) hergestellt, wobei Ihre IP-Adresse übertragen wird. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen Darstellung der Website). Weitere Informationen finden Sie in der Datenschutzerklärung von Google.</p>
+
+    <h3>7. Server-Logfiles</h3>
+    <p>Beim Aufruf dieser Website werden durch den Hosting-Anbieter automatisch Informationen wie IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp und Betriebssystem in Logfiles gespeichert. Diese Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO zum Zweck des sicheren und störungsfreien Betriebs der Website. Die Daten werden nach spätestens 7 Tagen gelöscht.</p>
+
+    <h3>8. Speicherdauer</h3>
+    <p>Anmeldedaten werden für die Dauer des Schnupperkurses und anschließend bis zum Ende der laufenden Saison gespeichert und danach gelöscht, spätestens jedoch 6 Monate nach Kursende. Längere Aufbewahrungsfristen gelten nur, soweit gesetzliche Aufbewahrungspflichten (z.&nbsp;B. steuerrechtlich) dem entgegenstehen.</p>
+
+    <h3>9. Foto- und Videoaufnahmen</h3>
+    <p>Während des Schnupperkurses und beim Nikolaus-Lauf können Foto- und Videoaufnahmen entstehen, die der Verein zur Berichterstattung über das Vereinsgeschehen (Website, Social Media, Presse) verwenden möchte. Eine Veröffentlichung erfolgt ausschließlich, wenn Sie bei der Anmeldung ausdrücklich eingewilligt haben. Die Einwilligung ist freiwillig; die Teilnahme am Kurs ist auch ohne Einwilligung möglich. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (E-Mail genügt).</p>
+
+    <h3>10. Ihre Rechte</h3>
+    <p>Sie haben jederzeit das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie ein Widerspruchsrecht gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO). Erteilte Einwilligungen können Sie jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+    <p>Zudem steht Ihnen ein Beschwerderecht bei einer Aufsichtsbehörde zu, für Nordrhein-Westfalen:<br>
+    Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf.</p>
+
+    <h3>11. Erforderlichkeit der Angaben</h3>
+    <p>Die Bereitstellung der als Pflichtfeld gekennzeichneten Daten ist für die Teilnahme am Schnupperkurs erforderlich. Ohne diese Angaben können wir die Anmeldung nicht berücksichtigen.</p>
   </div>
 </div>
+
 <div class="legal-page" id="page-teilnahme">
   <div class="wrap">
     <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
     <h2>Teilnahmebedingungen</h2>
-    <p>Die ausführlichen Teilnahme-, Haftungs- und Fotoeinwilligungsbedingungen für den Schnupperkurs Eisschnelllauf werden hier durch den Verein ergänzt.</p>
+    <p class="legal-intro">Diese Bedingungen gelten für den Schnupperkurs Eisschnelllauf des Eisschnelllauf-Club Grefrath 1992 e.V. (nachfolgend „Verein“) in der Saison 2026. Mit der Anmeldung werden sie von der/dem Erziehungsberechtigten anerkannt.</p>
+
+    <h3>1. Anmeldung und Vertragsschluss</h3>
+    <p>Die Anmeldung erfolgt über das Online-Formular auf dieser Website und ist nur durch eine erziehungsberechtigte Person zulässig. Ein Anspruch auf einen Kursplatz entsteht erst mit der Bestätigung durch den Verein. Die Plätze sind auf 30 Teilnehmende begrenzt und werden in der Reihenfolge des Eingangs vergeben.</p>
+
+    <h3>2. Termine und Teilnahmepflicht</h3>
+    <p>Pflichttermine sind das Vortreffen am Montag, 02.11.2026 um 17:00 Uhr im Eisstadion Grefrath sowie die vier Kurstermine am 11.11., 18.11., 25.11. und 02.12.2026 (jeweils mittwochs, 16:30 Uhr Aufwärmen, 17:00 Uhr Eiszeit, Ende ca. 18:00 Uhr). Die Teilnahme am Nikolaus-Lauf am 05.12.2026 ist ein freiwilliges Zusatzangebot und nicht verpflichtend.</p>
+    <p>Der Verein behält sich vor, Termine aus organisatorischen oder witterungsbedingten Gründen sowie bei technischen Störungen der Eisfläche zu verlegen oder abzusagen. Über Änderungen wird zeitnah per E-Mail informiert.</p>
+
+    <h3>3. Kosten</h3>
+    <p>Die Kursgebühr beträgt 35&nbsp;€. Eigene Schlittschuhe können kostenfrei mitgebracht werden; der Verleih von Schlittschuhen kostet zusätzlich 10&nbsp;€. Die Zahlungsmodalitäten werden nach der Anmeldung mitgeteilt. Bei Nichtteilnahme aus Gründen, die der Verein nicht zu vertreten hat, besteht kein Anspruch auf Erstattung. Muss der Verein den Kurs vollständig absagen, wird die Gebühr anteilig erstattet.</p>
+
+    <h3>4. Gesundheitliche Voraussetzungen</h3>
+    <p>Die Teilnahme setzt eine ausreichende körperliche Eignung und gesundheitliche Unbedenklichkeit voraus. Die/der Erziehungsberechtigte versichert mit der Anmeldung, dass keine gesundheitlichen Bedenken gegen die Teilnahme am Eissport bestehen. Erkrankungen, Allergien, Medikamentenbedarf oder Einschränkungen, die für die sichere Durchführung relevant sind, sind vor Kursbeginn unaufgefordert mitzuteilen. Der Verein führt keine medizinische Eignungsprüfung durch.</p>
+
+    <h3>5. Ausrüstung und Sicherheit</h3>
+    <p>Das Tragen eines passenden, sicher sitzenden Helms ist während des gesamten Aufenthalts auf dem Eis <strong>verpflichtend</strong>. Handschuhe sind vorgeschrieben. Empfohlen werden zusätzlich Knie- und Ellenbogenschützer. Mitzubringen sind ferner Sportschuhe zum Aufwärmen, Socken, die über die Knöchel reichen und nicht zu dick sind, sowie bequeme, funktionelle Kleidung. Getränke sind ausschließlich in bruchsicheren Flaschen mitzubringen – <strong>Glasflaschen sind im gesamten Eisstadion untersagt</strong>.</p>
+    <p>Den Anweisungen der Übungsleiterinnen und Übungsleiter, der Helferinnen und Helfer sowie des Stadionpersonals ist jederzeit Folge zu leisten. Die Haus- und Eisbahnordnung des Eisstadions Grefrath gilt ergänzend.</p>
+
+    <h3>6. Aufsichtspflicht – Eltern haften für ihre Kinder</h3>
+    <p>Die Aufsichtspflicht des Vereins beschränkt sich ausschließlich auf die Dauer der angeleiteten Kurseinheiten auf der Eisfläche und nur auf die tatsächlich anwesenden, angemeldeten Kinder. Vor Beginn und nach Ende der Kurseinheit, in den Umkleiden, auf dem Weg zum und vom Eisstadion sowie während Pausen liegt die Aufsichtspflicht vollständig bei den Erziehungsberechtigten.</p>
+    <p>Die Erziehungsberechtigten sind verpflichtet, ihr Kind pünktlich zu übergeben und nach Kursende unverzüglich wieder in Empfang zu nehmen. Bei Kindern unter 10 Jahren wird die Anwesenheit einer erziehungsberechtigten Person während des gesamten Termins empfohlen.</p>
+    <p>Für Schäden, die das Kind Dritten, dem Verein oder dem Betreiber des Eisstadions schuldhaft zufügt, haften die Erziehungsberechtigten nach den gesetzlichen Vorschriften. Wir empfehlen ausdrücklich den Abschluss einer privaten Haftpflichtversicherung, die Schäden durch Kinder einschließt.</p>
+
+    <h3>7. Haftung des Vereins</h3>
+    <p>Eissport ist mit einem erhöhten Sturz- und Verletzungsrisiko verbunden. Die Teilnahme erfolgt auf eigene Gefahr. Der Verein haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung des Vereins, seiner gesetzlichen Vertreter oder Erfüllungsgehilfen beruhen, sowie für sonstige Schäden, die auf Vorsatz oder grober Fahrlässigkeit beruhen.</p>
+    <p>Für sonstige Schäden haftet der Verein nur bei Verletzung einer wesentlichen Vertragspflicht (Kardinalpflicht) und begrenzt auf den vertragstypischen, vorhersehbaren Schaden. Eine darüber hinausgehende Haftung, insbesondere für leichte Fahrlässigkeit, ist ausgeschlossen. Diese Haftungsbeschränkungen gelten auch zugunsten der Übungsleiterinnen und Übungsleiter, Helferinnen und Helfer sowie Organe des Vereins.</p>
+    <p>Für mitgebrachte Wertgegenstände, Kleidung, Sportgeräte und sonstiges Eigentum wird keine Haftung übernommen; dies gilt insbesondere für Gegenstände, die in Umkleiden oder auf den Rängen zurückgelassen werden. Ein gesetzlicher Unfallversicherungsschutz über den Verein besteht nur im Rahmen der Sportversicherung des Landessportbundes NRW und nur für den satzungsgemäßen Sportbetrieb.</p>
+
+    <h3>8. Leihmaterial</h3>
+    <p>Geliehene Schlittschuhe sind sorgfältig zu behandeln und unmittelbar nach dem Termin zurückzugeben. Für Beschädigungen, die über die normale Abnutzung hinausgehen, sowie für Verlust haften die Erziehungsberechtigten.</p>
+
+    <h3>9. Ausschluss von der Teilnahme</h3>
+    <p>Der Verein kann Teilnehmende bei grobem oder wiederholtem Verstoß gegen diese Bedingungen, gegen die Hausordnung oder gegen Anweisungen der Kursleitung sowie bei Gefährdung anderer vom weiteren Kurs ausschließen. Ein Anspruch auf Erstattung der Kursgebühr besteht in diesem Fall nicht.</p>
+
+    <h3>10. Foto- und Videoaufnahmen</h3>
+    <p>Aufnahmen werden nur mit ausdrücklicher Einwilligung der Erziehungsberechtigten veröffentlicht. Näheres regelt die Datenschutzerklärung. Die Einwilligung kann jederzeit für die Zukunft widerrufen werden.</p>
+
+    <h3>11. Schlussbestimmungen</h3>
+    <p>Es gilt das Recht der Bundesrepublik Deutschland. Sollten einzelne Bestimmungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. An ihre Stelle tritt die gesetzliche Regelung.</p>
+    <p class="legal-updated">Stand: September 2026</p>
   </div>
 </div>
+
 <div class="legal-page" id="page-kontakt">
   <div class="wrap">
     <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
     <h2>Kontakt</h2>
-    <p>Eisschnelllauf-Club Grefrath 1992 e.V.</p>
-    <p>Kontaktdaten (E-Mail, Telefon, Ansprechpartner) werden hier ergänzt.</p>
+
+    <h3>Eisschnelllauf-Club Grefrath 1992 e.V.</h3>
+    <p>Grefrath, Deutschland</p>
+
+    <h3>Fragen zum Schnupperkurs</h3>
+    <p>
+      E-Mail: <a href="mailto:schnupperkurs2026@yahoo.com?subject=Frage%20zum%20Schnupperkurs%20Eisschnelllauf" style="font-weight:700;color:var(--green-dark);">schnupperkurs2026@yahoo.com</a><br>
+      Wir antworten in der Regel innerhalb weniger Tage.
+    </p>
+
+    <h3>Trainingsort</h3>
+    <p>Eisstadion Grefrath</p>
+
+    <h3>Vertretungsberechtigt</h3>
+    <p>Der Vorstand des Eisschnelllauf-Club Grefrath 1992 e.V.</p>
+
+    <p style="margin-top:22px;font-size:.9rem;color:var(--grey);">Hinweis: Bitte richten Sie Anfragen zu Anmeldung, Terminen und Ausrüstung per E-Mail an uns – so können wir sie am schnellsten bearbeiten.</p>
   </div>
 </div>
 
@@ -1106,7 +1364,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
   initSnow('snow-nik', 50);
 
   /* ---------------- countdown ---------------- */
-  const REG_OPEN = new Date('2026-10-04T00:00:00');
+  const REG_OPEN = new Date('2026-09-24T00:00:00');
   const MAX_SLOTS = 30;
 
   const cdDays=document.getElementById('cdDays'), cdHours=document.getElementById('cdHours'),
@@ -1210,7 +1468,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
       statusPill.className='status-pill status-closed';
       openCta.style.display='none';
       cdHeadline.textContent='Die Anmeldung startet bald!';
-      cdSub.textContent='Ab dem 04.10.2026 kannst du dich für den Schnupperkurs anmelden.';
+      cdSub.textContent='Ab dem 24.09.2026 kannst du dich für den Schnupperkurs anmelden.';
     } else {
       countdownGrid.style.display='none';
       const slotsLeft = freeSlots();
@@ -1291,7 +1549,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
   }
 
   function allRequiredChecked(){
-    return ['c1','c2','c3','c4'].every(n => regForm[n] && regForm[n].checked);
+    return ['c1','c2','c3','c4','c6'].every(n => regForm[n] && regForm[n].checked);
   }
   regForm.addEventListener('change', ()=>{ submitBtn.disabled = !allRequiredChecked(); });
 
