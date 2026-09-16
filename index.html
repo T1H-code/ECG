@@ -1021,6 +1021,11 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
           <div class="err"></div>
         </div>
         <div class="field">
+          <label>Alter des Kindes <span class="req">*</span></label>
+          <input type="number" name="childAge" min="3" max="17" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
           <label>Schuhgröße <span class="req">*</span></label>
           <input type="number" name="shoeSize" min="20" max="45" required>
           <div class="err"></div>
@@ -1058,7 +1063,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
         <label class="consent"><input type="checkbox" name="c3" required><span>Ich habe zur Kenntnis genommen, dass die Aufsichtspflicht des Vereins nur während der angeleiteten Kurseinheiten auf dem Eis besteht und davor, danach sowie in den Umkleiden bei mir als Erziehungsberechtigte/r liegt. <span class="req">*</span></span></label>
         <label class="consent"><input type="checkbox" name="c4" required><span>Ich erkenne die Haftungsregelungen an: Die Teilnahme erfolgt auf eigene Gefahr, für Schäden meines Kindes hafte ich als Erziehungsberechtigte/r, und für mitgebrachte Gegenstände wird keine Haftung übernommen. <span class="req">*</span></span></label>
         <label class="consent"><input type="checkbox" name="c6" required><span>Ich bestätige, dass mein Kind gesundheitlich zur Teilnahme geeignet ist und dass ein Helm zu jeder Zeit auf dem Eis getragen wird. <span class="req">*</span></span></label>
-        <label class="consent"><input type="checkbox" name="c5"><span>Ich stimme zu, dass während der Veranstaltung Fotos und/oder Videos gemacht und im Rahmen der Vereinskommunikation verwendet werden dürfen.</span></label>
+        <label class="consent"><input type="checkbox" name="c5" required><span>Ich stimme zu, dass während der Veranstaltung Fotos und/oder Videos gemacht und im Rahmen der Vereinskommunikation verwendet werden dürfen. <span class="req">*</span></span></label>
       </div>
 
       <button type="submit" class="btn btn-primary reg-submit" id="submitBtn" disabled>Verbindlich anmelden</button>
@@ -1165,7 +1170,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
     <p>Anmeldedaten werden für die Dauer des Schnupperkurses und anschließend bis zum Ende der laufenden Saison gespeichert und danach gelöscht, spätestens jedoch 6 Monate nach Kursende. Längere Aufbewahrungsfristen gelten nur, soweit gesetzliche Aufbewahrungspflichten (z.&nbsp;B. steuerrechtlich) dem entgegenstehen.</p>
 
     <h3>9. Foto- und Videoaufnahmen</h3>
-    <p>Während des Schnupperkurses und beim Nikolaus-Lauf können Foto- und Videoaufnahmen entstehen, die der Verein zur Berichterstattung über das Vereinsgeschehen (Website, Social Media, Presse) verwenden möchte. Eine Veröffentlichung erfolgt ausschließlich, wenn Sie bei der Anmeldung ausdrücklich eingewilligt haben. Die Einwilligung ist freiwillig; die Teilnahme am Kurs ist auch ohne Einwilligung möglich. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (E-Mail genügt).</p>
+    <p>Während des Schnupperkurses und beim Nikolaus-Lauf können Foto- und Videoaufnahmen entstehen, die der Verein zur Berichterstattung über das Vereinsgeschehen (Website, Social Media, Presse) verwenden möchte. Die Einwilligung hierzu ist Bestandteil der Anmeldung zum Schnupperkurs. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (E-Mail genügt); ein bereits erfolgter Kursbesuch bleibt davon unberührt.</p>
 
     <h3>10. Ihre Rechte</h3>
     <p>Sie haben jederzeit das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) sowie ein Widerspruchsrecht gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO). Erteilte Einwilligungen können Sie jederzeit mit Wirkung für die Zukunft widerrufen.</p>
@@ -1217,7 +1222,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
     <p>Der Verein kann Teilnehmende bei grobem oder wiederholtem Verstoß gegen diese Bedingungen, gegen die Hausordnung oder gegen Anweisungen der Kursleitung sowie bei Gefährdung anderer vom weiteren Kurs ausschließen. Ein Anspruch auf Erstattung der Kursgebühr besteht in diesem Fall nicht.</p>
 
     <h3>10. Foto- und Videoaufnahmen</h3>
-    <p>Aufnahmen werden nur mit ausdrücklicher Einwilligung der Erziehungsberechtigten veröffentlicht. Näheres regelt die Datenschutzerklärung. Die Einwilligung kann jederzeit für die Zukunft widerrufen werden.</p>
+    <p>Mit der Anmeldung willigen die Erziehungsberechtigten ein, dass während des Kurses und beim Nikolaus-Lauf Foto- und Videoaufnahmen entstehen und im Rahmen der Vereinskommunikation verwendet werden dürfen. Näheres regelt die Datenschutzerklärung. Die Einwilligung kann jederzeit für die Zukunft widerrufen werden.</p>
 
     <h3>11. Schlussbestimmungen</h3>
     <p>Es gilt das Recht der Bundesrepublik Deutschland. Sollten einzelne Bestimmungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. An ihre Stelle tritt die gesetzliche Regelung.</p>
@@ -1267,7 +1272,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
       <button id="adminReset">Alle Anmeldungen löschen</button>
     </div>
     <table>
-      <thead><tr><th>Kind</th><th>Schuhgröße</th><th>Erziehungsberechtigte/r</th><th>E-Mail</th><th>Telefon</th></tr></thead>
+      <thead><tr><th>Kind</th><th>Alter</th><th>Schuhgröße</th><th>Erziehungsberechtigte/r</th><th>E-Mail</th><th>Telefon</th></tr></thead>
       <tbody id="adminTableBody"></tbody>
     </table>
   </div>
@@ -1549,7 +1554,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
   }
 
   function allRequiredChecked(){
-    return ['c1','c2','c3','c4','c6'].every(n => regForm[n] && regForm[n].checked);
+    return ['c1','c2','c3','c4','c5','c6'].every(n => regForm[n] && regForm[n].checked);
   }
   regForm.addEventListener('change', ()=>{ submitBtn.disabled = !allRequiredChecked(); });
 
@@ -1586,6 +1591,12 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
       if(!el.value.trim()){ setErr(el,msg); valid=false; } else setErr(el,'');
     });
 
+    const age = f['childAge'];
+    const ageVal = parseInt(age.value,10);
+    if(!age.value || isNaN(ageVal) || ageVal < 3 || ageVal > 17){
+      setErr(age,'Bitte ein gültiges Alter (3–17) angeben.'); valid=false;
+    } else setErr(age,'');
+
     const shoe = f['shoeSize'];
     const shoeVal = parseInt(shoe.value,10);
     if(!shoe.value || isNaN(shoeVal) || shoeVal < 20 || shoeVal > 45){
@@ -1615,7 +1626,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
     submitBtn.disabled = true;
     const newReg = {
       childfirst:f.childFirst.value.trim(), childlast:f.childLast.value.trim(),
-      shoesize:shoeVal, parentfirst:f.parentFirst.value.trim(), parentlast:f.parentLast.value.trim(),
+      childage:ageVal, shoesize:shoeVal, parentfirst:f.parentFirst.value.trim(), parentlast:f.parentLast.value.trim(),
       parentemail:email.value.trim(), parentphone:phone.value.trim(),
       photoconsent: !!f.c5.checked, ts: new Date().toISOString()
     };
@@ -1698,7 +1709,7 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
     document.getElementById('adminStatus').textContent = isRegistrationOpen() ? 'Geöffnet' : 'Geschlossen';
     const tbody = document.getElementById('adminTableBody');
     tbody.innerHTML = storeCache.registrations.map(r=>
-      `<tr><td>${escapeHtml(r.childfirst)} ${escapeHtml(r.childlast)}</td><td>${r.shoesize}</td><td>${escapeHtml(r.parentfirst)} ${escapeHtml(r.parentlast)}</td><td>${escapeHtml(r.parentemail)}</td><td>${escapeHtml(r.parentphone)}</td></tr>`
+      `<tr><td>${escapeHtml(r.childfirst)} ${escapeHtml(r.childlast)}</td><td>${r.childage ?? ''}</td><td>${r.shoesize}</td><td>${escapeHtml(r.parentfirst)} ${escapeHtml(r.parentlast)}</td><td>${escapeHtml(r.parentemail)}</td><td>${escapeHtml(r.parentphone)}</td></tr>`
     ).join('') || '<tr><td colspan="5" style="color:#999;">Noch keine Anmeldungen.</td></tr>';
   }
   function escapeHtml(str){
@@ -1711,8 +1722,8 @@ footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
 
   document.getElementById('adminExport').addEventListener('click', async function(){
     await loadStore();
-    const rows = [['Kind Vorname','Kind Nachname','Schuhgröße','Eltern Vorname','Eltern Nachname','E-Mail','Telefon','Fotoeinwilligung','Zeitstempel']];
-    storeCache.registrations.forEach(r=> rows.push([r.childfirst,r.childlast,r.shoesize,r.parentfirst,r.parentlast,r.parentemail,r.parentphone,r.photoconsent?'Ja':'Nein',r.ts]));
+    const rows = [['Kind Vorname','Kind Nachname','Alter','Schuhgröße','Eltern Vorname','Eltern Nachname','E-Mail','Telefon','Fotoeinwilligung','Zeitstempel']];
+    storeCache.registrations.forEach(r=> rows.push([r.childfirst,r.childlast,r.childage,r.shoesize,r.parentfirst,r.parentlast,r.parentemail,r.parentphone,r.photoconsent?'Ja':'Nein',r.ts]));
     const csv = rows.map(r=> r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(';')).join('\n');
     const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
     const url = URL.createObjectURL(blob);
