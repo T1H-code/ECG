@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Schnupperkurs Eisschnelllauf · ECG Grefrath 1992 e.V.</title>
+<meta name="description" content="Schnupperkurs Eisschnelllauf des Eisschnelllauf-Club Grefrath 1992 e.V. – jetzt vormerken, Anmeldung ab 24.09.2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ECG GREFRATH — SCHNUPPERKURS EISSCHNELLLAUF
+   ============================================================ */
+:root{
+  --green:#0d3b2e;
+  --green-dark:#071f18;
+  --green-light:#175642;
+  --red:#d01f3c;
+  --red-dark:#9e1129;
+  --ice:#bdeaf5;
+  --ice-soft:#e7f8fc;
+  --black:#0a0d0c;
+  --white:#fbfdfc;
+  --grey:#5c6b68;
+  --grey-light:#e3e9e7;
+  --radius:20px;
+  --radius-sm:12px;
+  --shadow:0 20px 50px -20px rgba(7,31,24,0.35);
+  --ease:cubic-bezier(.22,.8,.28,1);
+  --maxw:1180px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--black);
+  background:var(--white);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+button{font-family:inherit;}
+
+h1,h2,h3,.display{
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:.02em;
+  line-height:.95;
+  margin:0;
+  font-weight:400;
+}
+p{line-height:1.6;margin:0;}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.section{padding:80px 0;position:relative;}
+@media(max-width:720px){.section{padding:56px 0;}}
+
+.eyebrow{
+  font-size:.8rem;
+  color:var(--green);
+  font-weight:700;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+.h2{font-size:clamp(2.4rem,6vw,4rem);color:var(--green-dark);}
+.h2 .accent{color:var(--red);}
+.lede{max-width:560px;font-size:1.08rem;color:var(--grey);margin-top:16px;}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 34px;
+  border-radius:100px;
+  font-weight:700;
+  font-size:1.02rem;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s;
+  min-height:56px;
+}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 14px 30px -12px rgba(208,31,60,.55);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 36px -12px rgba(208,31,60,.65);}
+.btn-primary:disabled{background:#c7cdcb;color:#8b9694;box-shadow:none;cursor:not-allowed;transform:none;}
+.btn-ghost{background:transparent;border:2px solid var(--white);color:var(--white);}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-3px);}
+.btn-dark{background:var(--green-dark);color:#fff;}
+.btn-dark:hover{transform:translateY(-3px);background:var(--green);}
+
+/* ---------- reveal-on-scroll ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  *{animation-duration:.001ms !important; scroll-behavior:auto !important;}
+}
+
+/* ---------- speed line divider ---------- */
+.speedline{position:relative;height:64px;overflow:hidden;}
+.speedline svg{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(10,13,12,0.72);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;}
+.nav-logo .mark{height:36px;width:auto;background:#fff;border-radius:8px;padding:3px 8px;}
+.nav-logo .word{font-family:'Bebas Neue';font-size:1.4rem;letter-spacing:.04em;}
+.nav-links{display:flex;gap:30px;list-style:none;margin:0;padding:0;}
+.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.92rem;font-weight:600;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
+.nav .btn-primary{padding:12px 22px;font-size:.9rem;min-height:auto;}
+.nav-burger{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:6px;}
+@media(max-width:860px){
+  .nav-links{display:none;}
+  .nav-burger{display:block;}
+  .nav .btn-primary.desktop-only{display:none;}
+}
+
+/* ============================================================
+   LOGO MARK (SVG placeholder — replace with real ECG logo file)
+   ============================================================ */
+.ecg-mark{filter:drop-shadow(0 6px 16px rgba(0,0,0,.35));}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(120% 90% at 50% -10%, #123f30 0%, var(--green-dark) 55%, var(--black) 100%);
+  color:#fff;
+  overflow:hidden;
+  padding-top:72px;
+}
+.hero-track{
+  position:absolute;inset:0;z-index:0;opacity:.5;
+}
+.hero-track svg{width:100%;height:100%;}
+.hero-frost{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg, rgba(189,234,245,0) 0%, rgba(189,234,245,.05) 60%, rgba(10,13,12,.55) 100%);
+}
+#snow-hero{position:absolute;inset:0;z-index:2;pointer-events:none;}
+
+.hero-content{position:relative;z-index:3;text-align:center;width:100%;padding:60px 0 90px;}
+.hero-logo-plate{
+  display:inline-block;background:#fff;border-radius:22px;padding:16px 24px;
+  margin:0 auto 30px;box-shadow:0 20px 45px -18px rgba(0,0,0,.55);
+  animation:logoIn 1s var(--ease) both;
+}
+.hero-logo{width:200px;height:auto;display:block;}
+@media(max-width:560px){.hero-logo{width:150px;}.hero-logo-plate{padding:12px 18px;border-radius:16px;}}
+@keyframes logoIn{from{opacity:0;transform:scale(.7) rotate(-8deg);}to{opacity:1;transform:scale(1) rotate(0);}}
+
+.hero-title{
+  font-size:clamp(2.8rem,9vw,6.4rem);
+  color:#fff;
+  animation:heroUp 1s .2s var(--ease) both;
+}
+.hero-title span{display:block;color:var(--ice);}
+@keyframes heroUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+
+.hero-sub{
+  font-size:clamp(1.1rem,2.4vw,1.5rem);
+  color:var(--ice);
+  margin-top:18px;
+  font-weight:700;
+  animation:heroUp 1s .35s var(--ease) both;
+}
+.hero-desc{
+  max-width:540px;margin:20px auto 0;color:rgba(255,255,255,.82);
+  font-size:1.05rem;
+  animation:heroUp 1s .45s var(--ease) both;
+}
+.hero-cta{margin-top:38px;animation:heroUp 1s .55s var(--ease) both;}
+.hero-note{
+  margin-top:22px;display:inline-flex;align-items:center;gap:10px;
+  font-size:.86rem;color:rgba(255,255,255,.75);
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  padding:10px 18px;border-radius:100px;
+  animation:heroUp 1s .65s var(--ease) both;
+}
+.hero-note .dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(208,31,60,.25);}
+
+.scroll-cue{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  z-index:3;color:rgba(255,255,255,.6);font-size:.75rem;letter-spacing:.15em;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.scroll-cue .line{width:1px;height:34px;background:linear-gradient(#fff,transparent);animation:cueMove 1.8s ease-in-out infinite;}
+@keyframes cueMove{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}50.01%{transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
+
+/* ============================================================
+   COUNTDOWN
+   ============================================================ */
+.countdown-section{
+  background:var(--green-dark);
+  color:#fff;
+  text-align:center;
+  position:relative;
+}
+.countdown-section .eyebrow{color:var(--ice);}
+.countdown-section .h2{color:#fff;}
+.countdown-section .lede{color:rgba(255,255,255,.75);margin-left:auto;margin-right:auto;}
+.countdown-head{text-align:center;}
+
+.countdown-grid{
+  display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+  margin-top:50px;
+}
+.cd-box{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius-sm);
+  width:120px;padding:24px 8px;
+  backdrop-filter:blur(6px);
+}
+.cd-num{
+  font-family:'Bebas Neue';
+  font-size:3.2rem;
+  color:var(--ice);
+  font-variant-numeric:tabular-nums;
+}
+.cd-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);margin-top:4px;}
+@media(max-width:560px){.cd-box{width:76px;padding:16px 4px;}.cd-num{font-size:2rem;}}
+
+.status-pill{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:46px;padding:14px 26px;border-radius:100px;
+  font-weight:800;font-size:.95rem;letter-spacing:.03em;
+}
+.status-closed{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85);}
+.status-open{background:var(--red);color:#fff;box-shadow:0 14px 30px -10px rgba(208,31,60,.6);}
+.status-full{background:var(--black);border:1px solid rgba(255,255,255,.2);color:#fff;}
+
+.open-cta{margin-top:28px;}
+
+/* ============================================================
+   INFO CARDS
+   ============================================================ */
+.info-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px;
+}
+@media(max-width:980px){.info-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.info-grid{grid-template-columns:1fr;}}
+
+.card{
+  background:#fff;
+  border:1px solid var(--grey-light);
+  border-radius:var(--radius);
+  padding:30px 26px;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--green),var(--red));
+}
+.card-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:var(--ice-soft);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;color:var(--green);
+}
+.card h3{font-family:'Inter';font-weight:800;font-size:1.15rem;margin-bottom:10px;color:var(--green-dark);}
+.card p{color:var(--grey);font-size:.95rem;}
+.card strong{color:var(--black);}
+
+.slot-number{
+  font-family:'Bebas Neue';font-size:3.4rem;color:var(--red);line-height:1;
+}
+.slot-sub{font-size:.85rem;color:var(--grey);margin-top:4px;}
+.slot-bar{height:10px;border-radius:100px;background:var(--grey-light);margin-top:16px;overflow:hidden;}
+.slot-bar-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--red));border-radius:100px;transition:width .8s var(--ease);}
+
+/* ---------- timeline ---------- */
+.timeline{margin-top:60px;}
+.timeline-title{font-weight:800;color:var(--green-dark);margin-bottom:24px;font-size:1.2rem;}
+.timeline-track{
+  display:flex;gap:0;overflow-x:auto;padding-bottom:12px;
+  scrollbar-width:thin;
+}
+.tl-item{
+  min-width:180px;flex:1;
+  padding:20px 18px 20px 0;
+  position:relative;
+  border-left:3px solid var(--grey-light);
+  padding-left:20px;
+  transform:translateX(-20px);
+  opacity:0;
+  transition:transform .6s var(--ease),opacity .6s var(--ease);
+}
+.tl-item.in{transform:translateX(0);opacity:1;}
+.tl-item.final{border-left-color:var(--red);}
+.tl-item::before{
+  content:'';position:absolute;left:-9px;top:22px;width:15px;height:15px;border-radius:50%;
+  background:var(--green);border:3px solid #fff;box-shadow:0 0 0 2px var(--green);
+}
+.tl-item.final::before{background:var(--red);box-shadow:0 0 0 2px var(--red);}
+.tl-date{font-family:'Bebas Neue';font-size:1.6rem;color:var(--green-dark);}
+.tl-item.final .tl-date{color:var(--red);}
+.tl-label{font-size:.85rem;color:var(--grey);margin-top:2px;}
+.tl-item.pre{border-left-color:var(--ice);}
+.tl-item.pre::before{background:var(--ice);box-shadow:0 0 0 2px var(--ice);}
+.tl-item.pre .tl-date{color:var(--green-light);}
+.tl-tag{
+  display:inline-block;margin-top:8px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:800;padding:4px 9px;border-radius:999px;
+}
+.tl-tag.must{background:var(--green);color:#fff;}
+.tl-tag.opt{background:var(--grey-light);color:var(--grey);}
+.timeline-legend{margin-top:16px;font-size:.85rem;color:var(--grey);}
+
+/* ============================================================
+   PRICING
+   ============================================================ */
+.price-section{background:var(--ice-soft);}
+.price-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;margin-top:56px;}
+@media(max-width:820px){.price-grid{grid-template-columns:1fr;}}
+.price-hero{
+  background:var(--green-dark);color:#fff;border-radius:var(--radius);
+  padding:44px 40px;position:relative;overflow:hidden;
+}
+.price-hero .big{font-family:'Bebas Neue';font-size:clamp(4rem,10vw,6.5rem);color:var(--ice);line-height:.85;}
+.price-hero p{color:rgba(255,255,255,.8);margin-top:10px;font-size:1.05rem;}
+.price-side{display:flex;flex-direction:column;gap:18px;}
+.price-line{
+  background:#fff;border-radius:var(--radius-sm);padding:22px 24px;
+  display:flex;justify-content:space-between;align-items:center;
+  border:1px solid var(--grey-light);
+}
+.price-line .label{font-weight:700;color:var(--green-dark);}
+.price-line .value{font-family:'Bebas Neue';font-size:1.6rem;color:var(--red);}
+.price-note{font-size:.85rem;color:var(--grey);margin-top:6px;}
+
+/* ============================================================
+   MITBRINGEN
+   ============================================================ */
+.bring-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;}
+@media(max-width:920px){.bring-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.bring-grid{grid-template-columns:1fr;}}
+.bring-card{
+  background:#fff;border:1px solid var(--grey-light);border-radius:var(--radius);
+  padding:26px;text-align:left;transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.bring-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+.bring-check{
+  width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px;
+}
+.bring-card h4{font-size:1.05rem;font-weight:800;color:var(--green-dark);margin-bottom:8px;}
+.bring-card p{font-size:.92rem;color:var(--grey);}
+
+.no-pro{
+  margin-top:50px;background:var(--green-dark);border-radius:var(--radius);
+  padding:40px;text-align:center;color:#fff;
+}
+.no-pro h4{font-family:'Bebas Neue';font-size:1.8rem;margin-bottom:12px;color:var(--ice);}
+.no-pro p{color:rgba(255,255,255,.8);max-width:520px;margin:0 auto;}
+.word-row{display:flex;justify-content:center;gap:16px;margin-top:26px;flex-wrap:wrap;}
+.word-chip{
+  font-family:'Bebas Neue';font-size:1.6rem;padding:12px 30px;border-radius:100px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+  opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease);
+}
+.word-chip.in{opacity:1;transform:translateY(0);}
+
+/* ============================================================
+   COMPARISON (Foto)
+   ============================================================ */
+.compare-photo{margin-top:56px;text-align:center;}
+.compare-photo-title{font-family:'Bebas Neue';font-size:clamp(1.8rem,4vw,2.4rem);color:var(--green-dark);margin-bottom:12px;}
+.compare-photo-lede{color:var(--grey);max-width:640px;margin:0 auto 28px;font-size:1rem;}
+.compare-photo-img{
+  width:100%;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--grey-light);
+}
+
+/* ============================================================
+   NIKOLAUS
+   ============================================================ */
+.nik-section{
+  position:relative;background:var(--green-dark);color:#fff;overflow:hidden;text-align:center;
+}
+#snow-nik{position:absolute;inset:0;z-index:0;pointer-events:none;}
+.nik-inner{position:relative;z-index:1;}
+.nik-badge{
+  display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;
+  padding:10px 22px;border-radius:100px;font-weight:800;font-size:.85rem;margin-bottom:22px;
+}
+.nik-layout{
+  display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;
+  text-align:left;margin-top:46px;
+}
+@media(max-width:820px){.nik-layout{grid-template-columns:1fr;text-align:center;}}
+.nik-date{font-family:'Bebas Neue';font-size:clamp(2.6rem,7vw,4.2rem);color:var(--ice);}
+.nik-day{font-size:1.05rem;color:rgba(255,255,255,.75);margin-top:-4px;}
+.nik-text{max-width:460px;margin:20px 0 0;color:rgba(255,255,255,.85);}
+@media(max-width:820px){.nik-text{margin-left:auto;margin-right:auto;}}
+.nik-text + .nik-text{margin-top:12px;}
+.nik-time-note{
+  margin-top:24px;display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+  padding:12px 24px;border-radius:100px;font-size:.9rem;color:rgba(255,255,255,.85);
+}
+.nik-photo img{
+  width:100%;border-radius:var(--radius);box-shadow:0 30px 70px -20px rgba(0,0,0,.6);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+/* ============================================================
+   VORTREFFEN / FAQ
+   ============================================================ */
+.pretreat-card{
+  margin-top:50px;background:#fff;border:2px dashed var(--grey-light);border-radius:var(--radius);
+  padding:40px;text-align:center;
+}
+.pretreat-card h4{font-family:'Bebas Neue';font-size:1.8rem;color:var(--green-dark);margin-bottom:10px;}
+.pretreat-card p{color:var(--grey);max-width:560px;margin:6px auto 0;}
+.pretreat-card{border-style:solid;border-color:var(--ice);box-shadow:var(--shadow);}
+
+.pretreat-facts{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:26px auto 0;max-width:720px;
+}
+.pretreat-fact{
+  flex:1 1 180px;background:var(--ice-soft);border-radius:var(--radius-sm);padding:16px 18px;
+  display:flex;flex-direction:column;gap:4px;
+}
+.pf-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-weight:700;}
+.pf-value{font-weight:700;color:var(--green-dark);font-size:1.02rem;}
+
+.sock-note{
+  margin:28px auto 0;max-width:720px;text-align:left;
+  background:var(--green);color:#fff;border-radius:var(--radius);padding:26px 28px;
+}
+.sock-note h5{font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.03em;margin:0 0 8px;color:#fff;}
+.sock-note p{color:rgba(255,255,255,.8);margin:0;max-width:none;}
+.sock-list{margin:14px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:10px;}
+.sock-list li{color:rgba(255,255,255,.88);font-size:.95rem;line-height:1.55;}
+.sock-list strong{color:var(--ice);}
+@media(max-width:600px){.sock-note{padding:22px 20px;}.pretreat-card{padding:28px 20px;}}
+
+/* ---------- RECHTSSEITEN ---------- */
+.legal-page h3{
+  font-family:'Inter',sans-serif;font-weight:800;font-size:1.02rem;color:var(--green-dark);
+  margin:30px 0 8px;letter-spacing:0;
+}
+.legal-page h3:first-of-type{margin-top:22px;}
+.legal-page p,.legal-page li{color:var(--grey);font-size:.95rem;line-height:1.7;}
+.legal-page ul{padding-left:20px;margin:8px 0;}
+.legal-page li{margin-bottom:6px;}
+.legal-page a{color:var(--green-dark);}
+.legal-page strong{color:var(--green-dark);}
+.legal-intro{background:var(--ice-soft);border-radius:var(--radius-sm);padding:16px 18px;margin-top:18px;}
+.legal-updated{margin-top:26px;font-size:.85rem;font-style:italic;}
+
+/* ---------- OFFENE FRAGEN / KONTAKTFELD ---------- */
+.questions-section{background:var(--ice-soft);}
+.questions-box{
+  margin-top:40px;background:#fff;border:2px solid var(--ice);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:52px 44px;text-align:center;
+}
+.questions-box .q-icon{font-size:2.6rem;line-height:1;margin-bottom:14px;}
+.questions-box h3{font-size:2.1rem;color:var(--green-dark);margin:0 0 12px;}
+.questions-box p{color:var(--grey);max-width:560px;margin:0 auto;font-size:1.02rem;}
+.mail-box{
+  margin:28px auto 0;max-width:640px;background:var(--green);border-radius:var(--radius);
+  padding:28px 24px;
+}
+.mail-label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ice);font-weight:700;}
+.mail-link{
+  display:block;margin-top:10px;font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;
+  font-size:clamp(1.5rem,4.6vw,2.4rem);color:#fff;text-decoration:none;word-break:break-all;
+  transition:color .25s var(--ease);
+}
+.mail-link:hover{color:var(--ice);}
+.mail-hint{margin-top:14px;color:rgba(255,255,255,.72);font-size:.9rem;}
+@media(max-width:600px){.questions-box{padding:34px 20px;}}
+
+.faq-list{margin-top:50px;display:flex;flex-direction:column;gap:14px;}
+.faq-item{border:1px solid var(--grey-light);border-radius:var(--radius-sm);overflow:hidden;background:#fff;}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;padding:20px 24px;
+  display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+  font-weight:700;font-size:1rem;color:var(--green-dark);
+}
+.faq-q .plus{transition:transform .3s var(--ease);color:var(--red);font-size:1.3rem;}
+.faq-item.open .faq-q .plus{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s var(--ease);}
+.faq-a p{padding:0 24px 22px;color:var(--grey);font-size:.95rem;}
+.faq-a .pending{color:var(--red);font-weight:600;}
+
+/* ============================================================
+   ANMELDUNG FORM
+   ============================================================ */
+.form-section{background:var(--ice-soft);}
+.form-locked{
+  margin-top:50px;text-align:center;background:#fff;border-radius:var(--radius);
+  padding:60px 30px;box-shadow:var(--shadow);
+}
+.form-locked .lock-icon{width:56px;height:56px;margin:0 auto 18px;color:var(--grey);}
+.form-locked h4{font-family:'Bebas Neue';font-size:1.8rem;color:var(--green-dark);}
+.form-locked p{color:var(--grey);margin-top:8px;}
+
+.reg-card{
+  margin-top:50px;background:#fff;border-radius:var(--radius);padding:44px;box-shadow:var(--shadow);
+}
+@media(max-width:600px){.reg-card{padding:26px;}}
+.reg-group-title{font-family:'Bebas Neue';font-size:1.4rem;color:var(--green);margin:28px 0 16px;}
+.reg-group-title:first-child{margin-top:0;}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:560px){.field-grid{grid-template-columns:1fr;}}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-size:.85rem;font-weight:700;color:var(--green-dark);}
+.field label .req{color:var(--red);}
+.field input{
+  padding:14px 16px;border:1.5px solid var(--grey-light);border-radius:10px;font-size:1rem;
+  font-family:inherit;transition:border-color .2s;
+}
+.field input:focus{outline:none;border-color:var(--green);}
+.field .err{font-size:.78rem;color:var(--red);min-height:16px;}
+.field input.invalid{border-color:var(--red);}
+
+.consent-list{margin-top:30px;display:flex;flex-direction:column;gap:14px;}
+.consent{display:flex;align-items:flex-start;gap:12px;cursor:pointer;}
+.consent input{width:20px;height:20px;margin-top:2px;accent-color:var(--green);flex:0 0 auto;}
+.consent span{font-size:.9rem;color:var(--grey);}
+.consent span .req{color:var(--red);}
+
+.photo-note{
+  margin-top:26px;background:var(--ice-soft);border-radius:10px;padding:16px 18px;font-size:.85rem;color:var(--grey);
+}
+
+.reg-submit{margin-top:32px;width:100%;}
+.form-msg{margin-top:16px;text-align:center;font-weight:700;font-size:.92rem;}
+.form-msg.error{color:var(--red);}
+
+.confirmation{display:none;margin-top:50px;text-align:center;}
+.confirmation.show{display:block;}
+.confirm-line{height:6px;background:linear-gradient(90deg,var(--green),var(--ice),var(--red));border-radius:100px;
+  width:0;margin:0 auto 30px;animation:lineRun 1.2s var(--ease) forwards;}
+@keyframes lineRun{to{width:100%;}}
+.confirmation .check-hero{
+  width:76px;height:76px;border-radius:50%;background:var(--green);color:#fff;margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;font-size:2rem;
+}
+.confirmation h4{font-family:'Bebas Neue';font-size:2.2rem;color:var(--green-dark);}
+.confirmation p{color:var(--grey);margin-top:10px;max-width:480px;margin-left:auto;margin-right:auto;}
+.confirm-details{
+  margin-top:30px;display:inline-block;text-align:left;background:var(--ice-soft);border-radius:var(--radius-sm);
+  padding:26px 30px;
+}
+.confirm-details div{font-size:.92rem;color:var(--black);margin-bottom:6px;}
+.confirm-details strong{color:var(--green-dark);}
+
+.sold-out-banner{
+  margin-top:24px;background:var(--black);color:#fff;padding:18px 24px;border-radius:var(--radius-sm);
+  text-align:center;font-weight:700;
+}
+.waitlist-btn{margin-top:16px;}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:var(--black);color:rgba(255,255,255,.7);padding:60px 0 30px;}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12);}
+.foot-brand{display:flex;align-items:center;gap:12px;color:#fff;}
+.foot-brand .word{font-family:'Bebas Neue';font-size:1.5rem;}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;list-style:none;padding:0;margin:0;}
+.foot-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.9rem;}
+.foot-links a:hover{color:#fff;}
+.foot-bottom{padding-top:24px;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.legal-page{display:none;padding:120px 0 80px;max-width:760px;margin:0 auto;}
+.legal-page.show{display:block;}
+.legal-page h2{font-size:2.2rem;color:var(--green-dark);margin-bottom:20px;}
+.legal-page p{color:var(--grey);margin-bottom:14px;}
+.legal-back{display:inline-block;margin-bottom:30px;color:var(--green);font-weight:700;text-decoration:none;}
+
+/* ---------- admin (demo) ---------- */
+.admin-link{background:none;border:none;color:rgba(255,255,255,.4);font-size:.75rem;cursor:pointer;text-decoration:underline;}
+.admin-panel{display:none;padding:120px 0 80px;}
+.admin-panel.show{display:block;}
+.admin-panel table{width:100%;border-collapse:collapse;margin-top:20px;font-size:.88rem;}
+.admin-panel th,.admin-panel td{padding:10px 12px;border-bottom:1px solid var(--grey-light);text-align:left;}
+.admin-stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px;}
+.admin-stat{background:var(--ice-soft);padding:16px 22px;border-radius:12px;}
+.admin-stat b{display:block;font-family:'Bebas Neue';font-size:1.8rem;color:var(--green-dark);}
+.admin-actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;}
+.admin-actions button{padding:10px 18px;border-radius:8px;border:1px solid var(--grey-light);background:#fff;cursor:pointer;font-weight:600;}
+
+/* main content hide when legal/admin page shown */
+#site-main.hidden{display:none;}
+
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="nav-logo">
+      <img class="mark ecg-mark" src="ecg-logo.png" alt="ECG Grefrath Logo">
+      <span class="word">ECG GREFRATH</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#kursinfos">Kurs</a></li>
+      <li><a href="#mitbringen">Ausrüstung</a></li>
+      <li><a href="#nikolauslauf">Nikolaus-Lauf</a></li>
+      <li><a href="#vortreffen">Vortreffen</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#offene-fragen">Kontakt</a></li>
+    </ul>
+    <a href="#anmeldung" class="btn btn-primary desktop-only">Jetzt vormerken</a>
+    <button class="nav-burger" id="burgerBtn" aria-label="Menü öffnen">☰</button>
+  </div>
+</nav>
+
+<div id="site-main">
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-track" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="trackGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#bdeaf5" stop-opacity="0.5"/>
+          <stop offset="1" stop-color="#bdeaf5" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="600" cy="900" rx="1000" ry="360" fill="none" stroke="url(#trackGrad)" stroke-width="2"/>
+      <ellipse cx="600" cy="900" rx="760" ry="270" fill="none" stroke="url(#trackGrad)" stroke-width="2"/>
+      <ellipse cx="600" cy="900" rx="520" ry="180" fill="none" stroke="url(#trackGrad)" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="hero-frost" aria-hidden="true"></div>
+  <canvas id="snow-hero"></canvas>
+
+  <div class="wrap hero-content">
+    <div class="hero-logo-plate">
+      <img class="hero-logo" src="ecg-logo.png" alt="ECG Grefrath Logo">
+    </div>
+
+    <h1 class="hero-title">Schnupperkurs<span>Eisschnelllauf</span></h1>
+    <p class="hero-sub">Entdecke den schnellsten Sport auf dem Eis!</p>
+    <p class="hero-desc">Du möchtest Eisschnelllauf ausprobieren? Dann komm zu unserem Schnupperkurs des Eisschnelllauf&#8209;Club Grefrath 1992 e.V.</p>
+
+    <div class="hero-cta">
+      <a href="#anmeldung" class="btn btn-primary">Jetzt vormerken</a>
+    </div>
+
+    <div class="hero-note"><span class="dot"></span> Anmeldung ab 24.09.2026 geöffnet</div>
+  </div>
+
+  <div class="scroll-cue"><span class="line"></span>SCROLLEN</div>
+</header>
+
+<!-- speed divider -->
+<div class="speedline" aria-hidden="true">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0 40 L1200 24" stroke="#0d3b2e" stroke-width="2" opacity=".3"/><path d="M0 52 L1200 36" stroke="#d01f3c" stroke-width="2" opacity=".25"/></svg>
+</div>
+
+<!-- ============ COUNTDOWN ============ -->
+<section class="countdown-section section" id="anmeldung-status">
+  <div class="wrap countdown-head">
+    <span class="eyebrow">ANMELDUNG</span>
+    <h2 class="h2" id="cdHeadline">Die Anmeldung startet bald!</h2>
+    <p class="lede" id="cdSub" style="margin-left:auto;margin-right:auto;">Ab dem 24.09.2026 kannst du dich für den Schnupperkurs anmelden.</p>
+
+    <div class="countdown-grid" id="countdownGrid">
+      <div class="cd-box"><div class="cd-num" id="cdDays">00</div><div class="cd-label">Tage</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdHours">00</div><div class="cd-label">Stunden</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdMinutes">00</div><div class="cd-label">Minuten</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdSeconds">00</div><div class="cd-label">Sekunden</div></div>
+    </div>
+
+    <div id="statusPillWrap">
+      <div class="status-pill status-closed" id="statusPill">ANMELDUNG NOCH NICHT GEÖFFNET</div>
+    </div>
+    <div class="open-cta" id="openCta" style="display:none;">
+      <a href="#anmeldung" class="btn btn-primary">Jetzt anmelden</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KURSINFOS ============ -->
+<section class="section" id="kursinfos">
+  <div class="wrap">
+    <span class="eyebrow">DER SCHNUPPERKURS</span>
+    <h2 class="h2 reveal">Alle Infos zum <span class="accent">Schnupperkurs</span></h2>
+    <p class="lede reveal">Alles, was Eltern und Kinder vorab wissen müssen — auf einen Blick.</p>
+
+    <div class="info-grid">
+      <div class="card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Wann?</h3>
+        <p>Start: <strong>ab 11.11.2026</strong><br>Jeden <strong>Mittwoch</strong></p>
+        <p style="margin-top:10px;">16:30 Uhr – Aufwärmen<br>17:00 Uhr – Eiszeit<br>bis ca. 18:00 Uhr</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Wo?</h3>
+        <p><strong>Eisstadion Grefrath</strong></p>
+        <p style="margin-top:10px;">Der genaue Treffpunkt vor Ort wird rechtzeitig bekannt gegeben.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M15.5 20c.3-2.6 2-4.6 4.5-5" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Für wen?</h3>
+        <p>Für Kinder, die Eisschnelllauf kennenlernen, ausprobieren und ihre Fähigkeiten auf dem Eis entdecken möchten.</p>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9h18" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Plätze</h3>
+        <div class="slot-number" id="slotNumber">35</div>
+        <div class="slot-sub" id="slotSub">Plätze insgesamt</div>
+        <div class="slot-bar"><div class="slot-bar-fill" id="slotBarFill" style="width:0%;"></div></div>
+      </div>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="timeline-title">Termine im Überblick</div>
+      <div class="timeline-track">
+        <div class="tl-item pre"><div class="tl-date">02.11.</div><div class="tl-label">Vortreffen (Mo.) · 17:00 Uhr · Eisstadion Grefrath</div><span class="tl-tag must">Pflichttermin</span></div>
+        <div class="tl-item"><div class="tl-date">11.11.</div><div class="tl-label">1. Termin</div></div>
+        <div class="tl-item"><div class="tl-date">18.11.</div><div class="tl-label">2. Termin</div></div>
+        <div class="tl-item"><div class="tl-date">25.11.</div><div class="tl-label">3. Termin</div></div>
+        <div class="tl-item"><div class="tl-date">02.12.</div><div class="tl-label">4. Termin</div></div>
+        <div class="tl-item final"><div class="tl-date">Termin folgt</div><div class="tl-label">Nikolaus-Lauf</div><span class="tl-tag opt">freiwillig</span></div>
+      </div>
+      <p class="timeline-legend">Das Vortreffen am 02.11.2026 ist ein Pflichttermin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- speed divider -->
+<div class="speedline" aria-hidden="true">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><path d="M0 24 L1200 40" stroke="#0d3b2e" stroke-width="2" opacity=".3"/></svg>
+</div>
+
+<!-- ============ PREISE ============ -->
+<section class="section price-section" id="preise">
+  <div class="wrap">
+    <span class="eyebrow">KOSTEN</span>
+    <h2 class="h2 reveal">Teilnahme &amp; <span class="accent">Kosten</span></h2>
+    <div class="price-grid">
+      <div class="price-hero reveal">
+        <div class="big">35&nbsp;€</div>
+        <p>Grundgebühr für den Schnupperkurs</p>
+      </div>
+      <div class="price-side reveal">
+        <div class="price-line">
+          <span class="label">Eigene Schlittschuhe</span>
+          <span class="value">kostenlos</span>
+        </div>
+        <div class="price-line">
+          <span class="label">Schlittschuhverleih</span>
+          <span class="value">10&nbsp;€</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MITBRINGEN ============ -->
+<section class="section" id="mitbringen" style="background:var(--white);">
+  <div class="wrap">
+    <span class="eyebrow">AUSRÜSTUNG</span>
+    <h2 class="h2 reveal">Bereit für das Eis? <span class="accent">Das solltest du mitbringen!</span></h2>
+    <p class="lede reveal">Damit du dich auf dem Eis wohlfühlst und dich gut bewegen kannst, ist die richtige Kleidung besonders wichtig.</p>
+
+    <div class="bring-grid">
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Trinkflasche</h4>
+        <p>Sport macht durstig – bitte bring eine eigene Trinkflasche mit. <strong>Keine Glasflaschen!</strong> Am besten Wasser oder Saftschorle, bitte keine Softdrinks.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Sportschuhe</h4>
+        <p>Für das Aufwärmen vor dem Betreten des Eises brauchst du bequeme Sportschuhe.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Socken</h4>
+        <p>Die Socken sollten über die Knöchel reichen und nicht zu dick sein – so sitzt der Schlittschuh gut und scheuert nicht.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Handschuhe</h4>
+        <p>Auf dem Eis sind Handschuhe wichtig, damit deine Hände geschützt sind.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Helm</h4>
+        <p>Bitte bring einen passenden Helm mit, der sicher sitzt.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Funktionelle Kleidung</h4>
+        <p>Zieh dich passend zum Wetter und zur Bewegung auf dem Eis an.</p>
+      </div>
+      <div class="bring-card reveal">
+        <div class="bring-check">✓</div>
+        <h4>Bewegungsfreiheit</h4>
+        <p>Deine Kleidung sollte bequem sein und dir ermöglichen, dich frei zu bewegen.</p>
+      </div>
+    </div>
+
+    <div class="no-pro reveal">
+      <h4>Du brauchst keine Profi-Ausrüstung!</h4>
+      <p>Für unseren Schnupperkurs brauchst du keine teure Eisschnelllauf-Ausrüstung. Wichtig ist, dass du dich warm und bequem anziehst und dich gut bewegen kannst.</p>
+      <div class="word-row" id="wordRow">
+        <div class="word-chip">BEQUEM</div>
+        <div class="word-chip">WARM</div>
+        <div class="word-chip">BEWEGLICH</div>
+      </div>
+    </div>
+
+    <div class="compare-photo reveal">
+      <h3 class="compare-photo-title">Die richtige Kleidung macht den Unterschied!</h3>
+      <p class="compare-photo-lede">Ein dicker Schneeanzug ist für den Eisschnelllauf meistens ungeeignet, weil er die Bewegungsfreiheit einschränken kann. Am besten eignet sich bewegliche, warme Sportkleidung.</p>
+      <img class="compare-photo-img" src="kleidung-vergleich.jpg" alt="Vergleich: ungeeignete und passende Kleidung beim Eisschnelllauf">
+    </div>
+  </div>
+</section>
+
+<!-- ============ NIKOLAUS ============ -->
+<section class="section nik-section" id="nikolauslauf">
+  <canvas id="snow-nik"></canvas>
+  <div class="wrap nik-inner">
+    <div class="nik-badge">🎅 DAS GROSSE FINALE · FREIWILLIG</div>
+    <h2 class="h2 reveal" style="color:#fff;">Der <span class="accent" style="color:var(--red);">Nikolaus-Lauf</span></h2>
+
+    <div class="nik-layout reveal">
+      <div class="nik-copy">
+        <div class="nik-date">Termin folgt</div>
+        <p class="nik-text">Nach den vier Schnupperkurs-Terminen wartet ein besonderes Highlight: der Nikolaus-Lauf. Die Teilnahme ist <strong>freiwillig</strong> und kein Pflichtbestandteil des Schnupperkurses.</p>
+        <p class="nik-text">Hier können die Kinder zeigen, was sie im Schnupperkurs gelernt haben, ihre Fähigkeiten unter Beweis stellen und gemeinsam einen besonderen Abschluss auf dem Eis erleben.</p>
+      </div>
+      <div class="nik-photo">
+        <img src="nikolaus-lauf.jpg" alt="Nikolaus-Lauf auf dem Eis beim ECG Grefrath">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VORTREFFEN ============ -->
+<section class="section" id="vortreffen">
+  <div class="wrap">
+    <span class="eyebrow">VOR DEM START</span>
+    <h2 class="h2 reveal">Vortreffen</h2>
+    <div class="pretreat-card reveal">
+      <h4>📍 Montag, 02.11.2026 · 17:00 Uhr · Eisstadion Grefrath</h4>
+      <p><strong>Das Vortreffen ist ein Pflichttermin</strong> – bitte kommt gemeinsam mit einem Erziehungsberechtigten. Vor dem Start des Schnupperkurses treffen wir uns im Eisstadion Grefrath. Dort besprechen wir den Ablauf, die Ausrüstung und beantworten alle offenen Fragen.</p>
+      <p><strong>Beim Vortreffen werden die Schuhe bzw. Füße ausgemessen.</strong></p>
+
+      <div class="pretreat-facts">
+        <div class="pretreat-fact"><span class="pf-label">Datum</span><span class="pf-value">Montag, 02.11.2026</span></div>
+        <div class="pretreat-fact"><span class="pf-label">Uhrzeit</span><span class="pf-value">17:00 Uhr</span></div>
+        <div class="pretreat-fact"><span class="pf-label">Ort</span><span class="pf-value">Eisstadion Grefrath</span></div>
+      </div>
+
+      <div class="sock-note">
+        <h5>🧦 Die richtigen Socken</h5>
+        <p>Beim Vortreffen sprechen wir auch über die passenden Socken – hier schon vorab das Wichtigste:</p>
+        <ul class="sock-list">
+          <li><strong>Über die Knöchel:</strong> Die Socken sollten über die Knöchel reichen, damit der Schlittschuh nicht am Bein scheuert.</li>
+          <li><strong>Nicht zu dick:</strong> Dünne Socken sind besser als dicke – zu dicke Socken machen den Schlittschuh eng, nehmen das Gefühl für den Schuh und die Füße werden eher kalt statt warm.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq" style="background:var(--ice-soft);">
+  <div class="wrap">
+    <span class="eyebrow">HÄUFIGE FRAGEN</span>
+    <h2 class="h2 reveal">Fragen &amp; <span class="accent">Antworten</span></h2>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Wann beginnt der Schnupperkurs? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Der Schnupperkurs beginnt am 11.11.2026 und findet danach jeden Mittwoch statt (16:30 Uhr Aufwärmen, 17:00 Uhr Eiszeit, bis ca. 18:00 Uhr).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Wo findet der Schnupperkurs statt? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Im Eisstadion Grefrath.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was kostet die Teilnahme? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Die Grundgebühr für den Schnupperkurs beträgt 35 €.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Kann ich eigene Schlittschuhe mitbringen? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Ja, eigene Schlittschuhe können kostenlos mitgebracht werden.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was kostet der Schlittschuhverleih? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Der Schlittschuhverleih kostet 10 €.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Wie viele Plätze gibt es? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Es stehen maximal 35 Plätze zur Verfügung.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Wann und wo findet das Vortreffen statt? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Am Montag, den 02.11.2026 um 17:00 Uhr im Eisstadion Grefrath.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Ist die Teilnahme am Vortreffen Pflicht? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Ja, das Vortreffen am 02.11.2026 ist ein Pflichttermin.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was soll mein Kind trinken? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Bitte eine eigene Trinkflasche mitbringen – <strong>keine Glasflaschen</strong>. Am besten Wasser oder Saftschorle, keine Softdrinks.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Welche Socken soll mein Kind anziehen? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Socken, die über die Knöchel reichen und nicht zu dick sind. So scheuert der Schlittschuh nicht am Bein und sitzt trotzdem passgenau.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">An wen kann ich mich bei weiteren Fragen wenden? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Schreib uns einfach eine E-Mail an schnupperkurs2026@yahoo.com – wir antworten so schnell wie möglich.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Was muss ich zum Kurs mitbringen? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Eine Trinkflasche, Sportschuhe zum Aufwärmen, Socken über den Knöcheln (nicht zu dick), Handschuhe, einen Helm sowie bequeme, funktionelle Kleidung. Details findest du weiter oben im Bereich „Ausrüstung“.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFENE FRAGEN ============ -->
+<section class="section questions-section" id="offene-fragen">
+  <div class="wrap">
+    <span class="eyebrow">NOCH FRAGEN?</span>
+    <h2 class="h2 reveal">Offene <span class="accent">Fragen?</span></h2>
+    <div class="questions-box reveal">
+      <div class="q-icon">✉️</div>
+      <h3>Schreib uns einfach!</h3>
+      <p>Ist deine Frage hier nicht beantwortet? Du erreichst uns jederzeit per E-Mail – wir melden uns so schnell wie möglich zurück.</p>
+      <div class="mail-box">
+        <span class="mail-label">E-Mail für alle Fragen</span>
+        <a class="mail-link" href="mailto:schnupperkurs2026@yahoo.com?subject=Frage%20zum%20Schnupperkurs%20Eisschnelllauf">schnupperkurs2026@yahoo.com</a>
+        <p class="mail-hint">Einfach auf die Adresse tippen, um direkt eine E-Mail zu schreiben.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANMELDUNG ============ -->
+<section class="section form-section" id="anmeldung">
+  <div class="wrap">
+    <span class="eyebrow">ANMELDUNG</span>
+    <h2 class="h2 reveal">Jetzt zum <span class="accent">Schnupperkurs</span> anmelden</h2>
+    <p class="lede reveal">Bitte fülle alle Pflichtfelder aus. Deine Angaben werden ausschließlich für die Organisation des Schnupperkurses verwendet.</p>
+
+    <!-- gesperrt -->
+    <div class="form-locked reveal" id="formLocked">
+      <svg class="lock-icon" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.6"/></svg>
+      <h4>Anmeldung noch nicht geöffnet</h4>
+      <p>Die Anmeldung startet automatisch am 24.09.2026. Schau in der Zwischenzeit gerne noch einmal auf den Countdown weiter oben.</p>
+    </div>
+
+    <!-- ausgebucht -->
+    <div class="sold-out-banner" id="soldOutBanner" style="display:none;">
+      Der Schnupperkurs ist aktuell ausgebucht.
+      <div class="waitlist-btn"><button class="btn btn-dark" id="waitlistBtn">Auf die Warteliste eintragen</button></div>
+    </div>
+
+    <!-- formular -->
+    <form class="reg-card reveal" id="regForm" style="display:none;" novalidate>
+      <div class="photo-note">Während des Schnupperkurses und beim Nikolaus-Lauf können Foto- und Videoaufnahmen entstehen. Die entsprechenden Einwilligungen werden im Anmeldeprozess abgefragt.</div>
+
+      <div class="reg-group-title">Kind</div>
+      <div class="field-grid">
+        <div class="field">
+          <label>Vorname des Kindes <span class="req">*</span></label>
+          <input type="text" name="childFirst" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Nachname des Kindes <span class="req">*</span></label>
+          <input type="text" name="childLast" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Alter des Kindes <span class="req">*</span></label>
+          <input type="number" name="childAge" min="3" max="17" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Schuhgröße <span class="req">*</span></label>
+          <input type="number" name="shoeSize" min="20" max="45" required>
+          <div class="err"></div>
+        </div>
+      </div>
+
+      <div class="reg-group-title">Eltern / Erziehungsberechtigte</div>
+      <div class="field-grid">
+        <div class="field">
+          <label>Vorname <span class="req">*</span></label>
+          <input type="text" name="parentFirst" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Nachname <span class="req">*</span></label>
+          <input type="text" name="parentLast" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>E-Mail-Adresse <span class="req">*</span></label>
+          <input type="email" name="parentEmail" required>
+          <div class="err"></div>
+        </div>
+        <div class="field">
+          <label>Telefonnummer <span class="req">*</span></label>
+          <input type="tel" name="parentPhone" required>
+          <div class="err"></div>
+        </div>
+      </div>
+
+      <div class="reg-group-title">Soziale Besonderheiten</div>
+      <div class="field">
+        <label>Soziale Besonderheiten des Kindes <span class="req">*</span></label>
+        <input type="text" name="socialPeculiarities" required placeholder="z. B. Besonderheiten im Umgang, Unterstützungsbedarf – sonst X">
+        <div class="field-hint" style="margin-top:8px;font-size:.85rem;color:var(--grey);">
+          <strong>Sehr wichtig:</strong> Falls nichts zutrifft, bitte ein <strong>X</strong> eintragen.
+        </div>
+        <div class="err"></div>
+      </div>
+
+      <div class="reg-group-title">Teilnahmebedingungen</div>
+      <div class="consent-list">
+        <label class="consent"><input type="checkbox" name="c1" required><span>Ich habe die <a href="#" data-legal="page-teilnahme" style="color:var(--green-dark);font-weight:700;">Teilnahmebedingungen</a> und die <a href="#" data-legal="page-datenschutz" style="color:var(--green-dark);font-weight:700;">Datenschutzerklärung</a> gelesen und akzeptiere diese. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c2" required><span>Ich bestätige, dass ich als Erziehungsberechtigte/r für die teilnehmende Person verantwortlich bin. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c3" required><span>Ich habe zur Kenntnis genommen, dass die Aufsichtspflicht des Vereins nur während der angeleiteten Kurseinheiten auf dem Eis besteht und davor, danach sowie in den Umkleiden bei mir als Erziehungsberechtigte/r liegt. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c4" required><span>Ich erkenne die Haftungsregelungen an: Die Teilnahme erfolgt auf eigene Gefahr, für Schäden meines Kindes hafte ich als Erziehungsberechtigte/r, und für mitgebrachte Gegenstände wird keine Haftung übernommen. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c6" required><span>Ich bestätige, dass mein Kind gesundheitlich zur Teilnahme geeignet ist und dass ein Helm zu jeder Zeit auf dem Eis getragen wird. <span class="req">*</span></span></label>
+        <label class="consent"><input type="checkbox" name="c5" required><span>Ich stimme zu, dass während der Veranstaltung Fotos und/oder Videos gemacht und im Rahmen der Vereinskommunikation verwendet werden dürfen. <span class="req">*</span></span></label>
+      </div>
+
+      <button type="submit" class="btn btn-primary reg-submit" id="submitBtn" disabled>Verbindlich anmelden</button>
+      <div class="form-msg error" id="formMsg"></div>
+    </form>
+
+    <!-- bestätigung -->
+    <div class="confirmation" id="confirmation">
+      <div class="confirm-line"></div>
+      <div class="check-hero">✓</div>
+      <h4>Geschafft! Deine Anmeldung ist angekommen.</h4>
+      <p>Vielen Dank für die Anmeldung zum Schnupperkurs des Eisschnelllauf&#8209;Club Grefrath 1992 e.V.</p>
+      <p>Weitere Informationen werden rechtzeitig vor Kursbeginn bekannt gegeben. Bei Fragen: <a href="mailto:schnupperkurs2026@yahoo.com">schnupperkurs2026@yahoo.com</a></p>
+      <div class="confirm-details">
+        <div><strong>Vortreffen (Pflicht):</strong> Mo., 02.11.2026, 17:00 Uhr</div>
+        <div><strong>11.11.2026</strong> – erster Termin (mittwochs)</div>
+        <div>16:30 Uhr Aufwärmen · 17:00 Uhr Eiszeit</div>
+        <div>Eisstadion Grefrath</div>
+        <div style="margin-top:10px;"><strong>Vortreffen:</strong> Montag, 02.11.2026, 17:00 Uhr, Eisstadion Grefrath</div>
+        <div style="margin-top:10px;"><strong>Nikolaus-Lauf (freiwillig):</strong> Termin folgt</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /site-main -->
+
+<!-- ============ LEGAL PAGES ============ -->
+<div class="legal-page" id="page-impressum">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>&larr; Zur&uuml;ck zur Startseite</a>
+    <h2>Impressum</h2>
+
+    <p>
+      Eisschnelllauf-Club-Grefrath 1992 e.V.<br>
+      Stadionstr. 161<br>
+      47929 Grefrath
+    </p>
+
+    <p>
+      Vertretungsberechtigter Vorstand: Karsten Herlitz<br>
+      Registergericht: Amtsgericht Kempen<br>
+      Registernummer: VR 526
+    </p>
+
+    <h3>Verantwortlich f&uuml;r den Inhalt nach &sect; 55 Abs. 2 RStV</h3>
+    <p>Karsten Herlitz</p>
+
+    <h3>Kontakt</h3>
+    <p>
+      E-Mail: <a href="mailto:info@eisschnelllauf-club-grefrath.de">info@eisschnelllauf-club-grefrath.de</a><br>
+      E-Mail Schnupperkurs: <a href="mailto:schnupperkurs2026@yahoo.com">schnupperkurs2026@yahoo.com</a>
+    </p>
+
+    <h3>Haftungsausschluss</h3>
+
+    <h3>Haftung f&uuml;r Inhalte</h3>
+    <p>Die Inhalte unserer Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt erstellt. F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und Aktualit&auml;t der Inhalte k&ouml;nnen wir jedoch keine Gew&auml;hr &uuml;bernehmen. Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+    <h3>Haftung f&uuml;r Links</h3>
+    <p>Unser Angebot enth&auml;lt Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
+    <h3>Urheberrecht</h3>
+    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+
+    <h3>Datenschutz</h3>
+    <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten m&ouml;glich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit m&ouml;glich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdr&uuml;ckliche Zustimmung nicht an Dritte weitergegeben.</p>
+    <p>Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
+    <p>Der Nutzung von im Rahmen der Impressumspflicht ver&ouml;ffentlichten Kontaktdaten durch Dritte zur &Uuml;bersendung von nicht ausdr&uuml;cklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdr&uuml;cklich widersprochen. Die Betreiber der Seiten behalten sich ausdr&uuml;cklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.</p>
+  </div>
+</div>
+
+<div class="legal-page" id="page-datenschutz">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>&larr; Zur&uuml;ck zur Startseite</a>
+    <h2>Datenschutzerkl&auml;rung</h2>
+
+    <h3>1. Datenschutz auf einen Blick</h3>
+    <p><strong>Allgemeine Hinweise</strong><br>
+    Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.</p>
+
+    <p><strong>Datenerfassung auf unserer Website</strong><br>
+    Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?</p>
+    <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten k&ouml;nnen Sie dem Impressum dieser Website entnehmen.</p>
+    <p>Wie erfassen wir Ihre Daten?</p>
+    <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
+    <p>Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie unsere Website betreten.</p>
+    <p>Wof&uuml;r nutzen wir Ihre Daten?</p>
+    <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gew&auml;hrleisten. Andere Daten k&ouml;nnen zur Analyse Ihres Nutzerverhaltens verwendet werden.</p>
+    <p>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</p>
+    <p>Sie haben jederzeit das Recht unentgeltlich Auskunft &uuml;ber Herkunft, Empf&auml;nger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben au&szlig;erdem ein Recht, die Berichtigung, Sperrung oder L&ouml;schung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden. Des Weiteren steht Ihnen ein Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde zu.</p>
+
+    <p><strong>Analyse-Tools und Tools von Drittanbietern</strong><br>
+    Beim Besuch unserer Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit Cookies und mit sogenannten Analyseprogrammen. Die Analyse Ihres Surf-Verhaltens erfolgt in der Regel anonym; das Surf-Verhalten kann nicht zu Ihnen zur&uuml;ckverfolgt werden. Sie k&ouml;nnen dieser Analyse widersprechen oder sie durch die Nichtbenutzung bestimmter Tools verhindern. Detaillierte Informationen dazu finden Sie in der folgenden Datenschutzerkl&auml;rung.</p>
+    <p>Sie k&ouml;nnen dieser Analyse widersprechen. &Uuml;ber die Widerspruchsm&ouml;glichkeiten werden wir Sie in dieser Datenschutzerkl&auml;rung informieren.</p>
+
+    <h3>2. Allgemeine Hinweise und Pflichtinformationen</h3>
+    <p><strong>Datenschutz</strong><br>
+    Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerkl&auml;rung.</p>
+    <p>Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Die vorliegende Datenschutzerkl&auml;rung erl&auml;utert, welche Daten wir erheben und wof&uuml;r wir sie nutzen. Sie erl&auml;utert auch, wie und zu welchem Zweck das geschieht.</p>
+    <p>Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
+
+    <p><strong>Hinweis zur verantwortlichen Stelle</strong><br>
+    Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p>
+    <p>
+      Herr K. Herlitz<br>
+      Eisschnelllauf-Club-Grefrath 1992 e.V., Stadionstr. 161, 47929 Grefrath<br>
+      E-Mail: <a href="mailto:info@eisschnelllauf-club-grefrath.de">info@eisschnelllauf-club-grefrath.de</a><br>
+      E-Mail Schnupperkurs: <a href="mailto:schnupperkurs2026@yahoo.com">schnupperkurs2026@yahoo.com</a>
+    </p>
+    <p>Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.</p>
+
+    <p><strong>SSL- bzw. TLS-Verschl&uuml;sselung</strong><br>
+    Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der &Uuml;bertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschl&uuml;sselung. Eine verschl&uuml;sselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+    <p>Wenn die SSL- bzw. TLS-Verschl&uuml;sselung aktiviert ist, k&ouml;nnen die Daten, die Sie an uns &uuml;bermitteln, nicht von Dritten mitgelesen werden.</p>
+
+    <p><strong>Auskunft, Sperrung, L&ouml;schung</strong><br>
+    Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft &uuml;ber Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empf&auml;nger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder L&ouml;schung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten k&ouml;nnen Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.</p>
+
+    <p><strong>Widerspruch gegen Werbe-Mails</strong><br>
+    Der Nutzung von im Rahmen der Impressumspflicht ver&ouml;ffentlichten Kontaktdaten zur &Uuml;bersendung von nicht ausdr&uuml;cklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdr&uuml;cklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.</p>
+
+    <h3>3. Datenerfassung auf unserer Website</h3>
+    <p><strong>Cookies</strong><br>
+    Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.</p>
+    <p>Die meisten der von uns verwendeten Cookies sind so genannte &bdquo;Session-Cookies&ldquo;. Sie werden nach Ende Ihres Besuchs automatisch gel&ouml;scht. Andere Cookies bleiben auf Ihrem Endger&auml;t gespeichert bis Sie diese l&ouml;schen. Diese Cookies erm&ouml;glichen es uns, Ihren Browser beim n&auml;chsten Besuch wiederzuerkennen.</p>
+    <p>Sie k&ouml;nnen Ihren Browser so einstellen, dass Sie &uuml;ber das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies f&uuml;r bestimmte F&auml;lle oder generell ausschlie&szlig;en sowie das automatische L&ouml;schen der Cookies beim Schlie&szlig;en des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalit&auml;t dieser Website eingeschr&auml;nkt sein.</p>
+    <p>Cookies, die zur Durchf&uuml;hrung des elektronischen Kommunikationsvorgangs oder zur Bereitstellung bestimmter, von Ihnen erw&uuml;nschter Funktionen (z.B. Warenkorbfunktion) erforderlich sind, werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von Cookies zur technisch fehlerfreien und optimierten Bereitstellung seiner Dienste. Soweit andere Cookies (z.B. Cookies zur Analyse Ihres Surfverhaltens) gespeichert werden, werden diese in dieser Datenschutzerkl&auml;rung gesondert behandelt.</p>
+
+    <p><strong>Cookie-Einwilligung mit Borlabs Cookie</strong><br>
+    Unsere Website nutzt die Cookie-Consent-Technologie von Borlabs Cookie, um Ihre Einwilligung zur Speicherung bestimmter Cookies in Ihrem Browser einzuholen und diese datenschutzkonform zu dokumentieren. Anbieter dieser Technologie ist Borlabs &ndash; Benjamin A. Bornschein, Georg-Wilhelm-Str. 17, 21107 Hamburg (im Folgenden Borlabs).</p>
+    <p>Wenn Sie unsere Website betreten, wird ein Borlabs-Cookie in Ihrem Browser gespeichert, in dem die von Ihnen erteilten Einwilligungen oder der Widerruf dieser Einwilligungen gespeichert werden. Diese Daten werden nicht an den Anbieter von Borlabs Cookie weitergegeben.</p>
+    <p>Die erfassten Daten werden gespeichert, bis Sie uns zur L&ouml;schung auffordern bzw. das Borlabs-Cookie selbst l&ouml;schen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt. Zwingende gesetzliche Aufbewahrungsfristen bleiben unber&uuml;hrt. Details zur Datenverarbeitung von Borlabs Cookie finden Sie unter <a href="https://de.borlabs.io/kb/welche-daten-speichert-borlabs-cookie/" target="_blank" rel="noopener">https://de.borlabs.io/kb/welche-daten-speichert-borlabs-cookie/</a></p>
+    <p>Der Einsatz der Borlabs-Cookie-Consent-Technologie erfolgt, um die gesetzlich vorgeschriebenen Einwilligungen f&uuml;r den Einsatz von Cookies einzuholen. Rechtsgrundlage hierf&uuml;r ist Art. 6 Abs. 1 S. 1 lit. c DSGVO.</p>
+
+    <p><strong>Server-Log-Dateien</strong><br>
+    Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns &uuml;bermittelt. Dies sind:</p>
+    <ul>
+      <li>Browsertyp und Browserversion</li>
+      <li>verwendetes Betriebssystem</li>
+      <li>Referrer URL</li>
+      <li>Hostname des zugreifenden Rechners</li>
+      <li>Uhrzeit der Serveranfrage</li>
+      <li>IP-Adresse</li>
+    </ul>
+    <p>Eine Zusammenf&uuml;hrung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+    <p>Grundlage f&uuml;r die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO, der die Verarbeitung von Daten zur Erf&uuml;llung eines Vertrags oder vorvertraglicher Ma&szlig;nahmen gestattet.</p>
+
+    <p><strong>Kontaktformular</strong><br>
+    Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und f&uuml;r den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+    <p>Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschlie&szlig;lich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie k&ouml;nnen diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorg&auml;nge bleibt vom Widerruf unber&uuml;hrt.</p>
+    <p>Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.</p>
+
+    <p><strong>Verarbeiten von Daten (Kunden- und Vertragsdaten)</strong><br>
+    Wir erheben, verarbeiten und nutzen personenbezogene Daten nur, soweit sie f&uuml;r die Begr&uuml;ndung, inhaltliche Ausgestaltung oder &Auml;nderung des Rechtsverh&auml;ltnisses erforderlich sind (Bestandsdaten). Dies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von Daten zur Erf&uuml;llung eines Vertrags oder vorvertraglicher Ma&szlig;nahmen gestattet. Personenbezogene Daten &uuml;ber die Inanspruchnahme unserer Internetseiten (Nutzungsdaten) erheben, verarbeiten und nutzen wir nur, soweit dies erforderlich ist, um dem Nutzer die Inanspruchnahme des Dienstes zu erm&ouml;glichen oder abzurechnen.</p>
+    <p>Die erhobenen Kundendaten werden nach Abschluss des Auftrags oder Beendigung der Gesch&auml;ftsbeziehung gel&ouml;scht. Gesetzliche Aufbewahrungsfristen bleiben unber&uuml;hrt.</p>
+
+    <h3>4. Anmeldung zum Schnupperkurs</h3>
+    <p><strong>Welche Daten wir bei der Anmeldung erheben</strong><br>
+    Im Rahmen der Online-Anmeldung zum Schnupperkurs verarbeiten wir folgende Daten:</p>
+    <ul>
+      <li>Name und Vorname des Kindes, Geburtsdatum bzw. Alter, Schuhgr&ouml;&szlig;e</li>
+      <li>Name der/des Erziehungsberechtigten</li>
+      <li>E-Mail-Adresse und Telefonnummer der/des Erziehungsberechtigten</li>
+      <li>Angaben zu sozialen Besonderheiten des Kindes (Pflichtfeld; falls nicht zutreffend, ist ein &bdquo;X&ldquo; einzutragen)</li>
+      <li>Angaben, die Sie uns freiwillig mitteilen (z.&nbsp;B. gesundheitliche Hinweise, Anmerkungen)</li>
+      <li>Zeitpunkt der Anmeldung</li>
+    </ul>
+    <p><strong>Zweck und Rechtsgrundlage der Verarbeitung</strong><br>
+    Die Daten werden ausschlie&szlig;lich zur Organisation und Durchf&uuml;hrung des Schnupperkurses verarbeitet: Platzvergabe, Gruppeneinteilung, Bereitstellung von Leihschlittschuhen, Kommunikation zu Terminen und &Auml;nderungen sowie zur Erreichbarkeit im Notfall.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen und Erf&uuml;llung des Teilnahmevertrages) sowie &ndash; soweit Sie uns freiwillige Angaben machen oder in Foto- und Videoaufnahmen einwilligen &ndash; Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Gesundheitsbezogene Angaben werden nur auf Grundlage Ihrer ausdr&uuml;cklichen Einwilligung gem&auml;&szlig; Art. 9 Abs. 2 lit. a DSGVO verarbeitet.</p>
+    <p><strong>Empf&auml;nger der Daten</strong><br>
+    Die Daten werden ausschlie&szlig;lich den mit der Organisation und Durchf&uuml;hrung des Schnupperkurses betrauten Personen des Vereins (Vorstand, &Uuml;bungsleiterinnen und &Uuml;bungsleiter, Helferinnen und Helfer) zug&auml;nglich gemacht. Eine Weitergabe an Dritte zu Werbezwecken findet nicht statt. Eine &Uuml;bermittlung an Beh&ouml;rden erfolgt nur, soweit wir gesetzlich dazu verpflichtet sind.</p>
+    <p><strong>Speicherdauer</strong><br>
+    Anmeldedaten werden f&uuml;r die Dauer des Schnupperkurses und anschlie&szlig;end bis zum Ende der laufenden Saison gespeichert und danach gel&ouml;scht, sp&auml;testens jedoch 6 Monate nach Kursende. L&auml;ngere Aufbewahrungsfristen gelten nur, soweit gesetzliche Aufbewahrungspflichten (z.&nbsp;B. steuerrechtlich) dem entgegenstehen.</p>
+    <p><strong>Foto- und Videoaufnahmen</strong><br>
+    W&auml;hrend des Schnupperkurses und beim Nikolaus-Lauf k&ouml;nnen Foto- und Videoaufnahmen entstehen, die der Verein zur Berichterstattung &uuml;ber das Vereinsgeschehen (Website, Social Media, Presse) verwenden m&ouml;chte. Die Einwilligung hierzu ist Bestandteil der Anmeldung zum Schnupperkurs. Sie k&ouml;nnen Ihre Einwilligung jederzeit mit Wirkung f&uuml;r die Zukunft widerrufen (E-Mail gen&uuml;gt); ein bereits erfolgter Kursbesuch bleibt davon unber&uuml;hrt.</p>
+    <p><strong>Erforderlichkeit der Angaben</strong><br>
+    Die Bereitstellung der als Pflichtfeld gekennzeichneten Daten ist f&uuml;r die Teilnahme am Schnupperkurs erforderlich. Ohne diese Angaben k&ouml;nnen wir die Anmeldung nicht ber&uuml;cksichtigen.</p>
+
+    <h3>5. Soziale Medien</h3>
+    <p><strong>Facebook-Plugins (Like &amp; Share-Button)</strong><br>
+    Auf unseren Seiten sind Plugins des sozialen Netzwerks Facebook, Anbieter Facebook Inc., 1 Hacker Way, Menlo Park, California 94025, USA, integriert. Die Facebook-Plugins erkennen Sie an dem Facebook-Logo oder dem &bdquo;Like-Button&ldquo; (&bdquo;Gef&auml;llt mir&ldquo;) auf unserer Seite. Eine &Uuml;bersicht &uuml;ber die Facebook-Plugins finden Sie hier: <a href="https://developers.facebook.com/docs/plugins/" target="_blank" rel="noopener">https://developers.facebook.com/docs/plugins/</a>.</p>
+    <p>Wenn Sie unsere Seiten besuchen, wird &uuml;ber das Plugin eine direkte Verbindung zwischen Ihrem Browser und dem Facebook-Server hergestellt. Facebook erh&auml;lt dadurch die Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den Facebook &bdquo;Like-Button&ldquo; anklicken w&auml;hrend Sie in Ihrem Facebook-Account eingeloggt sind, k&ouml;nnen Sie die Inhalte unserer Seiten auf Ihrem Facebook-Profil verlinken. Dadurch kann Facebook den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der &uuml;bermittelten Daten sowie deren Nutzung durch Facebook erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerkl&auml;rung von Facebook unter: <a href="https://de-de.facebook.com/policy.php" target="_blank" rel="noopener">https://de-de.facebook.com/policy.php</a>.</p>
+    <p>Wenn Sie nicht w&uuml;nschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook-Nutzerkonto zuordnen kann, loggen Sie sich bitte aus Ihrem Facebook-Benutzerkonto aus.</p>
+
+    <h3>6. Analyse Tools und Werbung</h3>
+    <p><strong>WordPress Stats</strong><br>
+    Diese Website nutzt das WordPress Tool Stats, um Besucherzugriffe statistisch auszuwerten. Anbieter ist die Automattic Inc., 60 29th Street #343, San Francisco, CA 94110-4929, USA.</p>
+    <p>WordPress Stats verwendet Cookies, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website erlauben. Die durch die Cookies generierten Informationen &uuml;ber die Benutzung unserer Website werden auf Servern in den USA gespeichert. Ihre IP-Adresse wird nach der Verarbeitung und vor der Speicherung anonymisiert.</p>
+    <p>&bdquo;WordPress-Stats&ldquo;-Cookies verbleiben auf Ihrem Endger&auml;t, bis Sie sie l&ouml;schen.</p>
+    <p>Die Speicherung von &bdquo;WordPress Stats&ldquo;-Cookies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der anonymisierten Analyse des Nutzerverhaltens, um sowohl sein Webangebot als auch seine Werbung zu optimieren.</p>
+    <p>Sie k&ouml;nnen Ihren Browser so einstellen, dass Sie &uuml;ber das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies f&uuml;r bestimmte F&auml;lle oder generell ausschlie&szlig;en sowie das automatische L&ouml;schen der Cookies beim Schlie&szlig;en des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalit&auml;t unserer Website eingeschr&auml;nkt sein.</p>
+    <p>Sie k&ouml;nnen der Erhebung und Nutzung Ihrer Daten f&uuml;r die Zukunft widersprechen, indem Sie mit einem Klick auf diesen Link einen Opt-Out-Cookie in Ihrem Browser setzen: <a href="https://www.quantcast.com/opt-out/" target="_blank" rel="noopener">https://www.quantcast.com/opt-out/</a>.</p>
+    <p>Wenn Sie die Cookies auf Ihrem Rechner l&ouml;schen, m&uuml;ssen Sie den Opt-Out-Cookie erneut setzen.</p>
+
+    <p><strong>Google reCAPTCHA</strong><br>
+    Wir nutzen &bdquo;Google reCAPTCHA&ldquo; (im Folgenden &bdquo;reCAPTCHA&ldquo;) auf unseren Websites. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA (&bdquo;Google&ldquo;).</p>
+    <p>Mit reCAPTCHA soll &uuml;berpr&uuml;ft werden, ob die Dateneingabe auf unseren Websites (z.B. in einem Kontaktformular) durch einen Menschen oder durch ein automatisiertes Programm erfolgt. Hierzu analysiert reCAPTCHA das Verhalten des Websitebesuchers anhand verschiedener Merkmale. Diese Analyse beginnt automatisch, sobald der Websitebesucher die Website betritt. Zur Analyse wertet reCAPTCHA verschiedene Informationen aus (z.B. IP-Adresse, Verweildauer des Websitebesuchers auf der Website oder vom Nutzer get&auml;tigte Mausbewegungen). Die bei der Analyse erfassten Daten werden an Google weitergeleitet.</p>
+    <p>Die reCAPTCHA-Analysen laufen vollst&auml;ndig im Hintergrund. Websitebesucher werden nicht darauf hingewiesen, dass eine Analyse stattfindet.</p>
+    <p>Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse daran, seine Webangebote vor missbr&auml;uchlicher automatisierter Aussp&auml;hung und vor SPAM zu sch&uuml;tzen.</p>
+    <p>Weitere Informationen zu Google reCAPTCHA sowie die Datenschutzerkl&auml;rung von Google entnehmen Sie folgenden Links: <a href="https://www.google.com/intl/de/policies/privacy/" target="_blank" rel="noopener">https://www.google.com/intl/de/policies/privacy/</a> und <a href="https://www.google.com/recaptcha/intro/android.html" target="_blank" rel="noopener">https://www.google.com/recaptcha/intro/android.html</a>.</p>
+
+    <h3>7. Plugins und Tools</h3>
+    <p><strong>YouTube</strong><br>
+    Unsere Website nutzt Plugins der von Google betriebenen Seite YouTube. Betreiber der Seiten ist die YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA.</p>
+    <p>Wenn Sie eine unserer mit einem YouTube-Plugin ausgestatteten Seiten besuchen, wird eine Verbindung zu den Servern von YouTube hergestellt. Dabei wird dem YouTube-Server mitgeteilt, welche unserer Seiten Sie besucht haben.</p>
+    <p>Wenn Sie in Ihrem YouTube-Account eingeloggt sind, erm&ouml;glichen Sie YouTube, Ihr Surfverhalten direkt Ihrem pers&ouml;nlichen Profil zuzuordnen. Dies k&ouml;nnen Sie verhindern, indem Sie sich aus Ihrem YouTube-Account ausloggen.</p>
+    <p>Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+    <p>Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerkl&auml;rung von YouTube unter: <a href="https://www.google.de/intl/de/policies/privacy" target="_blank" rel="noopener">https://www.google.de/intl/de/policies/privacy</a>.</p>
+
+    <p><strong>Vimeo</strong><br>
+    Unsere Website nutzt Plugins des Videoportals Vimeo. Anbieter ist die Vimeo Inc., 555 West 18th Street, New York, New York 10011, USA.</p>
+    <p>Wenn Sie eine unserer mit einem Vimeo-Plugin ausgestatteten Seiten besuchen, wird eine Verbindung zu den Servern von Vimeo hergestellt. Dabei wird dem Vimeo-Server mitgeteilt, welche unserer Seiten Sie besucht haben. Zudem erlangt Vimeo Ihre IP-Adresse. Dies gilt auch dann, wenn Sie nicht bei Vimeo eingeloggt sind oder keinen Account bei Vimeo besitzen. Die von Vimeo erfassten Informationen werden an den Vimeo-Server in den USA &uuml;bermittelt.</p>
+    <p>Wenn Sie in Ihrem Vimeo-Account eingeloggt sind, erm&ouml;glichen Sie Vimeo, Ihr Surfverhalten direkt Ihrem pers&ouml;nlichen Profil zuzuordnen. Dies k&ouml;nnen Sie verhindern, indem Sie sich aus Ihrem Vimeo-Account ausloggen.</p>
+    <p>Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerkl&auml;rung von Vimeo unter: <a href="https://vimeo.com/privacy" target="_blank" rel="noopener">https://vimeo.com/privacy</a>.</p>
+
+    <p><strong>Google Web Fonts</strong><br>
+    Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite l&auml;dt Ihr Browser die ben&ouml;tigten Web Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.</p>
+    <p>Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu den Servern von Google aufnehmen. Hierdurch erlangt Google Kenntnis dar&uuml;ber, dass &uuml;ber Ihre IP-Adresse unsere Website aufgerufen wurde. Die Nutzung von Google Web Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+    <p>Wenn Ihr Browser Web Fonts nicht unterst&uuml;tzt, wird eine Standardschrift von Ihrem Computer genutzt.</p>
+    <p>Weitere Informationen zu Google Web Fonts finden Sie unter <a href="https://developers.google.com/fonts/faq" target="_blank" rel="noopener">https://developers.google.com/fonts/faq</a> und in der Datenschutzerkl&auml;rung von Google: <a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">https://www.google.com/policies/privacy/</a>.</p>
+
+    <p><strong>Google Maps</strong><br>
+    Diese Seite nutzt &uuml;ber eine API den Kartendienst Google Maps. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</p>
+    <p>Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP Adresse zu speichern. Diese Informationen werden in der Regel an einen Server von Google in den USA &uuml;bertragen und dort gespeichert. Der Anbieter dieser Seite hat keinen Einfluss auf diese Daten&uuml;bertragung.</p>
+    <p>Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und an einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+    <p>Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerkl&auml;rung von Google: <a href="https://www.google.de/intl/de/policies/privacy/" target="_blank" rel="noopener">https://www.google.de/intl/de/policies/privacy/</a>.</p>
+
+    <h3>8. Ihre Rechte nach der DSGVO</h3>
+    <p>Sie haben jederzeit das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), L&ouml;schung (Art. 17 DSGVO), Einschr&auml;nkung der Verarbeitung (Art. 18 DSGVO), Daten&uuml;bertragbarkeit (Art. 20 DSGVO) sowie ein Widerspruchsrecht gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO). Erteilte Einwilligungen k&ouml;nnen Sie jederzeit mit Wirkung f&uuml;r die Zukunft widerrufen.</p>
+    <p>Zudem steht Ihnen ein Beschwerderecht bei einer Aufsichtsbeh&ouml;rde zu, f&uuml;r Nordrhein-Westfalen:<br>
+    Landesbeauftragte f&uuml;r Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestra&szlig;e 2&ndash;4, 40213 D&uuml;sseldorf.</p>
+  </div>
+</div>
+
+<div class="legal-page" id="page-teilnahme">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
+    <h2>Teilnahmebedingungen</h2>
+    <p class="legal-intro">Diese Bedingungen gelten für den Schnupperkurs Eisschnelllauf des Eisschnelllauf-Club Grefrath 1992 e.V. (nachfolgend „Verein“) in der Saison 2026. Mit der Anmeldung werden sie von der/dem Erziehungsberechtigten anerkannt.</p>
+
+    <h3>1. Anmeldung und Vertragsschluss</h3>
+    <p>Die Anmeldung erfolgt über das Online-Formular auf dieser Website und ist nur durch eine erziehungsberechtigte Person zulässig. Ein Anspruch auf einen Kursplatz entsteht erst mit der Bestätigung durch den Verein. Die Plätze sind auf 35 Teilnehmende begrenzt und werden in der Reihenfolge des Eingangs vergeben.</p>
+
+    <h3>2. Termine und Teilnahmepflicht</h3>
+    <p>Pflichttermin ist das Vortreffen am Montag, 02.11.2026 um 17:00 Uhr im Eisstadion Grefrath. Die vier regulären Kurstermine finden am 11.11., 18.11., 25.11. und 02.12.2026 statt (jeweils mittwochs, 16:30 Uhr Aufwärmen, 17:00 Uhr Eiszeit, Ende ca. 18:00 Uhr). Die Teilnahme am Nikolaus-Lauf ist ein freiwilliges Zusatzangebot und nicht verpflichtend; der Termin wird rechtzeitig bekannt gegeben.</p>
+    <p>Der Verein behält sich vor, Termine aus organisatorischen oder witterungsbedingten Gründen sowie bei technischen Störungen der Eisfläche zu verlegen oder abzusagen. Über Änderungen wird zeitnah per E-Mail informiert.</p>
+
+    <h3>3. Kosten</h3>
+    <p>Die Kursgebühr beträgt 35&nbsp;€. Eigene Schlittschuhe können kostenfrei mitgebracht werden; der Verleih von Schlittschuhen kostet zusätzlich 10&nbsp;€. Die Zahlungsmodalitäten werden nach der Anmeldung mitgeteilt. Bei Nichtteilnahme aus Gründen, die der Verein nicht zu vertreten hat, besteht kein Anspruch auf Erstattung. Muss der Verein den Kurs vollständig absagen, wird die Gebühr anteilig erstattet.</p>
+
+    <h3>4. Gesundheitliche Voraussetzungen</h3>
+    <p>Die Teilnahme setzt eine ausreichende körperliche Eignung und gesundheitliche Unbedenklichkeit voraus. Die/der Erziehungsberechtigte versichert mit der Anmeldung, dass keine gesundheitlichen Bedenken gegen die Teilnahme am Eissport bestehen. Erkrankungen, Allergien, Medikamentenbedarf oder Einschränkungen, die für die sichere Durchführung relevant sind, sind vor Kursbeginn unaufgefordert mitzuteilen. Der Verein führt keine medizinische Eignungsprüfung durch.</p>
+
+    <h3>5. Ausrüstung und Sicherheit</h3>
+    <p>Das Tragen eines passenden, sicher sitzenden Helms ist während des gesamten Aufenthalts auf dem Eis <strong>verpflichtend</strong>. Handschuhe sind vorgeschrieben. Empfohlen werden zusätzlich Knie- und Ellenbogenschützer. Mitzubringen sind ferner Sportschuhe zum Aufwärmen, Socken, die über die Knöchel reichen und nicht zu dick sind, sowie bequeme, funktionelle Kleidung. Getränke sind ausschließlich in bruchsicheren Flaschen mitzubringen – <strong>Glasflaschen sind im gesamten Eisstadion untersagt</strong>.</p>
+    <p>Den Anweisungen der Übungsleiterinnen und Übungsleiter, der Helferinnen und Helfer sowie des Stadionpersonals ist jederzeit Folge zu leisten. Die Haus- und Eisbahnordnung des Eisstadions Grefrath gilt ergänzend.</p>
+
+    <h3>6. Aufsichtspflicht – Eltern haften für ihre Kinder</h3>
+    <p>Die Aufsichtspflicht des Vereins beschränkt sich ausschließlich auf die Dauer der angeleiteten Kurseinheiten auf der Eisfläche und nur auf die tatsächlich anwesenden, angemeldeten Kinder. Vor Beginn und nach Ende der Kurseinheit, in den Umkleiden, auf dem Weg zum und vom Eisstadion sowie während Pausen liegt die Aufsichtspflicht vollständig bei den Erziehungsberechtigten.</p>
+    <p>Die Erziehungsberechtigten sind verpflichtet, ihr Kind pünktlich zu übergeben und nach Kursende unverzüglich wieder in Empfang zu nehmen. Bei Kindern unter 10 Jahren wird die Anwesenheit einer erziehungsberechtigten Person während des gesamten Termins empfohlen.</p>
+    <p>Für Schäden, die das Kind Dritten, dem Verein oder dem Betreiber des Eisstadions schuldhaft zufügt, haften die Erziehungsberechtigten nach den gesetzlichen Vorschriften. Wir empfehlen ausdrücklich den Abschluss einer privaten Haftpflichtversicherung, die Schäden durch Kinder einschließt.</p>
+
+    <h3>7. Haftung des Vereins</h3>
+    <p>Eissport ist mit einem erhöhten Sturz- und Verletzungsrisiko verbunden. Die Teilnahme erfolgt auf eigene Gefahr. Der Verein haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung des Vereins, seiner gesetzlichen Vertreter oder Erfüllungsgehilfen beruhen, sowie für sonstige Schäden, die auf Vorsatz oder grober Fahrlässigkeit beruhen.</p>
+    <p>Für sonstige Schäden haftet der Verein nur bei Verletzung einer wesentlichen Vertragspflicht (Kardinalpflicht) und begrenzt auf den vertragstypischen, vorhersehbaren Schaden. Eine darüber hinausgehende Haftung, insbesondere für leichte Fahrlässigkeit, ist ausgeschlossen. Diese Haftungsbeschränkungen gelten auch zugunsten der Übungsleiterinnen und Übungsleiter, Helferinnen und Helfer sowie Organe des Vereins.</p>
+    <p>Für mitgebrachte Wertgegenstände, Kleidung, Sportgeräte und sonstiges Eigentum wird keine Haftung übernommen; dies gilt insbesondere für Gegenstände, die in Umkleiden oder auf den Rängen zurückgelassen werden. Ein gesetzlicher Unfallversicherungsschutz über den Verein besteht nur im Rahmen der Sportversicherung des Landessportbundes NRW und nur für den satzungsgemäßen Sportbetrieb.</p>
+
+    <h3>8. Leihmaterial</h3>
+    <p>Geliehene Schlittschuhe sind sorgfältig zu behandeln und unmittelbar nach dem Termin zurückzugeben. Für Beschädigungen, die über die normale Abnutzung hinausgehen, sowie für Verlust haften die Erziehungsberechtigten.</p>
+
+    <h3>9. Ausschluss von der Teilnahme</h3>
+    <p>Der Verein kann Teilnehmende bei grobem oder wiederholtem Verstoß gegen diese Bedingungen, gegen die Hausordnung oder gegen Anweisungen der Kursleitung sowie bei Gefährdung anderer vom weiteren Kurs ausschließen. Ein Anspruch auf Erstattung der Kursgebühr besteht in diesem Fall nicht.</p>
+
+    <h3>10. Foto- und Videoaufnahmen</h3>
+    <p>Mit der Anmeldung willigen die Erziehungsberechtigten ein, dass während des Kurses und beim Nikolaus-Lauf Foto- und Videoaufnahmen entstehen und im Rahmen der Vereinskommunikation verwendet werden dürfen. Näheres regelt die Datenschutzerklärung. Die Einwilligung kann jederzeit für die Zukunft widerrufen werden.</p>
+
+    <h3>11. Schlussbestimmungen</h3>
+    <p>Es gilt das Recht der Bundesrepublik Deutschland. Sollten einzelne Bestimmungen unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. An ihre Stelle tritt die gesetzliche Regelung.</p>
+    <p class="legal-updated">Stand: September 2026</p>
+  </div>
+</div>
+
+<div class="legal-page" id="page-kontakt">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
+    <h2>Kontakt</h2>
+
+    <h3>Eisschnelllauf-Club-Grefrath 1992 e.V.</h3>
+    <p>Stadionstr. 161<br>47929 Grefrath</p>
+    <p>E-Mail: <a href="mailto:info@eisschnelllauf-club-grefrath.de">info@eisschnelllauf-club-grefrath.de</a></p>
+
+    <h3>Fragen zum Schnupperkurs</h3>
+    <p>
+      E-Mail: <a href="mailto:schnupperkurs2026@yahoo.com?subject=Frage%20zum%20Schnupperkurs%20Eisschnelllauf" style="font-weight:700;color:var(--green-dark);">schnupperkurs2026@yahoo.com</a><br>
+      Wir antworten in der Regel innerhalb weniger Tage.
+    </p>
+
+    <h3>Trainingsort</h3>
+    <p>Eisstadion Grefrath</p>
+
+    <h3>Vertretungsberechtigt</h3>
+    <p>Vertretungsberechtigter Vorstand: Karsten Herlitz</p>
+
+    <p style="margin-top:22px;font-size:.9rem;color:var(--grey);">Hinweis: Bitte richten Sie Anfragen zu Anmeldung, Terminen und Ausrüstung per E-Mail an uns – so können wir sie am schnellsten bearbeiten.</p>
+  </div>
+</div>
+
+<!-- ============ ADMIN (DEMO) ============ -->
+<div class="admin-panel" id="adminPanel">
+  <div class="wrap">
+    <a href="#" class="legal-back" data-close-legal>← Zurück zur Startseite</a>
+    <h2 style="font-family:'Bebas Neue';font-size:2.2rem;color:var(--green-dark);">Admin-Bereich (Demo)</h2>
+    <p style="color:var(--grey);">Alle Anmeldungen werden zentral gespeichert und sind hier für alle Admins sichtbar.</p>
+    <div class="admin-stats">
+      <div class="admin-stat"><b id="adminTotal">0</b>Anmeldungen</div>
+      <div class="admin-stat"><b id="adminFree">35</b>Freie Plätze</div>
+      <div class="admin-stat"><b id="adminStatus">Geschlossen</b>Anmeldestatus</div>
+    </div>
+    <div class="admin-actions">
+      <button id="adminRefresh">Aktualisieren</button>
+      <button id="adminExport">Als CSV exportieren</button>
+      <button id="adminToggle">Anmeldung manuell öffnen/schließen</button>
+      <button id="adminReset">Alle Anmeldungen löschen</button>
+    </div>
+    <table>
+      <thead><tr><th>Kind</th><th>Alter</th><th>Schuhgröße</th><th>Erziehungsberechtigte/r</th><th>E-Mail</th><th>Telefon</th><th>Soziale Besonderheiten</th></tr></thead>
+      <tbody id="adminTableBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer id="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <a href="#top" class="foot-brand">
+        <img src="ecg-logo.png" alt="ECG Grefrath Logo" style="height:30px;width:auto;background:#fff;border-radius:6px;padding:3px 7px;">
+        <span class="word">Eisschnelllauf-Club Grefrath 1992 e.V.</span>
+      </a>
+      <ul class="foot-links">
+        <li><a href="#" data-legal="page-impressum">Impressum</a></li>
+        <li><a href="#" data-legal="page-datenschutz">Datenschutz</a></li>
+        <li><a href="#" data-legal="page-teilnahme">Teilnahmebedingungen</a></li>
+        <li><a href="#" data-legal="page-kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Eisschnelllauf-Club Grefrath 1992 e.V.</span>
+      <button class="admin-link" id="adminOpenBtn">Admin</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SUPABASE (zentrale Speicherung) ============ -->
+<script>
+  // TODO: Ersetze diese beiden Werte durch deine eigenen aus Supabase (Project Settings -> API)
+  const SUPABASE_URL = "https://sfvjxjcrnpummjjkwotp.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNmdmp4amNybnB1bW1qamt3b3RwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkyOTc0MzEsImV4cCI6MjEwNDg3MzQzMX0.yS2yZku07cJ6cs1AtmyKa0WhORjdbu7rSPpGpmVLmdI";
+</script>
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- reveal on scroll ---------------- */
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const tlItems = document.querySelectorAll('.tl-item');
+  const tlIo = new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'), i*90); tlIo.unobserve(e.target);} });
+  },{threshold:.2});
+  tlItems.forEach(el=>tlIo.observe(el));
+
+  const wordChips = document.querySelectorAll('.word-chip');
+  const wordIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        wordChips.forEach((c,i)=> setTimeout(()=>c.classList.add('in'), i*220));
+        wordIo.disconnect();
+      }
+    });
+  },{threshold:.4});
+  if(document.getElementById('wordRow')) wordIo.observe(document.getElementById('wordRow'));
+
+  /* ---------------- snow canvas ---------------- */
+  function initSnow(canvasId, density){
+    const canvas = document.getElementById(canvasId);
+    if(!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let w,h,flakes;
+    function resize(){
+      w = canvas.width = canvas.offsetWidth;
+      h = canvas.height = canvas.offsetHeight;
+    }
+    function makeFlakes(){
+      flakes = Array.from({length:density}, ()=>({
+        x:Math.random()*w, y:Math.random()*h,
+        r:Math.random()*2+0.6, spd:Math.random()*0.6+0.2, drift:Math.random()*0.6-0.3
+      }));
+    }
+    resize(); makeFlakes();
+    window.addEventListener('resize', ()=>{resize(); makeFlakes();});
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce) return;
+    function tick(){
+      ctx.clearRect(0,0,w,h);
+      ctx.fillStyle='rgba(255,255,255,0.85)';
+      flakes.forEach(f=>{
+        f.y += f.spd; f.x += f.drift;
+        if(f.y>h){f.y=-4; f.x=Math.random()*w;}
+        ctx.beginPath(); ctx.arc(f.x,f.y,f.r,0,Math.PI*2); ctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+    tick();
+  }
+  initSnow('snow-hero', 60);
+  initSnow('snow-nik', 50);
+
+  /* ---------------- countdown ---------------- */
+  const REG_OPEN = new Date('2026-09-24T00:00:00');
+  const MAX_SLOTS = 35;
+
+  const cdDays=document.getElementById('cdDays'), cdHours=document.getElementById('cdHours'),
+        cdMinutes=document.getElementById('cdMinutes'), cdSeconds=document.getElementById('cdSeconds');
+  const countdownGrid = document.getElementById('countdownGrid');
+  const statusPill = document.getElementById('statusPill');
+  const openCta = document.getElementById('openCta');
+  const cdHeadline = document.getElementById('cdHeadline');
+  const cdSub = document.getElementById('cdSub');
+
+  let storeCache = { registrations: [], manualOverrideOpen: null };
+
+  function sbHeaders(extra){
+    return Object.assign({
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: 'Bearer ' + SUPABASE_ANON_KEY
+    }, extra || {});
+  }
+
+  async function loadStore(){
+    try{
+      const regRes = await fetch(SUPABASE_URL + '/rest/v1/registrations?select=*&order=ts.asc', {
+        headers: sbHeaders()
+      });
+      storeCache.registrations = regRes.ok ? await regRes.json() : [];
+
+      const settingsRes = await fetch(SUPABASE_URL + '/rest/v1/settings?id=eq.1&select=manual_override', {
+        headers: sbHeaders()
+      });
+      const settingsData = settingsRes.ok ? await settingsRes.json() : [];
+      storeCache.manualOverrideOpen = (settingsData[0] && typeof settingsData[0].manual_override !== 'undefined')
+        ? settingsData[0].manual_override : null;
+    }catch(e){
+      console.error('Laden von Supabase fehlgeschlagen', e);
+    }
+    return storeCache;
+  }
+  async function addRegistration(reg){
+    try{
+      const res = await fetch(SUPABASE_URL + '/rest/v1/registrations', {
+        method: 'POST',
+        headers: sbHeaders({ 'Content-Type': 'application/json', 'Prefer': 'return=minimal' }),
+        body: JSON.stringify(reg)
+      });
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      return true;
+    }catch(e){
+      console.error('Speichern fehlgeschlagen', e);
+      alert('Achtung: Die Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.');
+      return false;
+    }
+  }
+  async function setManualOverride(value){
+    try{
+      await fetch(SUPABASE_URL + '/rest/v1/settings?id=eq.1', {
+        method: 'PATCH',
+        headers: sbHeaders({ 'Content-Type': 'application/json', 'Prefer': 'return=minimal' }),
+        body: JSON.stringify({ manual_override: value })
+      });
+    }catch(e){
+      console.error('Speichern fehlgeschlagen', e);
+    }
+  }
+  async function resetAllRegistrations(){
+    try{
+      await fetch(SUPABASE_URL + '/rest/v1/registrations?id=gt.0', {
+        method: 'DELETE',
+        headers: sbHeaders()
+      });
+      await setManualOverride(null);
+    }catch(e){
+      console.error('Zurücksetzen fehlgeschlagen', e);
+    }
+  }
+
+  function isRegistrationOpen(){
+    if(storeCache.manualOverrideOpen === true) return true;
+    if(storeCache.manualOverrideOpen === false) return false;
+    return new Date() >= REG_OPEN;
+  }
+  function freeSlots(){
+    return Math.max(0, MAX_SLOTS - storeCache.registrations.length);
+  }
+
+  function renderCountdown(){
+    const now = new Date();
+    const diff = REG_OPEN - now;
+    const open = isRegistrationOpen();
+
+    if(!open && diff > 0){
+      countdownGrid.style.display='flex';
+      const d = Math.floor(diff/86400000);
+      const h = Math.floor((diff%86400000)/3600000);
+      const m = Math.floor((diff%3600000)/60000);
+      const sec = Math.floor((diff%60000)/1000);
+      cdDays.textContent=String(d).padStart(2,'0');
+      cdHours.textContent=String(h).padStart(2,'0');
+      cdMinutes.textContent=String(m).padStart(2,'0');
+      cdSeconds.textContent=String(sec).padStart(2,'0');
+      statusPill.textContent='ANMELDUNG NOCH NICHT GEÖFFNET';
+      statusPill.className='status-pill status-closed';
+      openCta.style.display='none';
+      cdHeadline.textContent='Die Anmeldung startet bald!';
+      cdSub.textContent='Ab dem 24.09.2026 kannst du dich für den Schnupperkurs anmelden.';
+    } else {
+      countdownGrid.style.display='none';
+      const slotsLeft = freeSlots();
+      if(slotsLeft <= 0){
+        statusPill.textContent='SCHNUPPERKURS AUSGEBUCHT';
+        statusPill.className='status-pill status-full';
+        openCta.style.display='none';
+      } else {
+        statusPill.textContent='ANMELDUNG IST GEÖFFNET!';
+        statusPill.className='status-pill status-open';
+        openCta.style.display='block';
+      }
+      cdHeadline.textContent='Die Anmeldung ist geöffnet!';
+      cdSub.textContent='Sichere jetzt einen der letzten Plätze für den Schnupperkurs.';
+    }
+    updateSlots();
+    updateFormState();
+  }
+
+  /* ---------------- slots ---------------- */
+  const slotNumber = document.getElementById('slotNumber');
+  const slotSub = document.getElementById('slotSub');
+  const slotBarFill = document.getElementById('slotBarFill');
+  let slotAnimated = false;
+
+  function updateSlots(){
+    const open = isRegistrationOpen();
+    const left = freeSlots();
+    if(!open){
+      slotNumber.textContent = MAX_SLOTS;
+      slotSub.textContent = 'Plätze insgesamt';
+    } else {
+      slotNumber.textContent = left;
+      slotSub.textContent = `von ${MAX_SLOTS} Plätzen frei`;
+    }
+    const pct = open ? ((MAX_SLOTS-left)/MAX_SLOTS*100) : 0;
+    slotBarFill.style.width = pct+'%';
+  }
+
+  setInterval(renderCountdown, 1000);
+
+  const slotIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting && !slotAnimated){
+        slotAnimated = true;
+        slotBarFill.style.transition='width 1s cubic-bezier(.22,.8,.28,1)';
+      }
+    });
+  },{threshold:.5});
+  slotIo.observe(slotNumber);
+
+  /* ---------------- registration form ---------------- */
+  const formLocked = document.getElementById('formLocked');
+  const soldOutBanner = document.getElementById('soldOutBanner');
+  const regForm = document.getElementById('regForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formMsg = document.getElementById('formMsg');
+  const confirmation = document.getElementById('confirmation');
+
+  function updateFormState(){
+    const open = isRegistrationOpen();
+    const left = freeSlots();
+    if(confirmation.classList.contains('show')) return; // don't override after success
+
+    if(!open){
+      formLocked.style.display='block';
+      soldOutBanner.style.display='none';
+      regForm.style.display='none';
+    } else if(left <= 0){
+      formLocked.style.display='none';
+      soldOutBanner.style.display='block';
+      regForm.style.display='none';
+    } else {
+      formLocked.style.display='none';
+      soldOutBanner.style.display='none';
+      regForm.style.display='block';
+    }
+  }
+
+  function allRequiredChecked(){
+    return ['c1','c2','c3','c4','c5','c6'].every(n => regForm[n] && regForm[n].checked);
+  }
+  regForm.addEventListener('change', ()=>{ submitBtn.disabled = !allRequiredChecked(); });
+
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+  function validPhone(v){ return /^[+0-9 \/\-()]{6,20}$/.test(v); }
+
+  function setErr(input, msg){
+    const err = input.closest('.field').querySelector('.err');
+    err.textContent = msg || '';
+    input.classList.toggle('invalid', !!msg);
+  }
+
+  regForm.addEventListener('submit', async function(ev){
+    ev.preventDefault();
+    formMsg.textContent='';
+    await loadStore(); // aktuellsten Stand holen, bevor wir prüfen/speichern
+    if(!isRegistrationOpen()){
+      formMsg.textContent='Die Anmeldung ist noch nicht geöffnet.';
+      return;
+    }
+    if(freeSlots() <= 0){
+      formMsg.textContent='Der Schnupperkurs ist leider bereits ausgebucht.';
+      updateFormState();
+      return;
+    }
+
+    let valid = true;
+    const f = regForm;
+    [['childFirst','Bitte Vorname des Kindes angeben.'],
+     ['childLast','Bitte Nachname des Kindes angeben.'],
+     ['parentFirst','Bitte Vorname angeben.'],
+     ['parentLast','Bitte Nachname angeben.']].forEach(([name,msg])=>{
+      const el = f[name];
+      if(!el.value.trim()){ setErr(el,msg); valid=false; } else setErr(el,'');
+    });
+
+    const age = f['childAge'];
+    const ageVal = parseInt(age.value,10);
+    if(!age.value || isNaN(ageVal) || ageVal < 3 || ageVal > 17){
+      setErr(age,'Bitte ein gültiges Alter (3–17) angeben.'); valid=false;
+    } else setErr(age,'');
+
+    const shoe = f['shoeSize'];
+    const shoeVal = parseInt(shoe.value,10);
+    if(!shoe.value || isNaN(shoeVal) || shoeVal < 20 || shoeVal > 45){
+      setErr(shoe,'Bitte eine gültige Schuhgröße (20–45) angeben.'); valid=false;
+    } else setErr(shoe,'');
+
+    const email = f['parentEmail'];
+    if(!validEmail(email.value)){ setErr(email,'Bitte eine gültige E-Mail-Adresse angeben.'); valid=false; }
+    else setErr(email,'');
+
+    const phone = f['parentPhone'];
+    if(!validPhone(phone.value)){ setErr(phone,'Bitte eine gültige Telefonnummer angeben.'); valid=false; }
+    else setErr(phone,'');
+
+    const social = f['socialPeculiarities'];
+    if(!social.value.trim()){
+      setErr(social,'Bitte ausfüllen – falls nicht zutreffend, ein X eintragen.'); valid=false;
+    } else setErr(social,'');
+
+    if(!allRequiredChecked()){
+      formMsg.textContent='Bitte bestätige alle erforderlichen Teilnahmebedingungen.';
+      valid=false;
+    }
+
+    if(!valid) return;
+
+    if(storeCache.registrations.length >= MAX_SLOTS){
+      formMsg.textContent='Der Schnupperkurs ist leider bereits ausgebucht.';
+      updateFormState();
+      return;
+    }
+    submitBtn.disabled = true;
+    const newReg = {
+      childfirst:f.childFirst.value.trim(), childlast:f.childLast.value.trim(),
+      childage:ageVal, shoesize:shoeVal, parentfirst:f.parentFirst.value.trim(), parentlast:f.parentLast.value.trim(),
+      parentemail:email.value.trim(), parentphone:phone.value.trim(),
+      socialpeculiarities: social.value.trim(),
+      photoconsent: !!f.c5.checked, ts: new Date().toISOString()
+    };
+    const ok = await addRegistration(newReg);
+    if(!ok){ submitBtn.disabled = false; return; }
+    storeCache.registrations.push(newReg);
+
+    regForm.reset();
+    regForm.style.display='none';
+    confirmation.classList.add('show');
+    renderCountdown();
+    renderAdmin();
+  });
+
+  document.getElementById('waitlistBtn').addEventListener('click', function(){
+    alert('Die Warteliste ist in Vorbereitung. Bitte kontaktiere den Verein, um dich vormerken zu lassen.');
+  });
+
+  /* ---------------- FAQ accordion ---------------- */
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight=null; });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight+'px'; }
+    });
+  });
+
+  /* ---------------- mobile nav ---------------- */
+  document.getElementById('burgerBtn').addEventListener('click', function(){
+    const links = document.querySelector('.nav-links');
+    const shown = links.style.display === 'flex';
+    links.style.display = shown ? 'none' : 'flex';
+    links.style.cssText += shown ? '' : 'position:fixed;top:72px;left:0;right:0;background:#0a0d0c;flex-direction:column;padding:20px 24px;gap:18px;';
+  });
+
+  /* ---------------- legal pages ---------------- */
+  const siteMain = document.getElementById('site-main');
+  const siteFooter = document.getElementById('site-footer');
+  function showLegal(id){
+    siteMain.classList.add('hidden');
+    document.querySelectorAll('.legal-page, .admin-panel').forEach(p=>p.classList.remove('show'));
+    document.getElementById(id).classList.add('show');
+    window.scrollTo(0,0);
+  }
+  function hideLegal(){
+    document.querySelectorAll('.legal-page, .admin-panel').forEach(p=>p.classList.remove('show'));
+    siteMain.classList.remove('hidden');
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('[data-legal]').forEach(a=>{
+    a.addEventListener('click', (e)=>{ e.preventDefault(); showLegal(a.dataset.legal); });
+  });
+  document.querySelectorAll('[data-close-legal]').forEach(a=>{
+    a.addEventListener('click', (e)=>{ e.preventDefault(); hideLegal(); });
+  });
+
+  /* ---------------- admin (demo) ---------------- */
+  const adminOpenBtn = document.getElementById('adminOpenBtn');
+  adminOpenBtn.addEventListener('click', async function(){
+    const pw = prompt('Admin-Passwort: ');
+    if(pw === '1344'){
+      adminOpenBtn.disabled = true;
+      await renderAdmin();
+      adminOpenBtn.disabled = false;
+      siteMain.classList.add('hidden');
+      document.querySelectorAll('.legal-page, .admin-panel').forEach(p=>p.classList.remove('show'));
+      document.getElementById('adminPanel').classList.add('show');
+      window.scrollTo(0,0);
+    } else if(pw !== null){
+      alert('Falsches Passwort.');
+    }
+  });
+
+  async function renderAdmin(){
+    await loadStore();
+    document.getElementById('adminTotal').textContent = storeCache.registrations.length;
+    document.getElementById('adminFree').textContent = freeSlots();
+    document.getElementById('adminStatus').textContent = isRegistrationOpen() ? 'Geöffnet' : 'Geschlossen';
+    const tbody = document.getElementById('adminTableBody');
+    tbody.innerHTML = storeCache.registrations.map(r=>
+      `<tr><td>${escapeHtml(r.childfirst)} ${escapeHtml(r.childlast)}</td><td>${r.childage ?? ''}</td><td>${r.shoesize}</td><td>${escapeHtml(r.parentfirst)} ${escapeHtml(r.parentlast)}</td><td>${escapeHtml(r.parentemail)}</td><td>${escapeHtml(r.parentphone)}</td><td>${escapeHtml(r.socialpeculiarities ?? '')}</td></tr>`
+    ).join('') || '<tr><td colspan="7" style="color:#999;">Noch keine Anmeldungen.</td></tr>';
+  }
+  function escapeHtml(str){
+    return String(str).replace(/[&<>"']/g, s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+  }
+
+  document.getElementById('adminRefresh').addEventListener('click', function(){
+    renderAdmin();
+  });
+
+  document.getElementById('adminExport').addEventListener('click', async function(){
+    await loadStore();
+    const rows = [['Kind Vorname','Kind Nachname','Alter','Schuhgröße','Eltern Vorname','Eltern Nachname','E-Mail','Telefon','Soziale Besonderheiten','Fotoeinwilligung','Zeitstempel']];
+    storeCache.registrations.forEach(r=> rows.push([r.childfirst,r.childlast,r.childage,r.shoesize,r.parentfirst,r.parentlast,r.parentemail,r.parentphone,r.socialpeculiarities ?? '',r.photoconsent?'Ja':'Nein',r.ts]));
+    const csv = rows.map(r=> r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(';')).join('\n');
+    const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href=url; a.download='anmeldungen_schnupperkurs.csv'; a.click();
+    URL.revokeObjectURL(url);
+  });
+  document.getElementById('adminToggle').addEventListener('click', async function(){
+    await loadStore();
+    let next;
+    if(storeCache.manualOverrideOpen === true) next = false;
+    else if(storeCache.manualOverrideOpen === false) next = null;
+    else next = true;
+    await setManualOverride(next);
+    storeCache.manualOverrideOpen = next;
+    renderCountdown(); await renderAdmin();
+    alert('Anmeldestatus (manuell): ' + (next===true?'Geöffnet (erzwungen)': next===false?'Geschlossen (erzwungen)':'Automatisch (Datum entscheidet)'));
+  });
+  document.getElementById('adminReset').addEventListener('click', async function(){
+    if(confirm('Wirklich ALLE Anmeldungen unwiderruflich löschen?')){
+      await resetAllRegistrations();
+      storeCache = {registrations:[], manualOverrideOpen:null};
+      renderCountdown(); await renderAdmin();
+    }
+  });
+
+  /* ---------------- initialer Start ---------------- */
+  // Wird hier ganz am Ende ausgelöst, damit garantiert alle oben
+  // verwendeten Variablen bereits deklariert und zugewiesen sind.
+  renderCountdown();
+  loadStore().then(renderCountdown);
+  setInterval(async ()=>{ await loadStore(); renderCountdown(); }, 8000);
+})();
+</script>
+</body>
+</html>
